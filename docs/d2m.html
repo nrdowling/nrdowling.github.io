@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.45">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>D2M Syllabus – Natalie R. Dowling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+    
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Natalie R. Dowling</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="./teaching/index.html">
+ <span class="dropdown-text">Classes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./teaching/teaching-statements.html">
+ <span class="dropdown-text">Teaching Statements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./d2m.html">
+ <span class="dropdown-text">Data to Manuscript in R</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#course-schedule" id="toc-course-schedule" class="nav-link" data-scroll-target="#course-schedule">Course schedule</a></li>
+  <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course policies</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">D2M Syllabus</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- ACCORDION TEMPLATE
+  \  
+::: {.accordion #w#c#} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week # / Class # Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w#c#readings" aria-expanded="false" aria-controls="w#c#readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w#c#readings .accordion-collapse .collapse data-bs-parent="#w#c#"}
+::: {.accordion-body}
+
+- [Reading title)](link)*
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign#" aria-expanded="false" aria-controls="assign#"}
+
+Assignment (#) Name
+
+:::
+:::
+
+::: {#assign# .accordion-collapse .collapse data-bs-parent="#w#c#"}
+::: {.accordion-body}
+
+- Assignment to-do
+  - task
+
+:::
+:::
+    
+:::
+
+:::
+-->
+<div class="alert alert-danger" role="alert">
+<p><strong>FYI:</strong> This is a version of the syllabus used for D2M in Winter 2024. It’s here temporarily while I rework the class site through its own repo. That means:</p>
+<ol type="1">
+<li>There are <strong><em>major</em></strong> changes to the structure of the class for Winter 2025! So if you’re planning to take the course next Winter don’t be misled by what you see here.</li>
+<li>There are very likely lots of broken links, css, and bootstrap elements as a result of the quick and dirty migration from the old-school RMarkdown format to the Quarto format used on this site. This is a temporary site and I’m not going to fix them.</li>
+</ol>
+</div>
+<p><strong>From Data to Manuscript (D2M) in R</strong></p>
+<p><em>Winter 2024: CHDV 20550/30550, MACS 30550, MAPS 30550, PSYC 20550/30550</em></p>
+<section id="overview" class="level2">
+<h2 data-anchor-id="overview">Overview</h2>
+<section id="description" class="level3">
+<h3 data-anchor-id="description">Description</h3>
+<p>This course tackles the basic skills needed to build an integrated research report with the R programming language. We will cover every step from data to manuscript including: Using R’s libraries to clean up and re-format messy datasets, preparing data sets for analysis, running statistical tools, generating clear and attractive figures and tables, and knitting those bits of code together with your manuscript writing. The result will be a reproducible, open-science friendly report that you can easily update after finishing data collection or receiving comments from readers. Never copy-paste your way through a table again! The R universe is large, so this course will focus specifically on: The core R libraries, the tidyverse library, and R Markdown. Students will also learn about the use of GitHub for version control.</p>
+<section id="weekly-meetings" class="level4">
+<h4 data-anchor-id="weekly-meetings">Weekly meetings:</h4>
+<ul>
+<li>Tuesdays and Thursdays 11am - 12:20pm</li>
+<li>1155 E 60th St, Room 289B</li>
+</ul>
+</section>
+<section id="instructor" class="level4">
+<h4 data-anchor-id="instructor">Instructor:</h4>
+<ul>
+<li><strong>Dr.&nbsp;Natalie Dowling</strong></li>
+<li>Email: ndowling@uchicago.edu</li>
+<li>GitHub: @nrdowling</li>
+<li>Office: 1155 Building, Room 404</li>
+<li>Office hours: Tues/Thurs 4pm - 5pm - <a href="https://calendar.app.google/SFfBd2291pigfJtL7">sign up via GCal</a></li>
+</ul>
+</section>
+<section id="teaching-assistant" class="level4">
+<h4 data-anchor-id="teaching-assistant">Teaching assistant:</h4>
+<ul>
+<li><strong>Grace Huang</strong></li>
+<li>Email: ysh@uchicago.edu</li>
+<li>GitHub: @ysh627</li>
+<li>Office: Green 208</li>
+<li>Office hours: Wednesdays 12-1:30pm (email for alternative appointment)</li>
+</ul>
+</section>
+<section id="hubs" class="level4">
+<h4 data-anchor-id="hubs">Hubs:</h4>
+<ul>
+<li><a href="https://nrdowling.github.io/d2m/">Course site &amp; syllabus</a> (you are here!)</li>
+<li><a href="https://piazza.com/class/lqikn4pfk085w8/">Piazza</a></li>
+<li><a href="https://canvas.uchicago.edu/courses/54329">Canvas</a></li>
+<li><a href="https://github.com/nrdowling/schelling-games">Example repo: schelling-games</a>
+<ul>
+<li>Duplicate this repo to poke around a (mostly) functional github pages site created entirely using R Markdown. Most of the .Rmd and .R files include extensive commenting, including some ideas for how you can practice coding by revising or adding to those R scripts directly. (I recommend duplicating rather than mirroring. <a href="https://github.com/new/import">Set up a new repo via “import”</a> using the same url copied from the green code tab. You’ll have a completely different repo – no need to worry about messing up the original. If you just clone it, it will still be attached to the original, but your changes still won’t push because you aren’t a collaborator.)</li>
+</ul></li>
+<li><a href="https://github.com/nrdowling/d2m-2024">Class repo: d2m-2024</a>
+<ul>
+<li>Begins empty at the start of the quarter. Will be updated with in-class demos and data as we go.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="course-materials" class="level3">
+<h3 data-anchor-id="course-materials">Course materials</h3>
+<ul>
+<li>Most required readings will be drawn from one of the following great (and free! and online!) resources:
+<ul>
+<li><a href="https://r4ds.hadley.nz/">R for Data Science</a> by Hadley Wickham</li>
+<li><a href="https://rmd4sci.njtierney.com/">R Markdown for Scientists</a> by Nicholas Tierney</li>
+<li>Also check out <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a> by Yihui Xie, J. J. Allaire, and Garrett Grolemund</li>
+</ul></li>
+<li>Additional resources can be found on the <a href="resources.html">resources page</a></li>
+</ul>
+</section>
+<section id="dataset" class="level3">
+<h3 data-anchor-id="dataset">Dataset</h3>
+<p>Nearly all assignments in this course will involve working with a dataset of your choice. We will begin with setting up a repo for your data and R scripts, then move to tidying the data, then to analyzing and plotting the data, and finally to interpreting the results based on those data. In other words, having an appropriate dataset as early as possible is essential. <span style="color:red">You will get the most out of this class if you work with your own data for a project you will continue to be invested in after the end of the quarter, like a BA or MA thesis, grant proposal, or manuscript intended for publication.</span> If you are not currently working on this type of project, you should consider taking this class next year (or whenever you <em>do</em> have data). Whether or not you use your own data, you are responsible for providing your dataset. Read the <a href="dataset-guidelines.html">dataset selection guidelines</a> for more information.</p>
+</section>
+</section>
+<section id="grading" class="level2">
+<h2 data-anchor-id="grading">Grading</h2>
+<p>Students enrolled in this course will be graded on the following basis:</p>
+<ul>
+<li>Short assignments: 60% (graded complete/incomplete, 3% each)</li>
+<li>Scientific report: 20% (including 2 ungraded preparatory tasks)</li>
+<li>Participation: 20% (including self-assessment)</li>
+</ul>
+<section id="assignments" class="level3">
+<h3 data-anchor-id="assignments">Assignments</h3>
+<p>There is a short assignment for each lecture. Each assignment will involve working with your own data, data provided for that assignment, or both and is designed to give you hands-on practice with using R. Assignments typically begin in class and may be completed after class (each one is highlighted in <span style="color:#CB7E45">orange</span>) on a pass/fail basis. Students must push their completed assignment to the appropriate GitHub repository, tagging and Dr.&nbsp;Dowling (@nrdowling) and Grace (@ysh627) with the assignment number so that they receive a notification. There are 20 assignments total, each worth 3% of your final grade.</p>
+<p>Assignment details are included at the end of the lecture slides.</p>
+<p><em>When are the assignments due?</em> We will usually start assignments in class. Anything you don’t finish during class time should be completed before the start of the next class meeting. If an assignment is listed under “pre-class preparation,” it should (hopefully unsurprisingly) be completed in preparation for the start of that class.</p>
+<p><em>Need help?</em> We will do much of this work in class, so ask your questions while we’re together. Each student will be assigned to a support group of other students to help answer questions (in addition to access to help from Dr.&nbsp;Dowling and Grace during office hours). A large portion of the course is developing your search skills when it comes to debugging your code (<a href="https://xkcd.com/979/">look for advice and solutions from others who have faced similar problems on sites like stackoverflow and github</a>)! Week 2 slides will include a formal procedure to follow for troubleshooting help.</p>
+</section>
+<section id="scientific-report" class="level3">
+<h3 data-anchor-id="scientific-report">Scientific report</h3>
+<p>Your final assignment will be a scientific report in R Markdown that is developed via a GitHub repository and includes:</p>
+<ol type="1">
+<li>data read-in, pre-processing, and analysis</li>
+<li>at least 2 figures and 1 table with captions and in-text references</li>
+<li>at least 2 in-text R code references</li>
+<li>BibTeX citations</li>
+<li>at least 1500 words of the manuscript in at least four subsections (Introductions, Methods, Results, Discussion; unless otherwise agreed with Dr.&nbsp;Dowling).</li>
+</ol>
+<p>Additional details about report requirements will be provided throughout the quarter.</p>
+<p>Items on the syllabus in <span style="color:#93A14D">green</span> indicate preparatory tasks for your final report: receiving approval for your dataset (by Tuesday of Week 2) and negotiating a manuscript plan (by Friday of Week 7). Each requires you to submit something informal via Canvas. These tasks are not graded, but grading for your final report will be contingent on completing both on time. <span style="color:red">Failing to meet with me for a report meeting will result in an automatic 10 points off your final report grade.</span></p>
+</section>
+<section id="participation" class="level3">
+<h3 data-anchor-id="participation">Participation</h3>
+<p>Students earn participation credit through their attendance and participation in their support group and discussion of course content in office hours. Students are generally expected to come to class prepared to practice using R together. That means you should come with your charged laptop, prepared with any data you are using and any installed software that is required (see the ‘preparation’ note for each class). Be prepared to share your screen with your support group and with the instructors. That said, please stay in touch about your limitations regarding in-person participation and/or technology access.</p>
+<p>This grade is not an attendance grade. It is much more important that you care for your mental and physical health and the health of those around you than it is to check the “came to class” box. Please do not come to class if you are ill, but DO contact Dr.&nbsp;Dowling and Grace at least 24 hours in advance of an absence, when possible. Missing classes without notifying us may result in a lower participation grade. If your attendance is low enough to impact your work (with or without notifying us) you will need to meet with Dr.&nbsp;Dowling to discuss how it may affect your grade.</p>
+<section id="self-assessment" class="level4">
+<h4 data-anchor-id="self-assessment">Self-assessment</h4>
+<p>At the end of the quarter you will write a brief reflection (1-2 paragraphs) on your participation in this class and assign yourself a grade (out of 20).</p>
+<p>Your self-assigned grade may or may not end up as your final participation grade, but it will be <em>strongly</em> taken into consideration.</p>
+</section>
+<section id="grading-1" class="level4">
+<h4 data-anchor-id="grading-1">Grading</h4>
+<p>Participation grades will be posted to this assignment at the same time your final scientific report is graded. Once assigned, <strong>participation grades are final</strong>. If you are concerned about your grade you should reach out to Dr.&nbsp;Dowling or Grace before the end of the quarter, who can give you guidance on ways to increase this part of your grade.</p>
+</section>
+</section>
+<section id="late-work-attendance" class="level3">
+<h3 data-anchor-id="late-work-attendance">Late work &amp; attendance</h3>
+<p>Life happens. Family emergencies, exams for other courses, COVID-19, roommates in crisis…</p>
+<p>If you need an extension, just ask. Send an email to Dr.&nbsp;Dowling (cc Grace) <em>as far in advance as possible</em> explaining what’s going on (vague!) and how much extra time you need (specific). <strong>It is never necessary to provide details about your physical or mental health.</strong> You are always welcome to have an open discussion about what you’re dealing with in office hours, but in your emails about absences it is more than sufficient to just say you’re sick or having a personal emergency.</p>
+<p>With prior notice and instructor approval, late work will not be penalized. Students who register for the class after one or more assignments were already due should contact Dr.&nbsp;Dowling to arrange an extended deadline.</p>
+<p>Without notice and/or approval, or after the agreed upon extended deadline:</p>
+<ol type="1">
+<li>Short assignments will be graded as incomplete, receiving 0 (of 3) points.</li>
+<li>Final scientific reports will lose 1 (of 20) points per 12 hours late.</li>
+</ol>
+<p>If you will be missing class for any reason, email <strong>both</strong> Dr.&nbsp;Dowling and Grace before the start of class. <strong><span style="color:red">Please do not come to class if you are feeling at all ill.</span></strong> You do not need to be specific about why you will be absent, but please do give a guess as to when you’ll be back in class and whether you’ll be able to work remotely while you’re out.</p>
+<p><em>Stressed out by emailing professors? Here are some good examples of what is helpful for your instructors.</em></p>
+<blockquote class="blockquote">
+<p>I have exams in two other classes 5th week. Is it ok if I take an extra 48 hours to turn in Assignment 5?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I just found out I need to quarantine after a COVID exposure. No positive test as of now, so I’ll plan on missing classes Tuesday and Thursday but completing the assignments at home. I’ll let you know if anything changes.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I have a family emergency and need to travel home. I won’t be able to work while I’m home and I’m not sure how long I’ll need to be away. Can we meet over Zoom to make a plan to handle late assignments and absences?</p>
+</blockquote>
+</section>
+</section>
+<section id="course-schedule" class="level2">
+<h2 data-anchor-id="course-schedule">Course schedule</h2>
+<p>This schedule is subject to change. Refer to this page for syllabus updates (including new and updated links, files, etc.) throughout the quarter. Slides will typically be posted the morning of class.</p>
+<p>For each day of class the schedule below includes an overview of what we’ll cover in class and any key information you’ll need for that day.</p>
+<p><strong>The accordion boxes contain detailed information about all tasks you should complete.</strong> These boxes will describe things you need to do <em>both before and after that class,</em> so you should always read details at least one class ahead. Tasks are color coded:</p>
+<ul>
+<li><span style="color:#99414D">Ungraded assignments, preparatory tasks, readings, and resources are in burgundy. Required readings are marked with as asterisk and should be completed before start of class.</span></li>
+<li><span style="color:#CB7E45">Graded assignments due before the start of next class (unless otherwise noted) are in orange.</span></li>
+<li><span style="color:#93A14D">Preparatory tasks for the final project are in green.</span></li>
+<li><span style="color:#4E6988">Extra information necessary for that class period is in blue.</span></li>
+</ul>
+<section id="module-1-fundamentals-of-r-and-github" class="level3">
+<h3 data-anchor-id="module-1-fundamentals-of-r-and-github">Module 1: Fundamentals of R and GitHub</h3>
+<section id="thursday-january-4-2024-1.11.2" class="level4">
+<h4 data-anchor-id="thursday-january-4-2024-1.11.2">Thursday, January 4 2024 (1.1+1.2)</h4>
+<section id="pre-quarter-preparation" class="level5">
+<h5 data-anchor-id="pre-quarter-preparation">Pre-quarter preparation</h5>
+<p>Because Winter 2024 begins on a Wednesday, we will not meet for the first lecture (which would otherwise be Tuesday Jan 2). It is critical that you come to the first class meeting on Thursday January 4th having completed the getting started tasks – <em>start by watching the short recorded lecture!</em> – and Assignment 1.</p>
+</section>
+<section id="class-meeting" class="level5">
+<h5 data-anchor-id="class-meeting">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/so55fxh7wo3ixsch8rbht64hs6zkt771">slides</a></p>
+<ul>
+<li>Introductions &amp; Course Structure</li>
+<li>Lecture: R Scripts &amp; Packages, and Markdown</li>
+<li>Groups: Assign support groups &amp; discuss datasets</li>
+<li>Assignment: <span style="color:#CB7E45">(2) Initialize a papaja .Rmd</span></li>
+</ul>
+<p><span style="color:#93A14D">Submit your dataset for approval by Friday Jan 5 at 11:59pm. This should be done via email, not GitHub. Friday is the <strong>absolute</strong> deadline, but the earlier the better! After you receive approval, complete the “Select dataset and get approval” assignment on Canvas to receive completion credit.</span></p>
+<div id="w1c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#gesttingstarted" aria-expanded="false" aria-controls="gettingstarted">
+<p>Getting started</p>
+</div>
+</div>
+<div id="gesttingstarted" class="accordion-collapse collapse" data-bs-parent="#w1c2">
+<div class="accordion-body">
+<ul>
+<li>Watch the recorded lecture (~43 min): <a href="https://uchicago.box.com/s/w922fw3jukwfaxcx46n6e3w7p32qep9u">R, RStudio, and GitHub</a> (<a href="https://uchicago.box.com/s/87xq12g6ivnbhx0rjczz5wa94a3ypij7">slides</a>)</li>
+<li><a href="https://education.github.com/">Request a GitHub education premium account</a> to get free private repositories
+<ul>
+<li>use your @uchicago.edu email</li>
+<li>this can take a few days to approve, but you can get started with a public repo for now</li>
+</ul></li>
+<li>Confirm your dataset meets the <a href="dataset-guidelines.html">requirements</a></li>
+<li>Download and install R, RStudio, and Git (if needed)
+<ul>
+<li>review the resources <a href="rstudio-github.html">Using GitHub with RStudio</a> &amp; <a href="setting-up-rstudio.html">Setting Up RStudio</a></li>
+</ul></li>
+<li>Complete <a href="https://forms.gle/DVFt4bKt5FZq9YpQ6">this brief welcome survey</a></li>
+<li>Sign up for our Piazza page
+<ul>
+<li>can be accessed through Canvas or directly through Piazza</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#a1collapse" aria-expanded="false" aria-controls="a1collapse">
+<p>Assignment (1) Create your repo (<span style="color:#960F22">!!due start of first class!!</span>)</p>
+</div>
+</div>
+<div id="a1collapse" class="accordion-collapse collapse" data-bs-parent="#w1c2">
+<div class="accordion-body">
+<ul>
+<li>Set up your GitHub repo w/ RStudio
+<ul>
+<li>Create a local R project by cloning a GitHub repo
+<ul>
+<li>Follow the <em>EXTREMELY DETAILED</em> <a href="rstudio-github.html">instructions for Using GitHub with RStudio</a> and troubleshoot as needed</li>
+<li>Give your repo a relevant name! (e.g., ‘child-gesture-study’, <em>NOT</em> ‘thesis’ or ‘d2m’)</li>
+</ul></li>
+<li>Invite @nrdowling (Natalie) and @ysh627 (Grace) as collaborators to your repo
+<ul>
+<li>If you intend to use a private repo with protected data, invite collaborators now, but wait on uploading the data.</li>
+<li>Once you are assigned to a support group you will also invite your group members as collaborators.</li>
+</ul></li>
+<li>Make 1+ change to the README, commit changes with an informative message, and push to GitHub</li>
+<li>REVERSE a change on GitHub, pull to your local project/repo, and review the changes</li>
+<li>Create a GitHub issue (not a commit!) with the text:</li>
+</ul>
+<pre><code>Title:Assignment 1.1
+Body:@nrdowling @ysh627 I have completed the following:
+[x] I have invited you both as repo collaborators
+[x] I have cloned this repo to create an R Studio Project
+[x] I have made at least 1 commit</code></pre></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#a2collapse" aria-expanded="false" aria-controls="a2collapse">
+<p>Assignment (2) Initialize your papaja document</p>
+</div>
+</div>
+<div id="a2collapse" class="accordion-collapse collapse" data-bs-parent="#w1c2">
+<div class="accordion-body">
+<ul>
+<li>Install the tidyverse and papaja packages</li>
+<li>Create an R script file (.R) that:
+<ul>
+<li>Loads the tidyverse and papaja packages</li>
+<li><em>REQUIRES</em> 1+ other package of your choice</li>
+<li>Includes 1+ lines of commented text</li>
+<li>Assigns 1+ numeric variable and 1+ string/character variable</li>
+<li>BONUS: Create a dataframe</li>
+</ul></li>
+<li>Create an R Notebook <em>with the Papaja template</em>
+<ul>
+<li>Change the title and author fields at the top</li>
+<li><code>source()</code> your R script in the first code chunk</li>
+</ul></li>
+<li><strong>FOR THIS AND ALL GRADED ASSIGNMENTS:</strong> Commit (with an informative message) and push to GitHub tagging Dr.&nbsp;Dowling and Grace</li>
+<li>Ungraded final step (no submission): knit .Rmd to Word doc or PDF and troubleshoot as needed</li>
+<li><strong>Above-and-beyond:</strong> Experiment with creating .Rmd files <em>without</em> papaja
+<ul>
+<li>We’ll only use papaja in this class, but knowing how to make use of .Rmds with other outputs might be very useful for you. For example if you want to make an html page (like this one!) or produce manuscripts in non-APA styles.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed infobox" type="button" data-bs-toggle="collapse" data-bs-target="#papajacollapse" aria-expanded="false" aria-controls="papajacollapse">
+<p>Papaja installation (extra info)</p>
+</div>
+</div>
+<div id="papajacollapse" class="accordion-collapse collapse" data-bs-parent="#w1c2">
+<div class="accordion-body">
+<ul>
+<li>Papaja installation is trickier than other packages for a few reasons:
+<ul>
+<li><del>It is not currently available through CRAN and so cannot be installed with the install.packages() function.</del> Papaja is now available through CRAN! Hooray! That means you can install it just like anything else, with the function <code>install.packages("papaja")</code>. These directions for installing it directly from the source will still work, but the CRAN installation should be much simpler.</li>
+<li>It requires manually setting up a TeX distribution – like TinyTex (recommended), MikTeX, MacTeX, or TeX Live – which can have their own installation issues.</li>
+<li>Because the installation is a relatively involved process, it can be difficult to determine exactly where in the process errors are occurring.</li>
+</ul></li>
+<li>So what are you supposed to do about it?
+<ul>
+<li>Follow the installation guide in papaja’s detailed documentation. I recommend starting with this guide rather than going to it when you hit a problem. Past students have encountered an issue where once their TeX distribution was installed in an incompatible way, they couldn’t undo it.</li>
+<li>If it doesn’t install smoothly, set a timer for 1 hour and do your best to troubleshoot the issue. If you can’t fix it in that time, makes notes on what you’ve done so far and what you think might still be going wrong and then stop messing with it.</li>
+</ul></li>
+<li>Adjust your assignment submission as follows:
+<ul>
+<li>Create an .Rmd with the default Notebook template (&amp; update the YAML title field)</li>
+<li>Include the line of code that would load the papaja package, then comment out that line</li>
+<li>Add your notes from above about the state of the installation</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed finalbox" type="button" data-bs-toggle="collapse" data-bs-target="#dataapproval" aria-expanded="false" aria-controls="dataapproval">
+<p>Dataset approval</p>
+</div>
+</div>
+<div id="dataapproval" class="accordion-collapse collapse" data-bs-parent="#w1c2">
+<div class="accordion-body">
+<ul>
+<li>Review the <a href="dataset-guidelines.html">dataset guidelines</a></li>
+<li>Once you are confident your dataset meets the requirements, request approval via email by Friday Jan 5 at 11:59pm:
+<ul>
+<li>Send the email to Dr.&nbsp;Dowling (ndowling @ uchicago.edu) and cc Grace (ysh @ uchicago.edu)</li>
+<li>Subject line should be: <code>(Your first &amp; last name) Dataset Selection</code></li>
+</ul></li>
+<li>Your email should include:
+<ul>
+<li>A brief (2-4 sentences) description of your data</li>
+<li>The data itself, in whole or part; this may be an attached .csv file, a link to a shared document, or instructions for where to find the data on the github repo you have already invited us to
+<ul>
+<li>If you are unable to share the data with us via email (due to IRB limitations or anonymization concerns), explain this issue and a tentative plan for how you will get the data into a sharable state (i.e., any data necessary to run your analyses is included in a private github repo) within one week<br>
+</li>
+</ul></li>
+<li><em>At least</em> one research question you tentatively plan to ask that can be answered with this dataset in the state it is currently in
+<ul>
+<li>Specifically, your question should be answerable with an outcome variable in your data <em>right now</em></li>
+<li>It’s ok if it’s a boring question, and it’s ok if you do not end up answering this question in your final project</li>
+</ul></li>
+</ul></li>
+<li>Once you receive a reply approving your data from either Dr.&nbsp;Dowling or Grace, complete the Canvas assignment to receive completion credit
+<ul>
+<li>Due before class on Tuesday Jan 9th 11am, meaning you will need to have gotten approval over the weekend</li>
+<li>In the text box, include a brief but descriptive name for your dataset and the sender (Dr.&nbsp;Dowling/Grace) and timestamp of the approval email</li>
+</ul></li>
+<li><strong>NOTE:</strong> If you received approval for your dataset when you requested enrollment consent, you do not need to request it again. Simply complete the Canvas assignment to receive credit.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tuesday-january-9-2024-2.1" class="level4">
+<h4 data-anchor-id="tuesday-january-9-2024-2.1">Tuesday, January 9 2024 (2.1)</h4>
+<section id="pre-class-preparation" class="level5">
+<h5 data-anchor-id="pre-class-preparation">Pre-class preparation</h5>
+<p>Take the weekend to catch up on any pre-quarter preparation tasks not yet completed. It is critical that you are fully caught up by today or you will not be able to follow along with demos and assignments. Additionally, confirm that your dataset approval is marked as complete on Canvas (contact Dr.&nbsp;Dowling if it is not marked as complete by start of class).</p>
+</section>
+<section id="class-meeting-1" class="level5">
+<h5 data-anchor-id="class-meeting-1">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/irnlq5mcgf4570vxjk6mf90rx9320q9x">slides</a></p>
+<ul>
+<li>Lecture: Best Practices &amp; Troubleshooting</li>
+<li>Assignment: <span style="color:#CB7E45">(3) Create and edit your README.md and .gitignore files</span></li>
+</ul>
+<div id="w2c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 2 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w2c1readings" aria-expanded="false" aria-controls="w2c1readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w2c1readings" class="accordion-collapse collapse" data-bs-parent="#w2c1">
+<div class="accordion-body">
+<ul>
+<li><a href="https://nrdowling.github.io/d2m/best-practices.html">Best practices for programming in R (in D2M)</a>*</li>
+<li><a href="https://style.tidyverse.org/">Tidyverse style guide</a></li>
+<li><a href="https://frederikaust.com/papaja_man/">Papaja documentation</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign3" aria-expanded="false" aria-controls="assign3">
+<p>Assignment (3) README.md &amp; .gitignore</p>
+</div>
+</div>
+<div id="assign3" class="accordion-collapse collapse" data-bs-parent="#w2c1">
+<div class="accordion-body">
+<ul>
+<li>Part 1: README
+<ul>
+<li>Create a README.md file in the top level of your repo if it doesn’t exist</li>
+<li>Edit your README to include:
+<ul>
+<li>A brief description of your data</li>
+<li>A brief overview of your planned project</li>
+<li>A real or hypothetical file tree
+<ul>
+<li>Format of your choosing</li>
+<li>This can be extremely simple, but should demonstrate you’ve thought about how plan to keep your repo organized.</li>
+</ul></li>
+</ul></li>
+<li>At a minimum, your README should include the following markdown elements:
+<ul>
+<li>1 header (any level)</li>
+<li><strong>bold</strong> <em>italics</em> or <del>strikethough</del></li>
+</ul></li>
+</ul></li>
+<li>Part 2: .gitignore
+<ul>
+<li>Create a .gitignore file in the top level of your repo if it does not exist
+<ul>
+<li>You can start with GitHub’s default R .gitignore template</li>
+</ul></li>
+<li>Edit the .gitignore to include:
+<ul>
+<li>A dedicated directory called localonly</li>
+<li>All files of specific types that you want on your computer but don’t want to upload to GitHub</li>
+<li>One specific file that is not in an ignored folder and is not an ignored filetype</li>
+</ul></li>
+<li>Add a comment for each</li>
+</ul></li>
+</ul>
+<p><strong>NOTE:</strong> A primary goal of this assignment is for you to practice answering your own questions. We have not formally covered either of these files in detail. It’s you job to figure out the point and the implementation of each. There will be a slide in the W2C2 lecture with “verbose” instructions for the .gitignore. Do your best at this point, then make adjustments as needed after next class.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-january-11-2024-2.2" class="level4">
+<h4 data-anchor-id="thursday-january-11-2024-2.2">Thursday, January 11 2024 (2.2)</h4>
+<section id="pre-class-preparation-1" class="level5">
+<h5 data-anchor-id="pre-class-preparation-1">Pre-class preparation</h5>
+<ul>
+<li>Confirm tidyverse and papaja packages are successfully installed and load without errors.
+<ul>
+<li>Remember that papaja in particular often requires troubleshooting!</li>
+</ul></li>
+<li>Read:
+<ul>
+<li>Intr2R Chapters 7 &amp; 8</li>
+<li>R Markdown Definitive Guide Sections 2.5, 2.6, &amp; 3.2</li>
+</ul></li>
+</ul>
+</section>
+<section id="class-meeting-2" class="level5">
+<h5 data-anchor-id="class-meeting-2">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/r2snbztg6m3x50ol1ojojz5x4k1t42bm">slides</a> <!-- [hello world walkthrough](...) --></p>
+<ul>
+<li>Lecture: Fundamentals of R &amp; Markdown</li>
+<li>Assignments:
+<ul>
+<li><span style="color:#CB7E45">(4) Create <code>hello_world()</code> function</span></li>
+<li><span style="color:#CB7E45">(5) Update .Rmd YAML, markdown, and code chunk</span></li>
+<li><span style="color:red">Note that these are 2 separate assignments!</span> You will reference the .R file you create in Assignment 4 in your Assignment 5 .Rmd file, but they will count as two assignment credits because each will be as much effort as the single assignment most other days. The <code>hello_world()</code> function in (4) may be particularly challenging if you are brand new to programming. Plan accordingly!!</li>
+</ul></li>
+</ul>
+<div id="w2c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 2 / Class 2 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w2c2readings" aria-expanded="false" aria-controls="w2c2readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w2c2readings" class="accordion-collapse collapse" data-bs-parent="#w2c2">
+<div class="accordion-body">
+<ul>
+<li>Required:
+<ul>
+<li><a href="https://intro2r.com/">An Introduction to R</a>: Sections <a href="https://intro2r.com/prog_r.html">7</a>* &amp; <a href="https://intro2r.com/rmarkdown_r.html">8</a>*</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown Definitive Guide</a>: Sections <a href="https://bookdown.org/yihui/rmarkdown/markdown-syntax.html">2.5</a>*, <a href="https://bookdown.org/yihui/rmarkdown/r-code.html">2.6</a>*, &amp; <a href="https://bookdown.org/yihui/rmarkdown/notebook.html">3.2</a>*</li>
+</ul></li>
+<li>Reference:
+<ul>
+<li><a href="">R Markdown Cookbook</a>, especially:
+<ul>
+<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/conceptual-overview.html">Chapter 2: Conceptual Overview</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/document-elements.html">Chapter 4: Document Elements</a></li>
+</ul></li>
+<li><a href="https://yihui.org/knitr/"><code>knitr</code> website</a></li>
+<li><a href="https://r4ds.had.co.nz/r-markdown.html">r4ds - R Markdown</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign4" aria-expanded="false" aria-controls="assign4">
+<p>Assignment (4) <code>hello_world()</code> function</p>
+</div>
+</div>
+<div id="assign4" class="accordion-collapse collapse" data-bs-parent="#w2c2">
+<div class="accordion-body">
+<ul>
+<li>Create a hello_world() function in an .R script dedicated to defining functions
+<ul>
+<li>This should be the script you eventually source in your .Rmd with project-specific functions (if necessary)</li>
+</ul></li>
+<li>Your function should include:
+<ul>
+<li>1+ object assignment</li>
+<li>1+ conditional statement</li>
+<li>CHALLENGE: 1+ for or while loop</li>
+</ul></li>
+<li>Your functions should take at least 1 argument, such as:
+<ul>
+<li>name (string)</li>
+<li>time_of_day (numeric or POSIX)</li>
+<li>is_morning (boolean)</li>
+<li>return_n_greetings (integer)</li>
+</ul></li>
+<li>Your function should have at least 2 possible return values, such as:
+<ul>
+<li>hello, class</li>
+<li>Good morning, Dr.&nbsp;Dowling!</li>
+<li>Sup?</li>
+<li>bonjour mes amis</li>
+</ul></li>
+<li>Feel free to get creative here! This will feel less tedious if you can make yourself laugh while you do it. (It will make grading more enjoyable, too.)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign5" aria-expanded="false" aria-controls="assign5">
+<p>Assignment (5) YAML, markdown, code chunk</p>
+</div>
+</div>
+<div id="assign5" class="accordion-collapse collapse" data-bs-parent="#w2c2">
+<div class="accordion-body">
+<ul>
+<li>Update the YAML header of your .Rmd, minimally:
+<ul>
+<li>Title</li>
+<li>Short title</li>
+<li>Author(s)</li>
+</ul></li>
+<li>Call your hello_world() function within your .Rmd:
+<ul>
+<li>source() the R script where you defined the function</li>
+<li>Add a chunk that calls the function</li>
+<li>Don’t forget to follow <a href="best-practices.html">best practices</a> for naming and placing chunks!</li>
+</ul></li>
+<li>Add/edit markdown to include at least (<a href="https://www.lipsum.com/">lorem ipsum</a> is ok):
+<ul>
+<li>1st, 2nd, &amp; 3rd headers (1 of each)</li>
+<li>1 unordered list &amp; 1 ordered list</li>
+<li>Bold &amp; italicized text</li>
+<li>1 linked URL</li>
+<li>1 HTML-style comment</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="module-2-the-tidyverse" class="level3">
+<h3 data-anchor-id="module-2-the-tidyverse">Module 2: The Tidyverse</h3>
+<section id="tuesday-january-16-2024-3.1" class="level4">
+<h4 data-anchor-id="tuesday-january-16-2024-3.1">Tuesday, January 16 2024 (3.1)</h4>
+<section id="pre-class-preparation-2" class="level5">
+<h5 data-anchor-id="pre-class-preparation-2">Pre-class preparation</h5>
+<ul>
+<li>Read chapters 7 (data import) and 3 (data transformation) in r4ds.</li>
+<li>Download and preview the cheatsheets for readr and dplyr.
+<ul>
+<li>Grab the ones for ggplot2, tidyr, forcats, and stringr if you want to look ahead!</li>
+</ul></li>
+<li>Ensure that your data - or a portion of it - is available in a tabular format (like a .csv file or 1 sheet of an Excel file or GoogleSheets document)</li>
+<li>Have RStudio and your tabular data file available to work with at the start of class!</li>
+</ul>
+</section>
+<section id="class-meeting-3" class="level5">
+<h5 data-anchor-id="class-meeting-3">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/ogv0nglxtxhx0vblxddd9v8g8aw9dvji">slides</a></p>
+<ul>
+<li>Lecture: Welcome to the Tidyverse</li>
+<li>Assignment: <span style="color:#CB7E45">(6) Data read-in and -out, tidy data evaluation</span></li>
+</ul>
+<div id="w3c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 3 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w3c1readings" aria-expanded="false" aria-controls="w3c1readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w3c1readings" class="accordion-collapse collapse" data-bs-parent="#w3c1">
+<div class="accordion-body">
+<ul>
+<li>Tidyverse cheat sheets: <a href="https://rstudio.github.io/cheatsheets/html/data-import.html">readr</a>, <a href="https://rstudio.github.io/cheatsheets/html/data-transformation.html">dplyr</a></li>
+<li>R for Data Science Introduction <a href="https://r4ds.hadley.nz/data-import">Chapter 7: Data import</a>* and <a href="https://r4ds.hadley.nz/data-transform">Chapter 3: Data transformation</a>* (recommended to read in that order)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign6" aria-expanded="false" aria-controls="assign6">
+<p>Assignment (6) Data read-in and -out, tidy data evaluation</p>
+</div>
+</div>
+<div id="assign6" class="accordion-collapse collapse" data-bs-parent="#w3c1">
+<div class="accordion-body">
+<ul>
+<li>Create (or update) a code chunk in your .Rmd for data read-in
+<ul>
+<li>Use readr to read in your data (and any supplementary data files you may have)</li>
+<li>Don’t forget to give your chunk a unique and informative name!</li>
+</ul></li>
+<li>Examine your dataset in RStudio. Answer these questions with comments in your read-in chunk
+<ul>
+<li>Is it tidy? Remember that “tidy” means:
+<ul>
+<li>Each column is a single variable</li>
+<li>Each row is a single observation</li>
+<li>Each cell is a single measurement</li>
+</ul></li>
+<li>If not, what data wrangling is necessary to tidy it?</li>
+<li>Which variables, observations, and measurements in your data are absolutely necessary for your plans? Which are (likely) extraneous?</li>
+</ul></li>
+<li>Create (and name!) a code chunk to create an intermediate dataset
+<ul>
+<li>Use 2+ dplyr functions</li>
+<li>Use readr to write your intermediate dataset to a .csv, .xlsx, or other tabular filetype</li>
+</ul></li>
+<li>Examine your new intermediate data file in Excel (or similar)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-january-18-2024-3.2" class="level4">
+<h4 data-anchor-id="thursday-january-18-2024-3.2">Thursday, January 18 2024 (3.2)</h4>
+<section id="pre-class-preparation-3" class="level5">
+<h5 data-anchor-id="pre-class-preparation-3">Pre-class preparation</h5>
+<ul>
+<li>Review the cheatsheets for core tidyverse packages</li>
+<li>Read chapters 5, 14, &amp; 16 (&amp; optionally ch15) in <a href="https://r4ds.hadley.nz/">r4ds</a></li>
+<li>Pull the most recent version of the d2m-2024 repo to try out the tidyverse functions demo code in <code>demo-snippets.R</code>.</li>
+</ul>
+</section>
+<section id="class-meeting-4" class="level5">
+<h5 data-anchor-id="class-meeting-4">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/r8mkp7hj2tyssibhx8tusjly49f37mp6">slides</a></p>
+<ul>
+<li>Lecture: Data Preparation in the Tidyverse</li>
+<li>Assignment: <span style="color:#CB7E45">(7) Mock up a preliminary dataset &amp; start data prep</span></li>
+</ul>
+<div id="w3c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 3 / Class 2 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w3c2readings" aria-expanded="false" aria-controls="w3c2readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w3c2readings" class="accordion-collapse collapse" data-bs-parent="#w3c2">
+<div class="accordion-body">
+<ul>
+<li>Tidyverse cheat sheets:
+<ul>
+<li><a href="https://rstudio.github.io/cheatsheets/html/tidyr.html">tidyr</a></li>
+<li><a href="https://github.com/rstudio/cheatsheets/blob/main/strings.pdf">stringr</a></li>
+<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf">forcats</a></li>
+<li><a href="https://github.com/rstudio/cheatsheets/blob/main/purrr.pdf">purr</a> - <em>advanced, low-priority for D2M</em></li>
+</ul></li>
+<li>R for Data Science:
+<ul>
+<li><a href="https://r4ds.hadley.nz/data-tidy">Chapter 5: Data tidying</a>*</li>
+<li><a href="https://r4ds.hadley.nz/strings">Chapter 14: Strings</a>*</li>
+<li><a href="https://r4ds.hadley.nz/regexps">Chapter 15: Regular expressions</a></li>
+<li><a href="https://r4ds.hadley.nz/factors">Chapter 16: Factors</a>*</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign7" aria-expanded="false" aria-controls="assign7">
+<p>Assignment (7) Mockup preliminary dataset and begin data prep</p>
+</div>
+</div>
+<div id="assign7" class="accordion-collapse collapse" data-bs-parent="#w3c2">
+<div class="accordion-body">
+<ul>
+<li>Conceptualize the dataset you’ll need to create <span style="color:purple">(this is just to get started, not a submission)</span>. Some ideas (not tasks!) to help get you thinking:
+<ul>
+<li>Draw out a couple mock figures you’d like to include and/or articulate your research questions and hypotheses</li>
+<li>How will you need to organize your variables (and within-variable groups) to produce those figures and/or analyses? What data types will your variables need to be? - Does anything that currently looks like string, numeric, or logical data need to be handled as factor?</li>
+</ul></li>
+<li>Mockup a preliminary dataset &amp; begin prep - <strong>PUSH TO YOUR REPO</strong>:
+<ul>
+<li>A tabular mock-up of your ideal data structure. Create this in Excel (or similar) either by manipulating your actual data manually or creating fully mock data
+<ul>
+<li>You <em>can</em> do this in R if you want, but the goal is more to get a solid concept of data structure rather than actually executing the data wrangling</li>
+</ul></li>
+<li>Building on or replacing the code you wrote in assignment (6), create an .R script called <code>data-prep.R</code>:
+<ul>
+<li>Use comments to write out in plain English the prep steps you expect to carry out in order to make your existing data look like your mock-up, including data import, wrangling, and exporting intermediate datasets</li>
+<li>Make note of anything that you know you’ll need to do conceptually but don’t yet know how to execute in R</li>
+<li>Begin to fill in the parts of your data prep you feel comfortable starting, e.g., import/export, filtering/selecting, object assignment</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tuesday-january-23-2024-4.1" class="level4">
+<h4 data-anchor-id="tuesday-january-23-2024-4.1">Tuesday, January 23 2024 (4.1)</h4>
+<section id="pre-class-preparation-4" class="level5">
+<h5 data-anchor-id="pre-class-preparation-4">Pre-class preparation</h5>
+<ul>
+<li><del>No new material this week!</del> We’ll walk through a data-prep demo and work in groups on Assignment (8) (and your own data prep time permitting).
+<ul>
+<li><em>Tiny</em> bit of new material: combining data with binds and joins</li>
+</ul></li>
+<li>Come prepared to make the most of your time by being thoughtful and thorough in completing Thursday’s assignment (7) &amp; having quick access to the tidyverse documentation and cheatsheets from last week</li>
+<li><span style="color:#93A14D">Office hours appointments for the <strong>required</strong> final report planning meetings begin this week and continue through Friday of 7th week (Feb 16).</span> <a href="https://calendar.app.google/HizDvG8gtBpPSGbB9">Book a 20 minute slot here</a>. See box below for more details.</li>
+</ul>
+</section>
+<section id="class-meeting-5" class="level5">
+<h5 data-anchor-id="class-meeting-5">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/j8l0ncmy3im8wx1tpxpsbs9dekrho2uh">slides</a></p>
+<ul>
+<li>Demo: Data Manipulation in the Tidyverse
+<ul>
+<li>Plus super-quick overview of combining data in R</li>
+</ul></li>
+<li>Assignments:
+<ul>
+<li><span style="color:#CB7E45">(8) Recreate this dataset</span></li>
+<li>Continue your data preparation</li>
+</ul></li>
+</ul>
+<div id="w4c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 4 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed finalbox" type="button" data-bs-toggle="collapse" data-bs-target="#meetinginfo" aria-expanded="false" aria-controls="meetinginfo">
+<p>Final project planning 1-on-1 meetings</p>
+</div>
+</div>
+<div id="meetinginfo" class="accordion-collapse collapse" data-bs-parent="#w4c1">
+<div class="accordion-body">
+<ul>
+<li>Office hours appointments for the <strong>required</strong> final report planning meetings begin this week and continue through Friday of 7th week (Feb 16).</li>
+<li><a href="https://calendar.app.google/HizDvG8gtBpPSGbB9">Book a 20 minute slot here</a>. See box below for more details.</li>
+<li>The intention of these meetings is to set clear expectations for your final project, based both on general course requirements and your specific project goals. You should come prepared to discuss your project’s aims and current status, but it is <em>not</em> necessary to bring in any concrete work. Please <a href="https://calendar.app.google/JxXb66xc8mwBmmsp7">sign up for regular office hours</a> outside these appointments if you’d like more hands-on support for your project.</li>
+<li>Note that this appointment schedule includes literally <em>all</em> my availability. Do not delay booking an appointment, as <strong>I will not be able to accommodate requests to meet outside these times.</strong></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign8" aria-expanded="false" aria-controls="assign8">
+<p>Assignment (8) Recreate this dataset</p>
+</div>
+</div>
+<div id="assign8" class="accordion-collapse collapse" data-bs-parent="#w4c1">
+<div class="accordion-body">
+<ul>
+<li>Recreate the modified starwars dataset:
+<ul>
+<li>Copy the file <code>starwars.R</code> in the d2m-2024 repo into your own project repo</li>
+<li>Follow the instructions in the file to import and examine the “goal” tibble</li>
+<li>Manipulate the built-in starwars tibble to create a new object called <code>sw.wrangled</code>
+<ul>
+<li>When you type <code>sw.wrangled</code> into the console, you should see exactly what’s in the image: <code>d2m-2024/images/starwars-goal.png</code></li>
+<li>Don’t forget to check number of rows and column data types</li>
+</ul></li>
+<li>If you can’t figure everything out, add comments explaining what you would like to do but aren’t sure how</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#continueprepping" aria-expanded="false" aria-controls="continueprepping">
+<p>Continue prepping (ungraded)</p>
+</div>
+</div>
+<div id="continueprepping" class="accordion-collapse collapse" data-bs-parent="#w4c1">
+<div class="accordion-body">
+<p>Continue prepping your data! We will finish data wrangling on Thursday. Your data should be fully prepped and ready for analysis and visualization in the tidyverse by Week 5.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-january-25-2024-4.2" class="level4">
+<h4 data-anchor-id="thursday-january-25-2024-4.2">Thursday, January 25 2024 (4.2)</h4>
+<section id="pre-class-preparation-5" class="level5">
+<h5 data-anchor-id="pre-class-preparation-5">Pre-class preparation</h5>
+<ul>
+<li>No new material! Aside from a brief discussion about final projects, the whole class will be time to work on data preparation with support from your group and instructors. Review and adjust your plans from assignment (7) ahead of time to make the best use of your time.</li>
+</ul>
+</section>
+<section id="class-meeting-6" class="level5">
+<h5 data-anchor-id="class-meeting-6">Class meeting</h5>
+<!-- [slides](...) -->
+<ul>
+<li>Brief discussion of final report requirements</li>
+<li>Lab: Data Manipulation in the Tidyverse</li>
+<li>Assignments:
+<ul>
+<li><span style="color:#CB7E45">(9) Finish prepping your data!</span>
+<ul>
+<li>Before your final commit, be sure that your scripts include sufficient and informative comments</li>
+</ul></li>
+<li><span style="color:#CB7E45">(10) Imagine two plots you would like to see of your data. Add comment blocks into your rmd describing (in plain English, not code) what elements will be necessary to create each plot.</span></li>
+</ul></li>
+</ul>
+<div id="w4c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 4 / Class 2 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign9" aria-expanded="false" aria-controls="assign9">
+<p>Assignment (9) Finish prepping your data</p>
+</div>
+</div>
+<div id="assign9" class="accordion-collapse collapse" data-bs-parent="#w4c2">
+<div class="accordion-body">
+<p>Finish preparing your data for analysis and presentation! Use tidyverse tools to create the mock-up data you created in Assignment (7). Be sure your data frames(s) is/are in a tidy, long format. In particular, as you imagine plots you’d like to create in Assignment (10), be sure that any measures you want to include on x or y axes are each in one column and that any groups you might want to compare against each other are in one column</p>
+<p>e.g.: You want to compare number of gestures used by parents and children. Your original <span style="color:red"><em>wide, untidy</em></span> dataset includes 2 measurement columns: <code>parent_gestures</code> and <code>child_gestures</code>. Your <span style="color:green"><em>long, tidy</em></span> has one <code>speaker</code> column with values <code>parent</code> and <code>child</code> and one <code>n_gestures</code> column with the number of gestures produced by that subject at the observation.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign10" aria-expanded="false" aria-controls="assign10">
+<p>Assignment (10) Mock up 2 plots</p>
+</div>
+</div>
+<div id="assign10" class="accordion-collapse collapse" data-bs-parent="#w4c2">
+<div class="accordion-body">
+<ul>
+<li>Mock up 2 plots (of 2 different types) you could include in your final report
+<ul>
+<li>Add code chunks to your .Rmd for each plot and give each a unique, informative name</li>
+<li>Add plain-English comments within your chunks explaining the goal for the plot. To start thinking about this, ask yourself questions like:
+<ul>
+<li>What variables are on the axis/axes?</li>
+<li>What kind of plot is it?</li>
+<li>Will you need to compare across groups?</li>
+<li>What would you anticipate seeing if your hypotheses were borne out in your analyses?</li>
+</ul></li>
+</ul></li>
+<li>Create a visual of each mock-up that render in your .Rmd when you knit. This can be either:
+<ul>
+<li>A first attempt at the ggplot code itself if you are already familiar with ggplot</li>
+<li>.jpg/.gif/.png files created outside R (e.g., in Excel, in MS paint, sketched by hand or on an iPad) and called in the text below the corresponding code chunk using R markdown
+<ul>
+<li>Look back at the slides or the R Markdown cheatsheet if you don’t remember how to insert an image file!</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed finalbox" type="button" data-bs-toggle="collapse" data-bs-target="#meetingsubmission" aria-expanded="false" aria-controls="meetingsubmission">
+<p>Canvas submission for (post-1-on-1-meeting) final report plan</p>
+</div>
+</div>
+<div id="meetingsubmission" class="accordion-collapse collapse" data-bs-parent="#w4c2">
+<div class="accordion-body">
+<ul>
+<li><strong>Due by 5pm Friday Week 7: Feb 16, 2024</strong></li>
+<li>After your report plan meeting with Dr.&nbsp;Dowling, write up a brief summary of what you discussed and submit to the “Report plan” assignment on Canvas. Your write-up should include:
+<ul>
+<li>The specific plans for you analysis, figure, and table chunks</li>
+<li>A general description for how you will distribute the 1500+ words across 4 sections</li>
+<li>At least 2 elements of code produced in code chunks that you can referent in text (e.g., a p-value from the model you run in your analysis chunk, a value within the table you created in the table chunk, a summary value like mean or median that you calculated and stored as a variable)</li>
+<li>2-4 sentences explaining your personal goals for the final report. What do you want to have accomplished or learned by the time you submit your report at the end of the quarter?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="module-3-presentating-data" class="level3">
+<h3 data-anchor-id="module-3-presentating-data">Module 3: Presentating Data</h3>
+<section id="tuesday-january-30-2024-5.1" class="level4">
+<h4 data-anchor-id="tuesday-january-30-2024-5.1">Tuesday, January 30 2024 (5.1)</h4>
+<section id="pre-class-preparation-6" class="level5">
+<h5 data-anchor-id="pre-class-preparation-6">Pre-class preparation</h5>
+<ul>
+<li><span style="color:#93A14D">Remember to book your final report meeting with Dr.&nbsp;Dowling and submit the meeting summary to Canvas (see details in W4C2 box above)</span></li>
+<li>Read chapters on data visualization and ggplot in r4ds: <a href="https://r4ds.hadley.nz/data-visualize">1</a>* and <a href="https://r4ds.hadley.nz/visualize">9, 10, 11</a>*</li>
+<li>Review the <a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf">ggplot2 cheatsheet</a></li>
+</ul>
+</section>
+<section id="class-meeting-7" class="level5">
+<h5 data-anchor-id="class-meeting-7">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/ow2vw25j93csebtuaa8ohh3e0s2ldrl0">slides</a></p>
+<ul>
+<li>Walkthrough of Assignment (8) Recreate this dataset
+<ul>
+<li>Follow along with script in <code>d2m-2024</code> repo</li>
+</ul></li>
+<li>Lecture: Introduction to Data Visualization and ggplot2</li>
+<li>Assignment: <span style="color:#CB7E45">(11) Create basic plots (2 parts: recreate these plots &amp; add 1 plot to .Rmd)</span>
+<ul>
+<li><span style="color:red"><strong>submit BOTH to receive credit for Assignment (11)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+</ul></li>
+</ul>
+<div id="w5c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 5 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w5c1readings" aria-expanded="false" aria-controls="w5c1readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w5c1readings" class="accordion-collapse collapse" data-bs-parent="#w5c1">
+<div class="accordion-body">
+<ul>
+<li>Chapters on data visualization and ggplot in r4ds: <a href="https://r4ds.hadley.nz/data-visualize">1</a>* and <a href="https://r4ds.hadley.nz/visualize">9, 10, 11</a>*</li>
+<li><a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf">ggplot2 cheatsheet</a></li>
+<li><a href="https://ggplot2-book.org/">ggplot2-Book</a> (note: 3e is currently “under construction” but it’s still a great resource!)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign11-1" aria-expanded="false" aria-controls="assign11-1">
+<p>Assignment (11) Part 1: Recreate these plots (basic)</p>
+</div>
+</div>
+<div id="assign11-1" class="accordion-collapse collapse" data-bs-parent="#w5c1">
+<div class="accordion-body">
+<ul>
+<li><span style="color:red"><strong>submit BOTH tasks to receive credit for Assignment (11)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+<li><strong>Part 1: Recreate these plots (basic)</strong>
+<ul>
+<li>In your existing <code>starwars.R</code> file from Assignment (8), replicate the following three plots using dplyr and ggplot2 functions (these can be found in the <code>d2m-2024</code> repo)
+<ul>
+<li><a href="https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign11-plot1.png">Plot 1</a></li>
+<li><a href="https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign11-plot2.png">Plot 2</a></li>
+<li><a href="https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign11-plot3.png">Plot 3</a></li>
+</ul></li>
+<li>You do not need to save these as image files</li>
+<li>If plotting the dataset you created in Assignment (8) isn’t working as expected, reproduce it with the code provided during the class walkthrough</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign11-2" aria-expanded="false" aria-controls="assign11-2">
+<p>Assignment (11) Part 2: Add a plot to your .Rmd</p>
+</div>
+</div>
+<div id="assign11-2" class="accordion-collapse collapse" data-bs-parent="#w5c1">
+<div class="accordion-body">
+<ul>
+<li><span style="color:red"><strong>submit BOTH tasks to receive credit for Assignment (11)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+<li><strong>Part 2: Add a plot to your .Rmd</strong>
+<ul>
+<li>Add code to one chunk created in Assignment (10)</li>
+<li>This can be very basic for now, but should at an absolute minimum contain the appropriate geom layer with correctly specified aesthetics</li>
+<li>Add/edit comments to make note of what you want to do to “fine tune” or “pretty up” your plot (e.g., changing theme, adding labels, changing how axis and legend labels appear, grouping by color, faceting, etc.)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-february-1-2024-5.2" class="level4">
+<h4 data-anchor-id="thursday-february-1-2024-5.2">Thursday, February 1 2024 (5.2)</h4>
+<section id="pre-class-preparation-7" class="level5">
+<h5 data-anchor-id="pre-class-preparation-7">Pre-class preparation</h5>
+<ul>
+<li>Refer to the ggplot2 resources from last class!</li>
+</ul>
+</section>
+<section id="class-meeting-8" class="level5">
+<h5 data-anchor-id="class-meeting-8">Class meeting</h5>
+<!-- [slides](...) -->
+<ul>
+<li><del>Lecture: Aesthetics &amp; Layers</del>
+<ul>
+<li>Going rogue: Messing around with ggplot live on air</li>
+</ul></li>
+<li>Assignment: <span style="color:#CB7E45">(12) Create intermediate plots (2 parts: recreate these plots &amp; add 1 (more) plot to .Rmd)</span>
+<ul>
+<li><span style="color:red"><strong>submit BOTH to receive credit for Assignment (12)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+</ul></li>
+</ul>
+<div id="w5c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 5 / Class 2 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign12-1" aria-expanded="false" aria-controls="assign12-1">
+<p>Assignment (12) Part 1: Recreate these plots (intermediate)</p>
+</div>
+</div>
+<div id="assign12-1" class="accordion-collapse collapse" data-bs-parent="#w5c2">
+<div class="accordion-body">
+<ul>
+<li><span style="color:red"><strong>submit BOTH tasks to receive credit for Assignment (12)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+<li><strong>Part 1: Recreate these plots (intermediate)</strong>
+<ul>
+<li>In your existing <code>starwars.R</code> file from Assignments (8) &amp; (11), replicate the following three plots using dplyr and ggplot2 functions (these can be found in the <code>d2m-2024</code> repo)
+<ul>
+<li><a href="https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign12-plot1.png">Plot 1</a></li>
+<li><a href="https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign12-plot2.png">Plot 2</a></li>
+<li><a href="https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign12-plot3.png">Plot 3</a></li>
+</ul></li>
+<li>You do not need to save these as image files</li>
+<li>If plotting the dataset you created in Assignment (8) isn’t working as expected, reproduce it with the code provided during the class walkthrough</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign12-2" aria-expanded="false" aria-controls="assign12-2">
+<p>Assignment (12) Part 2: Tune up your plot and add another to your .Rmd</p>
+</div>
+</div>
+<div id="assign12-2" class="accordion-collapse collapse" data-bs-parent="#w5c2">
+<div class="accordion-body">
+<ul>
+<li><span style="color:red"><strong>submit BOTH tasks to receive credit for Assignment (12)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+<li><strong>Part 2: Tune up your plot and add another to your .Rmd</strong>
+<ul>
+<li>Tune up the plot you made in Assignment (11), for example think about:
+<ul>
+<li>Did you use the best kind of plot to tell the story you’re hoping to tell?</li>
+<li>Did you have to do some wonky wrangling to plot what you wanted?</li>
+<li>Are there adjustments you could make to scale, coord, or labs layers that would make things easier to read?</li>
+<li>Are you effectively making use of groups? Could you communicate your point better by grouping in a different way (e.g., color, shape, fill, facet)? Add code to one chunk created in Assignment (10)</li>
+<li>Add/edit comments to make note of what you want to do to make your plot “pretty” like customizing colors or fonts, tweaking the theme, or relabeling in the legend</li>
+</ul></li>
+<li>Add in the second plot you planned in Assignment (10). At a minimum, replicate what you did in Assignment (11) for the first plot. Add some “tune-ups” if you can!</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tuesday-february-6-2024-6.1" class="level4">
+<h4 data-anchor-id="tuesday-february-6-2024-6.1">Tuesday, February 6 2024 (6.1)</h4>
+<section id="pre-class-preparation-8" class="level5">
+<h5 data-anchor-id="pre-class-preparation-8">Pre-class preparation</h5>
+<ul>
+<li>Refer to the ggplot2 resources from last week</li>
+<li>Read up on ggplot theme layer customization in the <a href="https://ggplot2.tidyverse.org/reference/theme.html">documentation</a> and <a href="https://ggplot2-book.org/themes">ggplot2-book</a>
+<ul>
+<li>These are going to be essential references when you do Assignment (13)!</li>
+</ul></li>
+<li><span style="color:#93A14D">If you haven’t signed up for a report meeting, <strong>do that right now.</strong></span> Slots are filling up fast, and report meeting slots during week 7 are competing with MAPSS pre-registration meeting slots. <strong>I cannot meet outside the listed appointment times.</strong> <span style="color:red">Failing to meet with me for a report meeting will result in an automatic 10 points off your final report grade.</span></li>
+</ul>
+</section>
+<section id="class-meeting-9" class="level5">
+<h5 data-anchor-id="class-meeting-9">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/t454rysbdmghmto3uozclx1y4egsn4rc">slides</a></p>
+<ul>
+<li>Lecture: “Pretty Plots” &amp; .Rmd Figure Chunks</li>
+<li>Assignment: <span style="color:#CB7E45">(13) Create advanced plots (2 parts: recreate this hideous plot &amp; tune up your own plots</span>
+<ul>
+<li><span style="color:red"><strong>submit BOTH to receive credit for Assignment (13)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+</ul></li>
+</ul>
+<div id="w6c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 6 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w6c1readings" aria-expanded="false" aria-controls="w6c1readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w6c1readings" class="accordion-collapse collapse" data-bs-parent="#w6c1">
+<div class="accordion-body">
+<ul>
+<li>ggplot theme layer customization:
+<ul>
+<li><a href="https://ggplot2.tidyverse.org/reference/theme.html">documentation</a></li>
+<li><a href="https://ggplot2-book.org/themes">ggplot2-book</a>*</li>
+</ul></li>
+<li>From last week:
+<ul>
+<li>Chapters on data visualization and ggplot in r4ds: <a href="https://r4ds.hadley.nz/data-visualize">1</a>* and <a href="https://r4ds.hadley.nz/visualize">9, 10, 11</a>*</li>
+<li><a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf">ggplot2 cheatsheet</a></li>
+<li><a href="https://ggplot2-book.org/">ggplot2-Book</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign13-1" aria-expanded="false" aria-controls="assign13-1">
+<p>Assignment (13) Part 1: Recreate this plot (advanced &amp; terrible)</p>
+</div>
+</div>
+<div id="assign13-1" class="accordion-collapse collapse" data-bs-parent="#w6c1">
+<div class="accordion-body">
+<ul>
+<li><span style="color:red"><strong>submit BOTH tasks to receive credit for Assignment (13)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+<li><strong>Part 1: Recreate this plot</strong>
+<ul>
+<li>In your existing <code>starwars.R</code> file from Assignments (8), (11), &amp; (12), replicate this using dplyr and ggplot2 functions (these can be found in the <code>d2m-2024</code> repo)
+<ul>
+<li><a href="https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign13.png">Plot 1</a></li>
+</ul></li>
+<li>You do not need to save this as an image file</li>
+<li>If plotting the dataset you created in Assignment (8) isn’t working as expected, reproduce it with the code provided during the class walkthrough</li>
+<li><span style="color:red">There’s a <strong>lot</strong> going on visually in this plot.</span> Start by creating a base plot with just the required <code>aes()</code> mappings and geoms, then making a commented list of all the different modifications you can spot, whether or not you have any idea how to replicate them. Some hints:
+<ul>
+<li>You’ll need 13 elements in your <code>theme()</code> layer <em>after</em> setting one of the built-in themes</li>
+<li>Install, load, and investigate the <code>ggsci</code> package to choose a scale layer</li>
+<li>Look for a list of “web-safe font families” to find the right fonts</li>
+<li>Neither the <code>limits</code> nor <code>breaks</code> arguments are required in your axis scales</li>
+<li>Remember that facet text can’t be modified in the <code>labs()</code> layer</li>
+<li>You can use a color selector (i.e., eye-dropper) tool <a href="https://get-color.com/image/">like this one</a> to identify precise colors
+<ul>
+<li>If something doesn’t look right even with the precise hex code, it could be an effect of transparency (“alpha”) somewhere along the way</li>
+</ul></li>
+</ul></li>
+<li>Try to match as much as you can, but don’t let it drive you crazy. Set a timer to keep working, then add/edit comments to describe what is still left to be done. Your completion grade is going to be based on putting in a good-faith effort, <em>not</em> getting a perfect replication</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign13-2" aria-expanded="false" aria-controls="assign13-2">
+<p>Assignment (13) Part 2: Tune up your plots &amp; .Rmd code chunks</p>
+</div>
+</div>
+<div id="assign13-2" class="accordion-collapse collapse" data-bs-parent="#w6c1">
+<div class="accordion-body">
+<ul>
+<li><span style="color:red"><strong>submit BOTH tasks to receive credit for Assignment (13)!</strong></span> Commit your final submission of both at the same time in just one commit</li>
+<li><strong>Part 2: Tune up your plots &amp; .Rmd code chunks</strong>
+<ul>
+<li>Tune up the plots you made in Assignments (11) &amp; (12), for example think about:
+<ul>
+<li>Did you use the best kind of plot to tell the story you’re hoping to tell?</li>
+<li>Did you have to do some wonky wrangling to plot what you wanted?</li>
+<li>Are there adjustments you could make to scale, coord, or labs layers that would make things easier to read?</li>
+<li>Are you effectively making use of groups? Could you communicate your point better by grouping in a different way (e.g., color, shape, fill, facet)?</li>
+</ul></li>
+<li>“Prettify” your plots with <code>scale_*()</code>, <code>theme()</code>, and <code>labs()</code> layers, as well as “aesthetic” non-aesthetics (i.e., visual attributes outside the <code>aes()</code> and so not mapped to your data)</li>
+<li>Use code chunks in your .Rmd to render publication-ready plots when knit that:
+<ul>
+<li>Are in their own uniquely named chunks</li>
+<li>Have a caption defined and referenced in the chunk’s fig.cap option</li>
+<li>Include appropriate and reader-friendly labels and text (no inscrutable axis or level names!)</li>
+<li>Include a theme layer with 1+ customized element (e.g., font, legend placement, background color)</li>
+</ul></li>
+<li><strong>Bonus:</strong> Add a chunk that reads in one image file, like a photo, diagram, or saved ggplot
+<ul>
+<li>Give it a chunk caption just like with your plot chunks</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-february-8-2024-6.2" class="level4">
+<h4 data-anchor-id="thursday-february-8-2024-6.2">Thursday, February 8 2024 (6.2)</h4>
+<section id="pre-class-preparation-9" class="level5">
+<h5 data-anchor-id="pre-class-preparation-9">Pre-class preparation</h5>
+<p><!-- - Task --></p>
+</section>
+<section id="class-meeting-10" class="level5">
+<h5 data-anchor-id="class-meeting-10">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/ujiftsbxroa2ha5rxn3nstsoqdt8n0c4">slides</a></p>
+<ul>
+<li>Lecture: Tables &amp; Kables</li>
+<li>Assignment:
+<ul>
+<li><del>Recreate this kable</del></li>
+<li><span style="color:#CB7E45">(14) Add a table/kable to your .Rmd</span></li>
+</ul></li>
+</ul>
+<div id="w6c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 6 / Class 2 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign14" aria-expanded="false" aria-controls="assign14">
+<p>Assignment (14) Add a table/kable and references to your .Rmd</p>
+</div>
+</div>
+<div id="assign14" class="accordion-collapse collapse" data-bs-parent="#w6c2">
+<div class="accordion-body">
+<ul>
+<li>Add a table/kable chunk to your .Rmd. Include:
+<ul>
+<li>A unique chunk name</li>
+<li>An informative caption</li>
+<li>Reader-friendly column names</li>
+<li>At least 3 style modifications, for example (but not limited to):
+<ul>
+<li>grouped header rows</li>
+<li>font or color changes</li>
+<li>table alignment or positioning</li>
+<li>scaled table size</li>
+</ul></li>
+</ul></li>
+<li>Reference your table <strong>and both your figures</strong> from your recent assignments in the text of your .Rmd. Be sure that when you knit the document you see the figures numbered in the order you expect.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tuesday-february-13-2024-7.1" class="level4">
+<h4 data-anchor-id="tuesday-february-13-2024-7.1">Tuesday, February 13 2024 (7.1)</h4>
+<section id="pre-class-preparation-10" class="level5">
+<h5 data-anchor-id="pre-class-preparation-10">Pre-class preparation</h5>
+<ul>
+<li><span style="color:#CB7E45">(15) Imagine (at least) two analyses you would like to run with your data, including 1+ descriptive analysis and 1+ hypothesis testing analysis. Add comment blocks into your rmd describing (in plain English, not code) the analyses you intend to run, for example listing the independent and dependent variables, explaining your hypothesized results, and identifying precisely which tests are appropriate.</span>
+<ul>
+<li>This is a good place to check in with your co-authors or advisor before moving forward!</li>
+</ul></li>
+<li><strong><span style="color:#93A14D">REMINDER: You must meet with Dr.&nbsp;Dowling by the end of this week (i.e., before end of day Friday, February 16th) to negotiate your plan for the scientific report assignment, which is due on Tuesday of Finals Week.</span></strong>
+<ul>
+<li>Don’t delay! More than 25 of these meetings need to happen; don’t count on available meeting times at the end of 7th week. You can sign up for office hours any time in weeks 5-7 to make your report plan. Extra slots will be added to my office hours sign-up schedule for these weeks. Look out for a Canvas announcement sometime in week 3 or 4 for when those times are posted.</li>
+<li><span style="color:red">Failing to meet with me for a report meeting will result in an automatic 10 points off your final report grade.</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="class-meeting-11" class="level5">
+<h5 data-anchor-id="class-meeting-11">Class meeting</h5>
+<!-- [slides](...) -->
+<p><strong>No slides this week! Demo only.</strong></p>
+<ul>
+<li>Demo: Data Analysis Part 1
+<ul>
+<li>Refer to <code>stats-demo.Rmd</code> in the <code>d2m-2024</code> repo</li>
+</ul></li>
+<li>Assignment: <span style="color:#CB7E45">(16) Add 2 analysis chunks - 1 descriptive, 1 hypothesis testing</span>
+<ul>
+<li>And complete Assignment (15) in the pre-class prep if you didn’t before class!</li>
+</ul></li>
+</ul>
+<div id="w7c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 7 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w7c1readings" aria-expanded="false" aria-controls="w7c1readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w7c1readings" class="accordion-collapse collapse" data-bs-parent="#w7c1">
+<div class="accordion-body">
+<ul>
+<li><a href="https://frederikaust.com/papaja_man/reporting.html">Reporting analyses in papaja</a>
+<ul>
+<li>how to use in-line code references effectively</li>
+</ul></li>
+<li><a href="https://statsandr.com/">Stats and R</a>
+<ul>
+<li><a href="https://statsandr.com/blog/correlogram-in-r-how-to-highlight-the-most-correlated-variables-in-a-dataset/">Correlogram in R: how to highlight the most correlated variables in a dataset</a></li>
+<li><a href="https://statsandr.com/blog/correlation-coefficient-and-correlation-test-in-r/">Correlation coefficient and correlation test in R</a></li>
+<li><a href="https://statsandr.com/blog/what-statistical-test-should-i-do/">What statistical test should I do?</a>
+<ul>
+<li>With a much bigger and better flowchart than mine!!</li>
+</ul></li>
+<li><a href="https://statsandr.com/blog/descriptive-statistics-in-r/">Descriptive statistics in R</a></li>
+</ul></li>
+<li><a href="https://rpsystats.com/">A Practical Extension of Introductory Statistics in Psychology using R</a>
+<ul>
+<li>Ch 6 Correlation</li>
+<li>Ch 7 One-sample t-test</li>
+<li>Ch 8 Dependent samples t-test</li>
+<li>Ch 9 Independent samples t-test</li>
+</ul></li>
+<li><a href="https://open.umn.edu/opentextbooks/textbooks/559">Learning Statistics with R</a>
+<ul>
+<li>Ch 5 Descriptive Statistics</li>
+<li>Ch 13 Comparing two means</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign15" aria-expanded="false" aria-controls="assign15">
+<p>Assignment (15) <strong>Pre-class Preparation</strong> add chunks for planned analyses</p>
+</div>
+</div>
+<div id="assign15" class="accordion-collapse collapse" data-bs-parent="#w7c1">
+<div class="accordion-body">
+<p>Imagine (at least) two analyses you would like to run with your data, including 1+ descriptive analysis and 1+ hypothesis testing analysis. Add comment blocks into your rmd describing (in plain English, not code) the analyses you intend to run, for example listing the independent and dependent variables, explaining your hypothesized results, and identifying precisely which tests are appropriate.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign16" aria-expanded="false" aria-controls="assign16">
+<p>Assignment (16) Add 2 analyses</p>
+</div>
+</div>
+<div id="assign16" class="accordion-collapse collapse" data-bs-parent="#w7c1">
+<div class="accordion-body">
+<ul>
+<li>Based on your plans from Assignment (15) (go complete that if you haven’t already!) fill in your planning chunks with basic analyses
+<ul>
+<li>One chunk should include descriptive statistics and another should include a hypothesis test
+<ul>
+<li>More than one of either or both works too! Just make sure you have at least one of each</li>
+</ul></li>
+<li>For anything we covered in class today (descriptives and basic hypothesis testing), create as complete and polished code as possible</li>
+<li>For anything more advanced, explore the <code>psych</code>, <code>lme4</code>, and <code>stats</code> packages and give it your best shot based on the info you can find. You’ll clean it up after Thursday’s class.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-february-15-2024-7.2" class="level4">
+<h4 data-anchor-id="thursday-february-15-2024-7.2">Thursday, February 15 2024 (7.2)</h4>
+<section id="pre-class-preparation-11" class="level5">
+<h5 data-anchor-id="pre-class-preparation-11">Pre-class preparation</h5>
+<p><!-- - Task --></p>
+</section>
+<section id="class-meeting-12" class="level5">
+<h5 data-anchor-id="class-meeting-12">Class meeting</h5>
+<!-- [slides](...) -->
+<p><strong>No slides this week! Demo only.</strong></p>
+<ul>
+<li>Demo: Data Analysis Part 2</li>
+<li>Assignment: <span style="color:#CB7E45">(17) Create a partial draft of methods/results with 5 in-line code references</span></li>
+</ul>
+<div id="w7c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 7 / Class 2 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w7c2readings" aria-expanded="false" aria-controls="w7c2readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w7c2readings" class="accordion-collapse collapse" data-bs-parent="#w7c2">
+<div class="accordion-body">
+<ul>
+<li><a href="https://statsandr.com/">Stats and R</a>
+<ul>
+<li><a href="https://statsandr.com/blog/anova-in-r/">ANOVA in R</a></li>
+<li><a href="https://statsandr.com/blog/multiple-linear-regression-made-simple/">Multiple linear regression made simple</a></li>
+<li><a href="https://statsandr.com/blog/binary-logistic-regression-in-r/">Binary logistic regression in R</a></li>
+<li><a href="https://statsandr.com/blog/chi-square-test-of-independence-in-r/">Chi-square test of independence in R</a></li>
+</ul></li>
+<li><a href="https://rpsystats.com/">A Practical Extension of Introductory Statistics in Psychology using R</a>
+<ul>
+<li>Ch 5 Simple Linear Regression</li>
+<li>Ch 10 One-way ANOVA</li>
+<li>Ch 12 GLM Approach Summary</li>
+</ul></li>
+<li><a href="https://open.umn.edu/opentextbooks/textbooks/559">Learning Statistics with R</a>
+<ul>
+<li>Ch 12 Categorical data analysis</li>
+<li>Ch 14 Comparing several means (1-way ANOVA)</li>
+<li>Ch 15 Linear regression</li>
+</ul></li>
+<li><a href="https://journals.sagepub.com/doi/full/10.1177/2515245920960351">Brown VA. (2021) An Introduction to Linear Mixed-Effects Modeling in R</a>. <em>Advances in Methods and Practices in Psychological Science.</em></li>
+<li>Linear &amp; Mixed-effects model tutorials
+<ul>
+<li><a href="http://arxiv.org/pdf/1308.5499.pdf">lme4 Tutorial 1: Linear models and linear mixed effects models in R with linguistic applications.</a></li>
+<li><a href="https://jontalle.web.engr.illinois.edu/MISC/lme4/bw_LME_tutorial.pdf">lme4 Tutorial 2: A very basic tutorial for performing linear mixed effects analyses</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign17" aria-expanded="false" aria-controls="assign17">
+<p>Assignment (17) Create a partial draft of methods/results with 5 in-line code references</p>
+</div>
+</div>
+<div id="assign17" class="accordion-collapse collapse" data-bs-parent="#w7c2">
+<div class="accordion-body">
+<ul>
+<li>Complete the code chunks for the two analysis chunks you have been working on in Assignments (15) and (16)</li>
+<li>In the narrative of your R Markdown manuscript, include at least <em>5</em> in-line code references
+<ul>
+<li>By “in-line code” I mean using R Markdown to interpret some text <em>outside of a code chunk</em> as R code, so that it runs it as code and displays the resulting output as fully in-line in your regular old text
+<ul>
+<li>Look at the <code>stats-demo.Rmd</code> file in the <code>d2m-2024</code> repo for lots of examples! Anything that starts with <code>r</code> is what I mean here.</li>
+<li>Remember that just using backticks without the <code>r</code> is just formatting, not code. (Everything on this page that looks like code in monospaced font is done that way.)</li>
+</ul></li>
+<li>At least 1 of these in-line code refs should “do something.” In other words, it should be more than just a value reference; it should include a function.
+<ul>
+<li>Examples of value calls:
+<ul>
+<li><code>`r knitr::inline_expr("model$p.value")`</code></li>
+<li><code>`r knitr::inline_expr("median_mpg")`</code></li>
+<li><code>`r knitr::inline_expr('mass_height_corr3$ci2[["r"]]')`</code></li>
+</ul></li>
+<li>Examples of in-line function code:
+<ul>
+<li><code>`r knitr::inline_expr("apa_p(model$p.value)")`</code></li>
+<li><code>`r knitr::inline_expr("nrow(filter(mtcars, mpg &gt; median(mpg)))")`</code></li>
+<li><code>`r knitr::inline_expr('round(mass_height_corr3$ci2[["r"]], 3)')`</code></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="module-4-creating-a-manuscript" class="level3">
+<h3 data-anchor-id="module-4-creating-a-manuscript">Module 4: Creating a Manuscript</h3>
+<section id="tuesday-february-20-2024-8.1" class="level4">
+<h4 data-anchor-id="tuesday-february-20-2024-8.1">Tuesday, February 20 2024 (8.1)</h4>
+<section id="pre-class-preparation-12" class="level5">
+<h5 data-anchor-id="pre-class-preparation-12">Pre-class preparation</h5>
+<ul>
+<li>Review the readings &amp; references box below to get a head start installing Zotero, Better BibTeX, and the <code>citr</code> package.</li>
+<li>Pull the most recent version of the <code>d2m-2024</code> repo and browse the <code>bibtex-demo</code> directory.</li>
+</ul>
+</section>
+<section id="class-meeting-13" class="level5">
+<h5 data-anchor-id="class-meeting-13">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/s5nasc2j64n45k5fpehlprq2pynz7gsa">slides</a></p>
+<ul>
+<li>Lecture: BibTeX References, citr, &amp; Zotero</li>
+<li>Workshop: Set up your ideal citation enviornment and start citing</li>
+<li>Assignment: <span style="color:#CB7E45">(18) Create a .bib file with 5+ references</span></li>
+</ul>
+<div id="w8c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 8 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed prepbox" type="button" data-bs-toggle="collapse" data-bs-target="#w8c1readings" aria-expanded="false" aria-controls="w8c1readings">
+<p>Readings &amp; resources</p>
+</div>
+</div>
+<div id="w8c1readings" class="accordion-collapse collapse" data-bs-parent="#w8c1">
+<div class="accordion-body">
+<ul>
+<li>Downloads:
+<ul>
+<li><a href="https://www.zotero.org/">Zotero citation manager</a></li>
+<li><a href="https://github.com/crsh/citr">citr</a> R package/add-on
+<ul>
+<li>Note: current version cannot be installed with CRAN, follow their instructions to install from GitHub</li>
+</ul></li>
+<li><a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> Zotero extension/add-on</li>
+</ul></li>
+<li>Reference:
+<ul>
+<li><a href="https://frederikaust.com/papaja_man/writing.html">Citations in papaja</a></li>
+<li><a href="https://bibtex.eu/rmarkdown/">R Mardown &amp; BibTeX</a></li>
+<li>Reproducible Research in R <a href="https://monashdatafluency.github.io/r-rep-res/citations.html">Ch10: Citations</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign18" aria-expanded="false" aria-controls="assign18">
+<p>Assignment (18) Create a .bib file and add 5+ in-text BibTeX citations</p>
+</div>
+</div>
+<div id="assign18" class="accordion-collapse collapse" data-bs-parent="#w8c1">
+<div class="accordion-body">
+<ul>
+<li>Finish downloading and setting up Zotero, Better BibTeX, and the <code>citr</code> package add-on</li>
+<li>Create a .bib file
+<ul>
+<li>Since you’ve been working in a papaja document all quarter, it’s likely a .bib file was automatically generated or that you made a blank one so that your .Rmd would knit properly. If so, you can continue to use that one or create a new one, just make sure it is named appropriately and referenced correctly in the .Rmd where needed</li>
+<li>Use the papaja default (<code>r-references.bib</code>) or give it some other sensible name</li>
+</ul></li>
+<li>Add 5+ relevant references for your manuscript
+<ul>
+<li>Try to do different entry types if you can (journal article, book, book chapter, conference paper, etc.)</li>
+<li><em>Already wrote a lit review for your project/proposal?</em> Great! You don’t need to rewrite it. You can copy and paste your existing work into your RMarkdown notebook, edit formatting as needed, and then swap out the in-text citations you wrote out manually for dynamic bibtex references</li>
+</ul></li>
+<li>Knit your .Rmd to .pdf and confirm that the citations render as expected
+<ul>
+<li>Error messages? Add/edit/check the name of your .bib file in the YAML header</li>
+<li>Unexpected formatting?
+<ul>
+<li>Check your .bib file to see if the problem is in that file (in which case, correct it)</li>
+<li>If not, debug by pinpointing the problem and following the troubleshooting guidelines from W2</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-february-22-2024-8.2" class="level4">
+<h4 data-anchor-id="thursday-february-22-2024-8.2">Thursday, February 22 2024 (8.2)</h4>
+<section id="pre-class-preparation-13" class="level5">
+<h5 data-anchor-id="pre-class-preparation-13">Pre-class preparation</h5>
+<p>Come to class with all your BibTeX tools from last class installed and fully functional! Troubleshoot any knitting issues with Assignment (18) before the beginning of class.</p>
+</section>
+<section id="class-meeting-14" class="level5">
+<h5 data-anchor-id="class-meeting-14">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/s5nasc2j64n45k5fpehlprq2pynz7gsa">slides</a> - same slides as last class</p>
+<ul>
+<li>Lecture: BibTeX References, citr, &amp; Zotero (continued)</li>
+<li>Assignment: <span style="color:#CB7E45">(19) Add 10+ in-text references to your manuscript in at least 3 different formats</span></li>
+</ul>
+<div id="w8c2" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 8 / Class 2 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign19" aria-expanded="false" aria-controls="assign19">
+<p>Assignment (19) Add 10+ in-text references to your manuscript in at least 3 different formats</p>
+</div>
+</div>
+<div id="assign19" class="accordion-collapse collapse" data-bs-parent="#w8c2">
+<div class="accordion-body">
+<p>Building on Assignment (18), continue adding BibTeX references to your literature review (or anywhere in your narrative text). Your repo should now include (among other things):</p>
+<ul>
+<li>A .bib file with at least 10 BibTeX entries
+<ul>
+<li>With at least 3 different source types (e.g., article, book, conference paper, policy memo, etc.)</li>
+</ul></li>
+<li>A papaja .Rmd with at least 10 in-text bibtex references
+<ul>
+<li>With at least 3 different formats (e.g., adding extra text, using year only, including chapters, etc.)</li>
+<li>You can rewrite or remove unnecessary extra formats later for your final project, but use them in this assignment for the sake of practice</li>
+</ul></li>
+<li>A .pdf file created when you knit your papaja notebook rendering all bibtex references error free
+<ul>
+<li>Everything is correctly APA formatted both in the text (e.g., alphabetical order, no random text, last names only, etc.) and the entries in the references section</li>
+<li>There are no formatting or input errors in the bibtex entries (e.g., broken special characters, incorrect capitalization, missing or misattributed fields, etc.)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tuesday-february-27-2024-9.1" class="level4">
+<h4 data-anchor-id="tuesday-february-27-2024-9.1">Tuesday, February 27 2024 (9.1)</h4>
+<section id="pre-class-preparation-14" class="level5">
+<h5 data-anchor-id="pre-class-preparation-14">Pre-class preparation</h5>
+<p><!-- - Task --></p>
+</section>
+<section id="class-meeting-15" class="level5">
+<h5 data-anchor-id="class-meeting-15">Class meeting</h5>
+<p><a href="https://uchicago.box.com/s/bcvfp539b84n2wnvupe2tcdntg2d5nyv">slides</a></p>
+<ul>
+<li>Housekeeping: Final reports, self-evaluation, last class planning</li>
+<li>Lecture: Putting it Together</li>
+<li>Assignment:
+<ul>
+<li><span style="color:#CB7E45">(20) Clean up your repo &amp; revise your .README as needed</span></li>
+<li>Revise your .Rmd (if needed) to include required elements</li>
+</ul></li>
+</ul>
+<div id="w9c1" class="accordion">
+<div class="accordion-item">
+<div class="accordion-header titlebox">
+<p>Week 9 / Class 1 Details</p>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed infobox" type="button" data-bs-toggle="collapse" data-bs-target="#finaltasks" aria-expanded="false" aria-controls="finaltasks">
+<p>Final tasks</p>
+</div>
+</div>
+<div id="finaltasks" class="accordion-collapse collapse" data-bs-parent="#w9c1">
+<div class="accordion-body">
+<ul>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLScZvslwBw7kTwkSlsmwv-IyPHJ5_j7pnYLFgKfZG0tgTKEfFQ/viewform">Tell me what you’d like to do with our next and last class meeting.</a></li>
+<li><a href="https://forms.gle/9SEpmVrNFffbUD5t8">Share your anonymous feedback about this class</a> to make it better for future students</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<div class="accordion-header">
+<div class="accordion-button collapsed assignbox" type="button" data-bs-toggle="collapse" data-bs-target="#assign20" aria-expanded="false" aria-controls="assign20">
+<p>Assignment (20) Clean up your repo &amp; update your .Rmd</p>
+</div>
+</div>
+<div id="assign20" class="accordion-collapse collapse" data-bs-parent="#w9c1">
+<div class="accordion-body">
+<ul>
+<li>Clean up your repo
+<ul>
+<li>Revise your README to reflect the current state of the project:
+<ul>
+<li>Narrative description of project purpose, may include project abstract</li>
+<li>Representation of current directory structure</li>
+</ul></li>
+<li>Remove or archive old files (add to .gitignore as needed)</li>
+<li>Review and update your .gitignore</li>
+</ul></li>
+<li>Revise your .Rmd so that it knit to PDF without errors and minimally includes:
+<ul>
+<li>1 table</li>
+<li>1 figure</li>
+<li>1 extracted value reference</li>
+<li>1 in-line function (or math)</li>
+<li>10 bibtex citations</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thursday-february-29-2024-9.2" class="level4">
+<h4 data-anchor-id="thursday-february-29-2024-9.2">Thursday, February 29 2024 (9.2)</h4>
+<section id="pre-class-preparation-15" class="level5">
+<h5 data-anchor-id="pre-class-preparation-15">Pre-class preparation</h5>
+<p><!-- - Task --></p>
+</section>
+<section id="class-meeting-16" class="level5">
+<h5 data-anchor-id="class-meeting-16">Class meeting</h5>
+<!-- [slides](...) -->
+<ul>
+<li>Lecture: Polishing &amp; Publishing</li>
+<li>Assignment: <span style="color:#93A14D">Final reports due next week!</span></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="final-report-participation-self-assessment" class="level3">
+<h3 data-anchor-id="final-report-participation-self-assessment">Final report &amp; participation self-assessment</h3>
+<section id="tuesday-march-5-2024" class="level4">
+<h4 data-anchor-id="tuesday-march-5-2024">Tuesday, March 5 2024</h4>
+<p><span style="color:#93A14D">Scientific report due. Push all materials to GitHub <strong>AND</strong> submit a .pdf (.doc acceptable if you absolutely insist) of your knit report to Canvas.</span></p>
+<p><span style="color:purple">Participation self-assessments due, submitted via Canvas.</span></p>
+</section>
+</section>
+</section>
+<section id="course-policies" class="level2">
+<h2 data-anchor-id="course-policies">Course policies</h2>
+<section id="accessibility-and-accommodation" class="level3">
+<h3 data-anchor-id="accessibility-and-accommodation">Accessibility and Accommodation</h3>
+<p>I am committed to making this course accessible to students of all backgrounds, identities, and abilities. If there are circumstances that make aspects of this course difficult for you to access, please contact me so we can discuss how to accommodate your needs. This includes, but is not limited to, accommodations around the format of course materials, the use of Canvas and other digital resources, the classroom and other physical resources, and the structure of assignments.</p>
+<p>I will work with you to create an accessible learning environment whether or not you disclose your disability or personal circumstances. If you choose to disclose personal information with me, I will keep those discussions confidential. For certain accommodations you may need to contact Student Disability Services at (773) 702-6000 or disabilities@uchicago.edu. If you have a documented disability (or think you may have a disability) and, as a result, need a reasonable accommodation to participate in class, complete course requirements, or benefit from the University’s programs or services, I encourage you to contact Student Disability Services.</p>
+</section>
+<section id="diversity-inclusion-and-community" class="level3">
+<h3 data-anchor-id="diversity-inclusion-and-community">Diversity, Inclusion, and Community</h3>
+<p>We will commit as a class to creating a welcoming, respectful, and productive classroom. We will expect each other to be mutually respectful of our meaningful identities. I expect that when we engage with each other in discussion we are considerate of the diversity of our classroom with regards to gender, sexuality, disability, race, ethnicity, religion, socioeconomic status, immigration status, and language. It is critical that we maintain respectful dialogue in the classroom, which includes using correct names and pronouns. If a member of our community – including myself – is creating an unwelcome space for you, I hope you will bring this to my attention immediately.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

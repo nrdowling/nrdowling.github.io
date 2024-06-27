@@ -1,0 +1,49 @@
+
+
+::: {.card .class-card-active  .equal-height}
+::: card-header
+### <i class="bi bi-arrow-right-circle-fill"></i> WINTER 2024 
+:::
+
+#### From Data to Manuscript in R (D2M) {.card-title}
+#####  CHDV 20550/30550, MACS 30550, MAPS 30550, PSYC 20550/30550 {.card-subtitle}
+
+![](cards/d2m-banner.svg){.class-banner fig-alt="Grid of logos for tidyverse and other R packages."}
+
+::: {.card-body style="margin-top: 0px;"}
+
+::: {.content-narrow style="margin-top:-1rem;"}
+### Course description {#course-summary}
+:::
+
+::: {.card-text .overflow-y-scroll .content-narrow .class-scroller}
+
+This course tackles the basic skills needed to build an integrated research report with the R programming language. We will cover every step from data to manuscript including: Using R’s libraries to clean up and re-format messy datasets, preparing data sets for analysis, running statistical tools, generating clear and attractive figures and tables, and knitting those bits of code together with your manuscript writing. The result will be a reproducible, open-science friendly report that you can easily update after finishing data collection or receiving comments from readers. Never copy-paste your way through a table again! The R universe is large, so this course will focus specifically on: The core R libraries, the tidyverse library, and R Markdown. Students will also learn about the use of GitHub for version control.
+
+:::
+:::
+
+::: {.list-group .list-group-flush}
+
+::: list-group-item
+Graduate, undergraduate
+:::
+::: list-group-item
+Elective lecture & workshop; MAPSS methods
+:::
+::: list-group-item
+Data wrangling, R language, quantitative methods, open science
+:::
+:::
+
+::: {.card-body .content-narrow style="text-align: center;"}
+[Catalog](http://collegecatalog.uchicago.edu/thecollege/search/?caturl=%2Fthecollege&P=data+to+manuscript+in+r){.card-link .badge}
+[Syllabus](../d2m.qmd){.card-link .badge}
+:::
+
+::: {.card-footer}
+<span style="font-weight:200;">Upcoming: Winter 2025 <br>
+Concluded: Winter 2023, Winter 2024</span>
+:::
+:::
+

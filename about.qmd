@@ -1,0 +1,177 @@
+---
+title: "About Natalie"
+toc: false
+---
+
+A lifelong love of language inspired me to major in linguistics. In my time as an undergraduate at the University of Chicago however, I realized that what I was really fascinated with was the remarkable and innumerable ways human beings effortlessly communicate with one another — with or without language. For my PhD, I worked with Dr. Susan Goldin-Meadow and Dr. Marisa Casillas in UChicago’s department of Comparative Human Development, allowing me to craft an interdisciplinary approach to my research. I borrow from psychology, linguistics, cognitive science, and sociology to study the development of pragmatics as a social, interactive and contextualized phenomenon that continues to change in form and function from infancy to adulthood.
+
+### But I'm also a real person!
+
+I do other stuff outside of work, like playing video games, bingeing[^2] Dropout, and taking on far too ambitious baking and knitting projects.
+
+For the first ~18 years of my life I thought I was going to be a professional ballet dancer. Tragically [I had neither the feet nor the heart](https://youtu.be/-5nvARS2bus?si=jLyIfEqgYVy5ROdx&t=258). I stayed very involved in college just for fun, and I still teach class from time to time.
+
+::: {#balletGallery .container-gallery}
+
+::: {.popup .popup-1}
+![](images/about/ballet4.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-2}
+![](images/about/ballet2.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-3}
+![](images/about/ballet3.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-4}
+![](images/about/ballet5-cat.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-5}
+![](images/about/ballet1.jpeg){.img-responsive}
+:::
+
+:::
+
+I bake cool stuff.
+
+
+::: {#bakingGallery .container-gallery}
+
+::: {.popup .popup-1}
+![](images/about/bake4.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-2}
+![](images/about/bake2.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-3}
+![](images/about/bake3.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-4}
+![](images/about/bake5.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-5}
+![](images/about/bake1.jpeg){.img-responsive}
+:::
+
+:::
+
+
+I knit cool stuff.
+
+
+::: {#knittingGallery .container-gallery}
+
+::: {.popup .popup-1}
+![](images/about/knit4.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-2}
+![](images/about/knit5-cat.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-3}
+![](images/about/knit3.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-4}
+![](images/about/knit2.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-5}
+![](images/about/knit1.jpeg){.img-responsive}
+:::
+
+:::
+
+
+
+I love puzzles and games, video or otherwise, and as of July 2024 have a 1503 day NYT Crossword streak. 
+
+
+::: {#gamesGallery .container-gallery}
+
+::: {.popup .popup-1}
+![](images/about/games4.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-2}
+![](images/about/games2.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-3}
+![](images/about/games3.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-4}
+![](images/about/games5.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-5}
+![](images/about/games1.jpeg){.img-responsive}
+:::
+
+:::
+
+
+As you can see, I share many of these interests with my cat Audrey. Audrey is, objectively, a very good cat.
+
+
+::: {#audreyGallery .container-gallery}
+
+::: {.popup .popup-1}
+![](images/about/cat4.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-2}
+![](images/about/cat2.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-3}
+![](images/about/cat1.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-4}
+![](images/about/cat5.jpeg){.img-responsive}
+:::
+
+::: {.popup .popup-5}
+![](images/about/cat6.jpeg){.img-responsive}
+:::
+
+:::
+
+
+My preferred way of blurring work/life boundaries is with [my shrug collection](https://nrdowling.notion.site/Obviously-Meh-Dunno-shrug-53d0a1a8936441d69724531a6a50b60c). 
+
+::: {.card style="margin-bottom:30px;"}
+![](images/shrugs/15.jpeg){style="border:5px;"}
+:::
+
+
+
+### Natalie's wisdom
+
+Here's some unsolicited advice if you made it this far:
+
+1. Watch Community. Priority #1.
+2. Try a [cryptic crossword](https://www.newyorker.com/puzzles-and-games-dept/cryptic-crossword) from the New Yorker.[^1]
+3. (Re)read The Phantom Tollbooth.
+4. Always use lynel weapons to kill lynels in Zelda games.
+5. Listen to Behind the Bastards and Sawbones.
+6. Cancel Netflix and subscribe to [Dropout.tv](https://www.dropout.tv/) (start with Game Changer).
+7. [Save](https://www.savepangolins.org/what-is-a-pangolin) the [pangolins](https://www.youtube.com/watch?v=QY1qqZiaTU8&t=1s)!
+8. Up your baking game with [52 Weeks of Baking](https://www.reddit.com/r/52weeksofbaking/) challenges.
+9. Go to one of the free, all-level (genuinely *all* levels!) adult classes offered on campus every week by [University Ballet of Chicago](https://uballet.org/) or attend one of their two annual full-length ballets.
+10. Come to my [office hours](https://calendar.google.com/calendar/u/0/appointments/AcZssZ26_g2R1YwSJ3UpjZetF6c7jfKXO8zrfwiT4Wo=?pli=1) and talk to me about any of the above! (Or like, psychology and academia I guess.)
+
+
+[^1]:Bonus crossword-related tip: The NYT publishes a daily [Wordplay column](https://www.nytimes.com/spotlight/daily-crossword-column) about the crossword. The column is fine, but the [comments](images/about/nyt-grag.jpeg) [section](images/about/nyt-margaret.jpeg) [is](images/about/nyt-mother.jpeg) [spectacular](images/about/nyt-nellie.jpeg). Someone give me funding to do a digital ethnography of this [incredible](images/about/nyt-rhubarb.jpeg) [nerd](images/about/nyt-spud.jpeg) [microcosm.](images/about/nyt-james.jpeg)
+
+[^2]: Fun fact: there's no correct way to spell the present progressive form of "binge."

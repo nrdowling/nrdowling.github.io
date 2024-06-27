@@ -1,0 +1,103 @@
+---
+title: "Natalie Dowling, Ph.D."
+format:
+  html:
+    toc: false
+about:
+    id: aboutme
+    template: trestles
+    image: images/2024headshot.jpeg
+    image-shape: round
+    image-alt: Portrait photo of a smiling woman wearing glasses
+    links:
+        - text: UChicago MAPSS
+          href: https://mapss.uchicago.edu/directory/Natalie-Dowling
+          icon: mortarboard
+        - text: Office Hours
+          href: https://calendar.google.com/calendar/u/0/appointments/AcZssZ26_g2R1YwSJ3UpjZetF6c7jfKXO8zrfwiT4Wo=?pli=1
+          icon: calendar-week
+        - text: GitHub
+          href: https://github.com/nrdowling/  
+          icon: github   
+        - text: Curriculum Vitae
+          href: cv/ND_CV.pdf
+          icon: list-columns
+        - text: Contact
+          href: mailto:ndowling@uchicago.edu
+          icon: envelope-at     
+---
+
+
+::: {#aboutme}
+::: {#rightAlignedHeadings style="text-align:right;"}
+
+## Assistant Instructional Professor in Psychology
+
+#### Master of Arts Program in the Social Sciences (MAPSS)
+
+#### University of Chicago
+:::
+
+## Education
+
+<span style="font-weight:500">Ph.D. Comparative Human Development</span> </br> <span style="opacity:.8">*University of Chicago* \| *August 2022*</span>
+
+<span style="font-weight:500">B.A. Linguistics</span> </br> <span style="opacity:.8">*University of Chicago* \| *June 2010*</span>
+
+:::
+
+
+::: {.card .card-alt style="margin-top:1rem;"}
+
+::: {.d-flex .align-items-start}
+
+<!--Begin Tab Nav-->
+::: {#mainTabs .nav .nav-pills .flex-column .me-0 aria-orientation="vertical" style="padding-top:20px;"}
+
+[Research](#researchSummary){#researchTab .nav-link .active data-bs-toggle="pill" data-bs-target="#researchSummary" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"}
+
+[Teaching](#teachingSummary){#teachingTab .nav-link data-bs-toggle="pill" data-bs-target="#teachingSummary" type="button" role="tab" aria-controls="v-pills-home" aria-selected="false"}
+
+[Keywords](#keywordsSummary){#keywordsTab .nav-link data-bs-toggle="pill" data-bs-target="#keywordsSummary" type="button" role="tab" aria-controls="v-pills-home" aria-selected="false"}
+</span>
+:::
+
+<!--Begin Tab Content-->
+
+::: {#mainTabsContent .tab-content style="border-right:none; border-bottom:none;"}
+
+::: {#researchSummary .tab-pane .fade .show .active role="tabpanel" aria-labelledby="researchTab" tabindex="0"}
+
+**My research explores how people coordinate in face-to-face interaction with more than just their words and how these conversational tools develop from infancy to adulthood.**
+
+I study the development of multimodal discourse across the lifespan. I examine the changing functions of co-speech gestures as children become collaborative conversationalists. Because language is much more than just speech, my work approaches language development as fundamentally multimodal as well. *Why and when do children use gestures before words? What kinds of nonverbal messages are children sending when they speak? As adults, do we notice?*
+
+[Research Projects](research/index.html){.btn role="button" type="button"}
+
+:::
+
+::: {#teachingSummary .tab-pane .fade role="tabpanel" aria-labelledby="teachingTab" tabindex="0"}
+
+**I teach general and introductory courses in psychology and the social sciences more broadly, including practical application of quantitative, qualitative, and mixed methods.**
+
+My research expertise allows me to teach intermediate and advanced coursework in first language development/acquisition, applied methods in observational and naturalistic data analysis, multimodal conversation, and the socialization of face-to-face interaction.
+
+
+[Teaching Portfolio](teaching/index.html){.btn role="button" type="button"}
+:::
+
+::: {#keywordsSummary .tab-pane .noborder .fade role="tabpanel" aria-labelledby="keywordsTab" tabindex="0"}
+
+-   Multimodality
+-   Language development
+-   Discourse-pragmatics
+-   Interactive gesture
+-   Parent-child interaction
+-   Observational corpora
+
+:::
+
+:::
+:::
+
+:::

@@ -1,0 +1,17 @@
+---
+title: "Getting on Track"
+subtitle: "Pre-K Math and Language Assessment"
+format:
+  html:
+    template: ../templates/project-template.html
+toc: false
+project-image: ../images/GOT.png
+---
+
+The Getting on Track Early for School Success (GoT) project has created objective, valid, and instructionally relevant assessments of oral language and literacy skills and numerical and spatial reasoning skills for 3-5 year old children. These assessments are designed to be quickly and easily administered by early childhood educators in the classroom while serving as highly statistically reliable measures for longitudinal learning achievement. In addition to developing this series of assessments, GoT provides educators with clear and continuous feedback to recognize skill-level milestones and support each student throughout the school year. GoT additionally provides classroom instructional materials to help teachers scaffold student learning in tandem with the assessment.
+
+I was actively involved in the development of the Oral Language and Literacy (OLL) assessment and instructional materials from 2017-2021. Serving as an IES Pre-Doctoral Fellow on the project, I developed crosswalks from the GoT assessment to commonly used pre-K curricula. While it became clear from these crosswalks and teacher feedback that pre-K educators felt comfortable supporting students in early literacy skills, this was not the case for oral language skills. A unique feature of the Getting on Track assessments is the evidence-based emphasis on promoting oral language development in addition to literacy, such morphological production, syntactic comprehension, and concept formation. My primary role on this project has been to strategically fill in those gaps: 1) revising assessment items and administration design, 2) drafting plain-English explanations for teachers for how and why we assess these unfamiliar skills as well as benchmarks and stage-based learning objectives, 3) creating lesson plans for instructional activities to offer educators concrete methods for incorporating oral language learning into their classrooms.
+
+*Principal investigators and project leadership: Alana Dulaney, PhD; Susan Goldin-Meadow, PhD; Marc Hernandez, PhD; Debbie Leslie, MAT; Susan C Levine, PhD; Stephen Raudenbush, EdD; Janet Sorkin, PhD*
+
+[Learn more about Getting on Track from NORC](https://www.norc.org/research/projects/getting-on-track-improving-pre-k-outcomes.html){.btn .btn-dark}

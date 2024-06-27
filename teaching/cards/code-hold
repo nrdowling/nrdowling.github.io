@@ -1,0 +1,66 @@
+$main4: #992600 !default;
+$light4: #E6C3B8 !default;
+$lightest4: #E6DDDA !default;
+$bright4: #E63900 !default;
+$dark4: #591600 !default;
+$darkest4: #260A00 !default;
+
+$main5: #994000 !default;
+$light5: #E6CBB8 !default;
+$lightest5: #E6DFDA !default;
+$bright5: #E66000 !default;
+$dark5: #592500 !default;
+$darkest5: #261000 !default;
+
+$main1: #006399 !default;
+$light1: #B8D5E6 !default;
+$lightest1: #DAE1E6 !default;
+$bright1: #0095E6 !default;
+$dark1: #003A59 !default;
+$darkest1: #001926 !default;
+
+$main2: #008F99 !default;
+$light2: #B8D5E6 !default;
+$lightest2: #DAE5E6 !default;
+$bright2: #00D6E6 !default;
+$dark2: #00474D !default;
+$darkest2: #002426 !default;
+
+
+$main3: #009978 !default;
+$light3: #B8E6DC !default;
+$lightest3: #DAE6E3 !default;
+$bright3: #00E6B4 !default;
+$dark3: #005946 !default;
+$darkest3: #00261E !default;
+
+$main4: #9e0131 !default;
+$light4: #E6B8C5 !default;
+$lightest4: #E6DADD !default;
+$bright4: #E60045 !default;
+$dark4: #59001B !default;
+$darkest4: #26000B !default;
+
+$main5: #990086 !default;
+$light5: #E6B8E0 !default;
+$lightest5: #E6DAE4 !default;
+$bright5: #E600CB !default;
+$dark5: #59004F !default;
+$darkest5: #260022 !default;
+
+
+
+---
+$main6: #995700 !default;
+$light6: #E6D2B8 !default;
+$lightest6: #E6E1DA !default;
+$bright6: #E68302 !default;
+$dark6: #593301 !default;
+$darkest6: #261600 !default;
+
+$mainBW: $gray-500 !default;
+$lightBW: $gray-300 !default;
+$lightestBW: $gray-100 !default;
+$brightBW: $gray-400 !default;
+$darkBW: $gray-700 !default;
+$darkestBW: $gray-900 !default;

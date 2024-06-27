@@ -1,0 +1,1914 @@
+---
+title: D2M Syllabus
+---
+
+
+<!-- ACCORDION TEMPLATE
+  \  
+::: {.accordion #w#c#} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week # / Class # Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w#c#readings" aria-expanded="false" aria-controls="w#c#readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w#c#readings .accordion-collapse .collapse data-bs-parent="#w#c#"}
+::: {.accordion-body}
+
+- [Reading title)](link)*
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign#" aria-expanded="false" aria-controls="assign#"}
+
+Assignment (#) Name
+
+:::
+:::
+
+::: {#assign# .accordion-collapse .collapse data-bs-parent="#w#c#"}
+::: {.accordion-body}
+
+- Assignment to-do
+  - task
+
+:::
+:::
+    
+:::
+
+:::
+-->
+
+::: {.alert .alert-danger role="alert"}
+
+**FYI:** This is a version of the syllabus used for D2M in Winter 2024. It's here temporarily while I rework the class site through its own repo. That means:
+
+1. There are __*major*__ changes to the structure of the class for Winter 2025! So if you're planning to take the course next Winter don't be misled by what you see here.
+2. There are very likely lots of broken links, css, and bootstrap elements as a result of the quick and dirty migration from the old-school RMarkdown format to the Quarto format used on this site. This is a temporary site and I'm not going to fix them.
+
+:::
+
+
+**From Data to Manuscript (D2M) in R**
+
+*Winter 2024: CHDV 20550/30550, MACS 30550, MAPS 30550, PSYC 20550/30550*
+
+## Overview
+
+### Description
+
+This course tackles the basic skills needed to build an integrated research report with the R programming language. We will cover every step from data to manuscript including: Using R’s libraries to clean up and re-format messy datasets, preparing data sets for analysis, running statistical tools, generating clear and attractive figures and tables, and knitting those bits of code together with your manuscript writing. The result will be a reproducible, open-science friendly report that you can easily update after finishing data collection or receiving comments from readers. Never copy-paste your way through a table again! The R universe is large, so this course will focus specifically on: The core R libraries, the tidyverse library, and R Markdown. Students will also learn about the use of GitHub for version control.
+
+
+#### Weekly meetings:
+
+  - Tuesdays and Thursdays 11am - 12:20pm
+  - 1155 E 60th St, Room 289B
+
+
+#### Instructor: 
+
+  - **Dr. Natalie Dowling**
+  - Email: ndowling\@uchicago.edu
+  - GitHub: \@nrdowling
+  - Office: 1155 Building, Room 404
+  - Office hours: Tues/Thurs 4pm - 5pm - [sign up via GCal](https://calendar.app.google/SFfBd2291pigfJtL7)
+
+
+#### Teaching assistant:
+
+  - **Grace Huang**
+  - Email: ysh\@uchicago.edu
+  - GitHub: \@ysh627
+  - Office: Green 208
+  - Office hours: Wednesdays 12-1:30pm (email for alternative appointment)
+
+
+#### Hubs:
+  
+  - [Course site & syllabus](https://nrdowling.github.io/d2m/) (you are here!)
+  - [Piazza](https://piazza.com/class/lqikn4pfk085w8/)
+  - [Canvas](https://canvas.uchicago.edu/courses/54329)
+  - [Example repo: schelling-games](https://github.com/nrdowling/schelling-games)
+    - Duplicate this repo to poke around a (mostly) functional github pages site created entirely using R Markdown. Most of the .Rmd and .R files include extensive commenting, including some ideas for how you can practice coding by revising or adding to those R scripts directly. (I recommend duplicating rather than mirroring. [Set up a new repo via "import"](https://github.com/new/import) using the same url copied from the green code tab. You'll have a completely different repo -- no need to worry about messing up the original. If you just clone it, it will still be attached to the original, but your changes still won't push because you aren't a collaborator.) 
+  - [Class repo: d2m-2024](https://github.com/nrdowling/d2m-2024)
+    - Begins empty at the start of the quarter. Will be updated with in-class demos and data as we go.
+
+
+### Course materials
+
+  - Most required readings will be drawn from one of the following great (and free! and online!) resources:
+    - [R for Data Science](https://r4ds.hadley.nz/) by Hadley Wickham
+    - [R Markdown for Scientists](https://rmd4sci.njtierney.com/) by Nicholas Tierney
+    - Also check out [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, and Garrett Grolemund
+  - Additional resources can be found on the [resources page](resources.html)
+  
+
+### Dataset
+
+Nearly all assignments in this course will involve working with a dataset of your choice. We will begin with setting up a repo for your data and R scripts, then move to tidying the data, then to analyzing and plotting the data, and finally to interpreting the results based on those data. In other words, having an appropriate dataset as early as possible is essential. <span style="color:red">You will get the most out of this class if you work with your own data for a project you will continue to be invested in after the end of the quarter, like a BA or MA thesis, grant proposal, or manuscript intended for publication.</span> If you are not currently working on this type of project, you should consider taking this class next year (or whenever you *do* have data). Whether or not you use your own data, you are responsible for providing your dataset. Read the [dataset selection guidelines](dataset-guidelines.html) for more information.
+
+
+## Grading
+
+Students enrolled in this course will be graded on the following basis:
+
+  - Short assignments: 60% (graded complete/incomplete, 3% each)
+  - Scientific report: 20% (including 2 ungraded preparatory tasks)
+  - Participation: 20% (including self-assessment)
+
+### Assignments
+
+There is a short assignment for each lecture. Each assignment will involve working with your own data, data provided for that assignment, or both and is designed to give you hands-on practice with using R. Assignments typically begin in class and may be completed after class (each one is highlighted in <span style="color:#CB7E45">orange</span>) on a pass/fail basis. Students must push their completed assignment to the appropriate GitHub repository, tagging and Dr. Dowling (\@nrdowling) and Grace (\@ysh627) with the assignment number so that they receive a notification. There are 20 assignments total, each worth 3% of your final grade.
+
+Assignment details are included at the end of the lecture slides.
+
+_When are the assignments due?_
+We will usually start assignments in class. Anything you don't finish during class time should be completed before the start of the next class meeting. If an assignment is listed under "pre-class preparation," it should (hopefully unsurprisingly) be completed in preparation for the start of that class.
+
+_Need help?_ We will do much of this work in class, so ask your questions while we're together. Each student will be assigned to a support group of other students to help answer questions (in addition to access to help from Dr. Dowling and Grace during office hours). A large portion of the course is developing your search skills when it comes to debugging your code ([look for advice and solutions from others who have faced similar problems on sites like stackoverflow and github](https://xkcd.com/979/))! Week 2 slides will include a formal procedure to follow for troubleshooting help.
+
+### Scientific report
+
+Your final assignment will be a scientific report in R Markdown that is developed via a GitHub repository and includes:
+
+  1. data read-in, pre-processing, and analysis
+  2. at least 2 figures and 1 table with captions and in-text references
+  3. at least 2 in-text R code references
+  4. BibTeX citations
+  5. at least 1500 words of the manuscript in at least four subsections (Introductions, Methods, Results, Discussion; unless otherwise agreed with Dr. Dowling). 
+
+Additional details about report requirements will be provided throughout the quarter.
+
+Items on the syllabus in <span style="color:#93A14D">green</span> indicate preparatory tasks for your final report: receiving approval for your dataset (by Tuesday of Week 2) and negotiating a manuscript plan (by Friday of Week 7). Each requires you to submit something informal via Canvas. These tasks are not graded, but grading for your final report will be contingent on completing both on time. <span style="color:red">Failing to meet with me for a report meeting will result in an automatic 10 points off your final report grade.</span>
+
+### Participation
+
+Students earn participation credit through their attendance and participation in their support group and discussion of course content in office hours. Students are generally expected to come to class prepared to practice using R together. That means you should come with your charged laptop, prepared with any data you are using and any installed software that is required (see the 'preparation' note for each class). Be prepared to share your screen with your support group and with the instructors. That said, please stay in touch about your limitations regarding in-person participation and/or technology access.
+
+This grade is not an attendance grade. It is much more important that you care for your mental and physical health and the health of those around you than it is to check the "came to class" box. Please do not come to class if you are ill, but DO contact Dr. Dowling and Grace at least 24 hours in advance of an absence, when possible. Missing classes without notifying us may result in a lower participation grade. If your attendance is low enough to impact your work (with or without notifying us) you will need to meet with Dr. Dowling to discuss how it may affect your grade.
+
+#### Self-assessment
+
+At the end of the quarter you will write a brief reflection (1-2 paragraphs) on your participation in this class and assign yourself a grade (out of 20).
+
+Your self-assigned grade may or may not end up as your final participation grade, but it will be *strongly* taken into consideration.
+
+#### Grading
+
+Participation grades will be posted to this assignment at the same time your final scientific report is graded. Once assigned, **participation grades are final**. If you are concerned about your grade you should reach out to Dr. Dowling or Grace before the end of the quarter, who can give you guidance on ways to increase this part of your grade. 
+
+### Late work & attendance
+
+Life happens. Family emergencies, exams for other courses, COVID-19, roommates in crisis...
+
+If you need an extension, just ask. Send an email to Dr. Dowling (cc Grace) *as far in advance as possible* explaining what's going on (vague!) and how much extra time you need (specific). **It is never necessary to provide details about your physical or mental health.** You are always welcome to have an open discussion about what you're dealing with in office hours, but in your emails about absences it is more than sufficient to just say you're sick or having a personal emergency. 
+
+With prior notice and instructor approval, late work will not be penalized. Students who register for the class after one or more assignments were already due should contact Dr. Dowling to arrange an extended deadline.
+
+Without notice and/or approval, or after the agreed upon extended deadline: 
+
+  1. Short assignments will be graded as incomplete, receiving 0 (of 3) points.
+  2. Final scientific reports will lose 1 (of 20) points per 12 hours late.
+
+If you will be missing class for any reason, email **both** Dr. Dowling and Grace before the start of class. **<span style="color:red">Please do not come to class if you are feeling at all ill.</span>** You do not need to be specific about why you will be absent, but please do give a guess as to when you'll be back in class and whether you'll be able to work remotely while you're out.
+
+_Stressed out by emailing professors? Here are some good examples of what is helpful for your instructors._
+
+> I have exams in two other classes 5th week. Is it ok if I take an extra 48 hours to turn in Assignment 5? 
+
+> I just found out I need to quarantine after a COVID exposure. No positive test as of now, so I'll plan on missing classes Tuesday and Thursday but completing the assignments at home. I'll let you know if anything changes.
+
+> I have a family emergency and need to travel home. I won't be able to work while I'm home and I'm not sure how long I'll need to be away. Can we meet over Zoom to make a plan to handle late assignments and absences? 
+
+
+## Course schedule
+
+This schedule is subject to change. Refer to this page for syllabus updates (including new and updated links, files, etc.) throughout the quarter. Slides will typically be posted the morning of class.
+
+For each day of class the schedule below includes an overview of what we'll cover in class and any key information you'll need for that day.
+
+**The accordion boxes contain detailed information about all tasks you should complete.** These boxes will describe things you need to do *both before and after that class,* so you should always read details at least one class ahead. Tasks are color coded:
+
+- <span style="color:#99414D">Ungraded assignments, preparatory tasks, readings, and resources are in burgundy. Required readings are marked with as asterisk and should be completed before start of class.</span>
+- <span style="color:#CB7E45">Graded assignments due before the start of next class (unless otherwise noted) are in orange.</span>
+- <span style="color:#93A14D">Preparatory tasks for the final project are in green.</span>
+- <span style="color:#4E6988">Extra information necessary for that class period is in blue.</span>
+
+
+
+### Module 1: Fundamentals of R and GitHub
+
+#### Thursday, January 4 2024 (1.1+1.2)
+
+##### Pre-quarter preparation
+
+Because Winter 2024 begins on a Wednesday, we will not meet for the first lecture (which would otherwise be Tuesday Jan 2). It is critical that you come to the first class meeting on Thursday January 4th having completed the getting started tasks -- *start by watching the short recorded lecture!* -- and Assignment 1.
+ 	
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/so55fxh7wo3ixsch8rbht64hs6zkt771)
+
+  - Introductions & Course Structure
+  - Lecture: R Scripts & Packages, and Markdown
+  - Groups: Assign support groups & discuss datasets
+  - Assignment: <span style="color:#CB7E45">(2) Initialize a papaja .Rmd</span>
+  
+<span style="color:#93A14D">Submit your dataset for approval by Friday Jan 5 at 11:59pm. This should be done via email, not GitHub. Friday is the **absolute** deadline, but the earlier the better! After you receive approval, complete the "Select dataset and get approval" assignment on Canvas to receive completion credit.</span>
+
+::: {.accordion #w1c2} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#gesttingstarted" aria-expanded="false" aria-controls="gettingstarted"}
+
+Getting started
+
+:::
+:::
+
+::: {#gesttingstarted .accordion-collapse .collapse data-bs-parent="#w1c2"}
+::: {.accordion-body}
+
+
+  - Watch the recorded lecture (~43 min): [R, RStudio, and GitHub](https://uchicago.box.com/s/w922fw3jukwfaxcx46n6e3w7p32qep9u) ([slides](https://uchicago.box.com/s/87xq12g6ivnbhx0rjczz5wa94a3ypij7))
+  - [Request a GitHub education premium account](https://education.github.com/) to get free private repositories
+    - use your \@uchicago.edu email
+    - this can take a few days to approve, but you can get started with a public repo for now
+  - Confirm your dataset meets the [requirements](dataset-guidelines.html)
+  - Download and install R, RStudio, and Git (if needed)
+    - review the resources [Using GitHub with RStudio](rstudio-github.html) & [Setting Up RStudio](setting-up-rstudio.html)
+  - Complete [this brief welcome survey](https://forms.gle/DVFt4bKt5FZq9YpQ6)
+  - Sign up for our Piazza page
+    - can be accessed through Canvas or directly through Piazza
+
+:::
+:::
+    
+:::    
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#a1collapse" aria-expanded="false" aria-controls="a1collapse"}
+
+Assignment (1) Create your repo (<span style="color:#960F22">!!due start of first class!!</span>)
+
+:::
+:::
+
+::: {#a1collapse .accordion-collapse .collapse data-bs-parent="#w1c2"}
+::: {.accordion-body}
+  - Set up your GitHub repo w/ RStudio
+    - Create a local R project by cloning a GitHub repo
+      - Follow the *EXTREMELY DETAILED* [instructions for Using GitHub with RStudio](rstudio-github.html) and troubleshoot as needed
+      - Give your repo a relevant name! (e.g., 'child-gesture-study', *NOT* 'thesis' or 'd2m')
+    - Invite \@nrdowling (Natalie) and \@ysh627 (Grace) as collaborators to your repo 
+      - If you intend to use a private repo with protected data, invite collaborators now, but wait on uploading the data.
+      - Once you are assigned to a support group you will also invite your group members as collaborators.
+    - Make 1+ change to the README, commit changes with an informative message, and push to GitHub
+    - REVERSE a change on GitHub, pull to your local project/repo, and review the changes
+    - Create a GitHub issue (not a commit!) with the text:
+    ```
+    Title:Assignment 1.1
+    Body:@nrdowling @ysh627 I have completed the following:
+    [x] I have invited you both as repo collaborators
+    [x] I have cloned this repo to create an R Studio Project
+    [x] I have made at least 1 commit
+   ```
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#a2collapse" aria-expanded="false" aria-controls="a2collapse"}
+
+Assignment (2) Initialize your papaja document
+
+:::
+:::
+
+::: {#a2collapse .accordion-collapse .collapse data-bs-parent="#w1c2"}
+::: {.accordion-body}
+
+- Install the tidyverse and papaja packages
+- Create an R script file (.R) that:
+  - Loads the tidyverse and papaja packages
+  - *REQUIRES* 1+ other package of your choice
+  - Includes 1+ lines of commented text
+  - Assigns 1+ numeric variable and 1+ string/character variable
+  - BONUS: Create a dataframe 
+- Create an R Notebook *with the Papaja template*
+  - Change the title and author fields at the top
+  - `source()` your R script in the first code chunk
+- **FOR THIS AND ALL GRADED ASSIGNMENTS:** Commit (with an informative message) and push to GitHub tagging Dr. Dowling and Grace
+- Ungraded final step (no submission): knit .Rmd to Word doc or PDF and troubleshoot as needed
+- **Above-and-beyond:** Experiment with creating .Rmd files *without* papaja
+  - We'll only use papaja in this class, but knowing how to make use of .Rmds with other outputs might be very useful for you. For example if you want to make an html page (like this one!) or produce manuscripts in non-APA styles.
+
+:::
+:::
+
+:::
+  
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .infobox type="button" data-bs-toggle="collapse" data-bs-target="#papajacollapse" aria-expanded="false" aria-controls="papajacollapse"}
+
+Papaja installation (extra info)
+
+:::
+:::
+
+::: {#papajacollapse .accordion-collapse .collapse data-bs-parent="#w1c2"}
+::: {.accordion-body}
+
+- Papaja installation is trickier than other packages for a few reasons:
+  - ~~It is not currently available through CRAN and so cannot be installed with the install.packages() function.~~ Papaja is now available through CRAN! Hooray! That means you can install it just like anything else, with the function `install.packages("papaja")`. These directions for installing it directly from the source will still work, but the CRAN installation should be much simpler. 
+  - It requires manually setting up a TeX distribution – like TinyTex (recommended), MikTeX, MacTeX, or TeX Live – which can have their own installation issues.
+  - Because the installation is a relatively involved process, it can be difficult to determine exactly where in the process errors are occurring.
+- So what are you supposed to do about it?
+  - Follow the installation guide in papaja's detailed documentation. I recommend starting with this guide rather than going to it when you hit a problem. Past students have encountered an issue where once their TeX distribution was installed in an incompatible way, they couldn't undo it.
+  - If it doesn't install smoothly, set a timer for 1 hour and do your best to troubleshoot the issue. If you can't fix it in that time, makes notes on what you've done so far and what you think might still be going wrong and then stop messing with it.
+- Adjust your assignment submission as follows:
+  - Create an .Rmd with the default Notebook template (& update the YAML title field)
+  - Include the line of code that would load the papaja package, then comment out that line
+  - Add your notes from above about the state of the installation
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .finalbox type="button" data-bs-toggle="collapse" data-bs-target="#dataapproval" aria-expanded="false" aria-controls="dataapproval"}
+
+Dataset approval
+
+:::
+:::
+
+::: {#dataapproval .accordion-collapse .collapse data-bs-parent="#w1c2"}
+::: {.accordion-body}
+
+- Review the [dataset guidelines](dataset-guidelines.html)
+- Once you are confident your dataset meets the requirements, request approval via email by Friday Jan 5 at 11:59pm:
+  - Send the email to Dr. Dowling (ndowling \@ uchicago.edu) and cc Grace (ysh \@ uchicago.edu)
+  - Subject line should be: `(Your first & last name) Dataset Selection`
+- Your email should include:
+  - A brief (2-4 sentences) description of your data
+  - The data itself, in whole or part; this may be an attached .csv file, a link to a shared document, or instructions for where to find the data on the github repo you have already invited us to
+    - If you are unable to share the data with us via email (due to IRB limitations or anonymization concerns), explain this issue and a tentative plan for how you will get the data into a sharable state (i.e., any data necessary to run your analyses is included in a private github repo) within one week  
+  - *At least* one research question you tentatively plan to ask that can be answered with this dataset in the state it is currently in
+    - Specifically, your question should be answerable with an outcome variable in your data *right now*
+    - It's ok if it's a boring question, and it's ok if you do not end up answering this question in your final project
+- Once you receive a reply approving your data from either Dr. Dowling or Grace, complete the Canvas assignment to receive completion credit
+  - Due before class on Tuesday Jan 9th 11am, meaning you will need to have gotten approval over the weekend
+  - In the text box, include a brief but descriptive name for your dataset and the sender (Dr. Dowling/Grace) and timestamp of the approval email
+- **NOTE:** If you received approval for your dataset when you requested enrollment consent, you do not need to request it again. Simply complete the Canvas assignment to receive credit.
+
+:::
+:::
+
+:::
+
+::: 
+
+#### Tuesday, January 9 2024 (2.1)
+
+##### Pre-class preparation
+
+Take the weekend to catch up on any pre-quarter preparation tasks not yet completed. It is critical that you are fully caught up by today or you will not be able to follow along with demos and assignments. Additionally, confirm that your dataset approval is marked as complete on Canvas (contact Dr. Dowling if it is not marked as complete by start of class).
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/irnlq5mcgf4570vxjk6mf90rx9320q9x)
+
+  - Lecture: Best Practices & Troubleshooting
+  - Assignment: <span style="color:#CB7E45">(3) Create and edit your README.md and .gitignore files</span>
+
+  
+
+::: {.accordion #w2c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 2 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w2c1readings" aria-expanded="false" aria-controls="w2c1readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w2c1readings .accordion-collapse .collapse data-bs-parent="#w2c1"}
+::: {.accordion-body}
+
+- [Best practices for programming in R (in D2M)](https://nrdowling.github.io/d2m/best-practices.html)*
+- [Tidyverse style guide](https://style.tidyverse.org/)
+- [Papaja documentation](https://frederikaust.com/papaja_man/)
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign3" aria-expanded="false" aria-controls="assign3"}
+
+Assignment (3) README.md & .gitignore
+
+:::
+:::
+
+::: {#assign3 .accordion-collapse .collapse data-bs-parent="#w2c1"}
+::: {.accordion-body}
+
+  - Part 1: README
+    - Create a README.md file in the top level of your repo if it doesn't exist
+    - Edit your README to include:
+      - A brief description of your data
+      - A brief overview of your planned project
+      - A real or hypothetical file tree
+        - Format of your choosing
+        - This can be extremely simple, but should demonstrate you've thought about how plan to keep your repo organized.
+    - At a minimum, your README should include the following markdown elements:
+      - 1 header (any level)
+      - **bold** *italics* or ~~strikethough~~
+  - Part 2: .gitignore
+    - Create a .gitignore file in the top level of your repo if it does not exist
+      - You can start with GitHub's default R .gitignore template
+    - Edit the .gitignore to include:
+      - A dedicated directory called localonly
+      - All files of specific types that you want on your computer but don't want to upload to GitHub
+      - One specific file that is not in an ignored folder and is not an ignored filetype
+    - Add a comment for each
+
+**NOTE:** A primary goal of this assignment is for you to practice answering your own questions. We have not formally covered either of these files in detail. It's you job to figure out the point and the implementation of each. There will be a slide in the W2C2 lecture with "verbose" instructions for the .gitignore. Do your best at this point, then make adjustments as needed after next class.
+
+:::
+:::
+    
+:::
+
+:::
+
+
+#### Thursday, January 11 2024 (2.2)
+
+##### Pre-class preparation
+
+- Confirm tidyverse and papaja packages are successfully installed and load without errors. 
+  - Remember that papaja in particular often requires troubleshooting!
+- Read: 
+  - Intr2R Chapters 7 & 8
+  - R Markdown Definitive Guide Sections 2.5, 2.6, & 3.2
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/r2snbztg6m3x50ol1ojojz5x4k1t42bm)
+<!-- [hello world walkthrough](...) -->
+
+  - Lecture: Fundamentals of R & Markdown
+  - Assignments: 
+    - <span style="color:#CB7E45">(4) Create `hello_world()` function</span>
+    - <span style="color:#CB7E45">(5) Update .Rmd YAML, markdown, and code chunk</span>
+    - <span style="color:red">Note that these are 2 separate assignments!</span> You will reference the .R file you create in Assignment 4 in your Assignment 5 .Rmd file, but they will count as two assignment credits because each will be as much effort as the single assignment most other days. The `hello_world()` function in (4) may be particularly challenging if you are brand new to programming. Plan accordingly!!
+    
+  
+  
+::: {.accordion #w2c2}
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 2 / Class 2 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w2c2readings" aria-expanded="false" aria-controls="w2c2readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w2c2readings .accordion-collapse .collapse data-bs-parent="#w2c2"}
+::: {.accordion-body}
+
+- Required:
+  - [An Introduction to R](https://intro2r.com/): Sections [7](https://intro2r.com/prog_r.html)\* & [8](https://intro2r.com/rmarkdown_r.html)\*
+  - [R Markdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/): Sections [2.5](https://bookdown.org/yihui/rmarkdown/markdown-syntax.html)\*, [2.6](https://bookdown.org/yihui/rmarkdown/r-code.html)\*, & [3.2](https://bookdown.org/yihui/rmarkdown/notebook.html)\*
+- Reference: 
+  - [R Markdown Cookbook](), especially:
+    - [Chapter 2: Conceptual Overview](https://bookdown.org/yihui/rmarkdown-cookbook/conceptual-overview.html)
+    - [Chapter 4: Document Elements](https://bookdown.org/yihui/rmarkdown-cookbook/document-elements.html)
+  - [`knitr` website](https://yihui.org/knitr/)
+  - [r4ds - R Markdown](https://r4ds.had.co.nz/r-markdown.html)
+  
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign4" aria-expanded="false" aria-controls="assign4"}
+
+Assignment (4) `hello_world()` function
+
+:::
+:::
+
+::: {#assign4 .accordion-collapse .collapse data-bs-parent="#w2c2"}
+::: {.accordion-body}
+
+- Create a hello_world() function in an .R script dedicated to defining functions
+  - This should be the script you eventually source in your .Rmd with project-specific functions (if necessary)
+- Your function should include:
+  - 1+ object assignment
+  - 1+ conditional statement
+  - CHALLENGE: 1+ for or while loop
+- Your functions should take at least 1 argument, such as:
+  - name (string)
+  - time_of_day (numeric or POSIX)
+  - is_morning (boolean)
+  - return_n_greetings (integer)
+- Your function should have at least 2 possible return values, such as:
+  - hello, class
+  - Good morning, Dr. Dowling!
+  - Sup?
+  - bonjour mes amis
+- Feel free to get creative here! This will feel less tedious if you can make yourself laugh while you do it. (It will make grading more enjoyable, too.)
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign5" aria-expanded="false" aria-controls="assign5"}
+
+Assignment (5) YAML, markdown, code chunk
+
+:::
+:::
+
+::: {#assign5 .accordion-collapse .collapse data-bs-parent="#w2c2"}
+::: {.accordion-body}
+
+- Update the YAML header of your .Rmd, minimally:
+  - Title
+  - Short title
+  - Author(s)
+- Call your hello_world() function within your .Rmd:
+  - source() the R script where you defined the function
+  - Add a chunk that calls the function
+  - Don't forget to follow [best practices](best-practices.html) for naming and placing chunks!
+- Add/edit markdown to include at least ([lorem ipsum](https://www.lipsum.com/) is ok):
+  - 1st, 2nd, & 3rd headers (1 of each)
+  - 1 unordered list & 1 ordered list
+  - Bold & italicized text
+  - 1 linked URL
+  - 1 HTML-style comment
+
+:::
+:::
+    
+:::
+
+:::
+
+### Module 2: The Tidyverse
+
+#### Tuesday, January 16 2024 (3.1)
+
+##### Pre-class preparation
+
+- Read chapters 7 (data import) and 3 (data transformation) in r4ds. 
+- Download and preview the cheatsheets for readr and dplyr. 
+  - Grab the ones for ggplot2, tidyr, forcats, and stringr if you want to look ahead!
+- Ensure that your data - or a portion of it - is available in a tabular format (like a .csv file or 1 sheet of an Excel file or GoogleSheets document)
+- Have RStudio and your tabular data file available to work with at the start of class!
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/ogv0nglxtxhx0vblxddd9v8g8aw9dvji)
+
+  - Lecture: Welcome to the Tidyverse
+  - Assignment: <span style="color:#CB7E45">(6) Data read-in and -out, tidy data evaluation</span>
+  
+    
+  
+  
+::: {.accordion #w3c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 3 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w3c1readings" aria-expanded="false" aria-controls="w3c1readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w3c1readings .accordion-collapse .collapse data-bs-parent="#w3c1"}
+::: {.accordion-body}
+
+- Tidyverse cheat sheets: [readr](https://rstudio.github.io/cheatsheets/html/data-import.html), [dplyr](https://rstudio.github.io/cheatsheets/html/data-transformation.html)
+- R for Data Science Introduction [Chapter 7: Data import](https://r4ds.hadley.nz/data-import)* and [Chapter 3: Data transformation](https://r4ds.hadley.nz/data-transform)* (recommended to read in that order)
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign6" aria-expanded="false" aria-controls="assign6"}
+
+Assignment (6) Data read-in and -out, tidy data evaluation
+
+:::
+:::
+
+::: {#assign6 .accordion-collapse .collapse data-bs-parent="#w3c1"}
+::: {.accordion-body}
+
+- Create (or update) a code chunk in your .Rmd for data read-in 
+  - Use readr to read in your data (and any supplementary data files you may have)
+  - Don't forget to give your chunk a unique and informative name!
+- Examine your dataset in RStudio. Answer these questions with comments in your read-in chunk
+  - Is it tidy? Remember that "tidy" means:
+    - Each column is a single variable
+    - Each row is a single observation
+    - Each cell is a single measurement
+  - If not, what data wrangling is necessary to tidy it?
+  - Which variables, observations, and measurements in your data are absolutely necessary for your plans? Which are (likely) extraneous?
+- Create (and name!) a code chunk to create an intermediate dataset
+  - Use 2+ dplyr functions
+  - Use readr to write your intermediate dataset to a .csv, .xlsx, or other tabular filetype
+- Examine your new intermediate data file in Excel (or similar)
+
+:::
+:::
+
+:::
+
+:::
+  
+#### Thursday, January 18 2024 (3.2)
+
+##### Pre-class preparation
+
+  - Review the cheatsheets for core tidyverse packages
+  - Read chapters 5, 14, & 16 (& optionally ch15) in [r4ds](https://r4ds.hadley.nz/)
+  - Pull the most recent version of the d2m-2024 repo to try out the tidyverse functions demo code in `demo-snippets.R`.
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/r8mkp7hj2tyssibhx8tusjly49f37mp6)
+
+  - Lecture: Data Preparation in the Tidyverse
+  - Assignment: <span style="color:#CB7E45">(7) Mock up a preliminary dataset & start data prep</span>
+  
+  
+  
+::: {.accordion #w3c2} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 3 / Class 2 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w3c2readings" aria-expanded="false" aria-controls="w3c2readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w3c2readings .accordion-collapse .collapse data-bs-parent="#w3c2"}
+::: {.accordion-body}
+
+
+- Tidyverse cheat sheets:     
+  - [tidyr](https://rstudio.github.io/cheatsheets/html/tidyr.html)
+  - [stringr](https://github.com/rstudio/cheatsheets/blob/main/strings.pdf)
+  - [forcats](https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf)
+  - [purr](https://github.com/rstudio/cheatsheets/blob/main/purrr.pdf) - *advanced, low-priority for D2M*
+- R for Data Science:
+  - [Chapter 5: Data tidying](https://r4ds.hadley.nz/data-tidy)* 
+  - [Chapter 14: Strings](https://r4ds.hadley.nz/strings)*
+  - [Chapter 15: Regular expressions](https://r4ds.hadley.nz/regexps)
+  - [Chapter 16: Factors](https://r4ds.hadley.nz/factors)*
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign7" aria-expanded="false" aria-controls="assign7"}
+
+Assignment (7) Mockup preliminary dataset and begin data prep
+
+:::
+:::
+
+::: {#assign7 .accordion-collapse .collapse data-bs-parent="#w3c2"}
+::: {.accordion-body}
+
+- Conceptualize the dataset you'll need to create <span style="color:purple">(this is just to get started, not a submission)</span>. Some ideas (not tasks!) to help get you thinking:
+  - Draw out a couple mock figures you'd like to include and/or articulate your research questions and hypotheses
+  - How will you need to organize your variables (and within-variable groups) to produce those figures and/or analyses? What data types will your variables need to be?   - Does anything that currently looks like string, numeric, or logical data need to be handled as factor?
+- Mockup a preliminary dataset & begin prep - **PUSH TO YOUR REPO**:
+  - A tabular mock-up of your ideal data structure. Create this in Excel (or similar) either by manipulating your actual data manually or creating fully mock data
+    - You *can* do this in R if you want, but the goal is more to get a solid concept of data structure rather than actually executing the data wrangling
+  - Building on or replacing the code you wrote in assignment (6), create an .R script called `data-prep.R`: 
+    - Use comments to write out in plain English the prep steps you expect to carry out in order to make your existing data look like your mock-up, including data import, wrangling, and exporting intermediate datasets
+    - Make note of anything that you know you'll need to do conceptually but don't yet know how to execute in R
+    - Begin to fill in the parts of your data prep you feel comfortable starting, e.g., import/export, filtering/selecting, object assignment
+
+
+:::
+:::
+
+:::
+
+:::
+
+
+#### Tuesday, January 23 2024 (4.1)
+
+##### Pre-class preparation
+
+  - ~~No new material this week!~~ We'll walk through a data-prep demo and work in groups on Assignment (8) (and your own data prep time permitting).
+    - *Tiny* bit of new material: combining data with binds and joins
+  - Come prepared to make the most of your time by being thoughtful and thorough in completing Thursday's assignment (7) & having quick access to the tidyverse documentation and cheatsheets from last week
+  - <span style="color:#93A14D">Office hours appointments for the **required** final report planning meetings begin this week and continue through Friday of 7th week (Feb 16).</span> [Book a 20 minute slot here](https://calendar.app.google/HizDvG8gtBpPSGbB9). See box below for more details.
+
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/j8l0ncmy3im8wx1tpxpsbs9dekrho2uh)
+
+  - Demo: Data Manipulation in the Tidyverse
+    - Plus super-quick overview of combining data in R
+  - Assignments: 
+    - <span style="color:#CB7E45">(8) Recreate this dataset</span>
+    - Continue your data preparation
+    
+    
+    
+
+::: {.accordion #w4c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 4 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+    
+::: {.accordion-header}
+::: {.accordion-button .collapsed .finalbox type="button" data-bs-toggle="collapse" data-bs-target="#meetinginfo" aria-expanded="false" aria-controls="meetinginfo"}
+
+Final project planning 1-on-1 meetings
+
+:::
+:::
+
+::: {#meetinginfo .accordion-collapse .collapse data-bs-parent="#w4c1"}
+::: {.accordion-body}
+
+  - Office hours appointments for the **required** final report planning meetings begin this week and continue through Friday of 7th week (Feb 16). 
+  - [Book a 20 minute slot here](https://calendar.app.google/HizDvG8gtBpPSGbB9). See box below for more details.
+  - The intention of these meetings is to set clear expectations for your final project, based both on general course requirements and your specific project goals. You should come prepared to discuss your project's aims and current status, but it is *not* necessary to bring in any concrete work. Please [sign up for regular office hours](https://calendar.app.google/JxXb66xc8mwBmmsp7) outside these appointments if you'd like more hands-on support for your project. 
+  - Note that this appointment schedule includes literally *all* my availability. Do not delay booking an appointment, as **I will not be able to accommodate requests to meet outside these times.**
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign8" aria-expanded="false" aria-controls="assign8"}
+
+Assignment (8) Recreate this dataset
+
+:::
+:::
+
+::: {#assign8 .accordion-collapse .collapse data-bs-parent="#w4c1"}
+::: {.accordion-body}
+
+- Recreate the modified starwars dataset:
+  - Copy the file `starwars.R` in the d2m-2024 repo into your own project repo
+  - Follow the instructions in the file to import and examine the "goal" tibble
+  - Manipulate the built-in starwars tibble to create a new object called `sw.wrangled`
+    - When you type `sw.wrangled` into the console, you should see exactly what's in the image: `d2m-2024/images/starwars-goal.png`
+    - Don't forget to check number of rows and column data types
+  - If you can't figure everything out, add comments explaining what you would like to do but aren't sure how
+
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#continueprepping" aria-expanded="false" aria-controls="continueprepping"}
+
+Continue prepping (ungraded)
+
+:::
+:::
+
+::: {#continueprepping .accordion-collapse .collapse data-bs-parent="#w4c1"}
+::: {.accordion-body}
+
+Continue prepping your data! We will finish data wrangling on Thursday. Your data should be fully prepped and ready for analysis and visualization in the tidyverse by Week 5.
+
+:::
+:::
+
+:::
+
+:::
+  
+#### Thursday, January 25 2024 (4.2)
+
+##### Pre-class preparation
+
+- No new material! Aside from a brief discussion about final projects, the whole class will be time to work on data preparation with support from your group and instructors. Review and adjust your plans from assignment (7) ahead of time to make the best use of your time.
+
+
+##### Class meeting
+
+<!-- [slides](...) -->
+
+  - Brief discussion of final report requirements
+  - Lab: Data Manipulation in the Tidyverse
+  - Assignments: 
+    - <span style="color:#CB7E45">(9) Finish prepping your data!</span>
+      - Before your final commit, be sure that your scripts include sufficient and informative comments
+    - <span style="color:#CB7E45">(10) Imagine two plots you would like to see of your data. Add comment blocks into your rmd describing (in plain English, not code) what elements will be necessary to create each plot.</span>
+    
+    
+    
+    
+
+::: {.accordion #w4c2} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 4 / Class 2 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign9" aria-expanded="false" aria-controls="assign9"}
+
+Assignment (9) Finish prepping your data
+
+:::
+:::
+
+::: {#assign9 .accordion-collapse .collapse data-bs-parent="#w4c2"}
+::: {.accordion-body}
+
+Finish preparing your data for analysis and presentation! Use tidyverse tools to create the mock-up data you created in Assignment (7). Be sure your data frames(s) is/are in a tidy, long format. In particular, as you imagine plots you'd like to create in Assignment (10), be sure that any measures you want to include on x or y axes are each in one column and that any groups you might want to compare against each other are in one column
+
+e.g.: You want to compare number of gestures used by parents and children. Your original <span style="color:red">*wide, untidy*</span> dataset includes 2 measurement columns: `parent_gestures` and `child_gestures`. Your <span style="color:green">*long, tidy*</span> has one `speaker` column with values `parent` and `child` and one `n_gestures` column with the number of gestures produced by that subject at the observation.
+
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign10" aria-expanded="false" aria-controls="assign10"}
+
+Assignment (10) Mock up 2 plots
+
+:::
+:::
+
+::: {#assign10 .accordion-collapse .collapse data-bs-parent="#w4c2"}
+::: {.accordion-body}
+
+- Mock up 2 plots (of 2 different types) you could include in your final report
+  - Add code chunks to your .Rmd for each plot and give each a unique, informative name
+  - Add plain-English comments within your chunks explaining the goal for the plot. To start thinking about this, ask yourself questions like: 
+    - What variables are on the axis/axes? 
+    - What kind of plot is it? 
+    - Will you need to compare across groups?
+    - What would you anticipate seeing if your hypotheses were borne out in your analyses?
+- Create a visual of each mock-up that render in your .Rmd when you knit. This can be either:
+  - A first attempt at the ggplot code itself if you are already familiar with ggplot
+  - .jpg/.gif/.png files created outside R (e.g., in Excel, in MS paint, sketched by hand or on an iPad) and called in the text below the corresponding code chunk using R markdown
+    - Look back at the slides or the R Markdown cheatsheet if you don't remember how to insert an image file!
+
+:::
+:::
+
+:::
+
+
+::: {.accordion-item}
+    
+::: {.accordion-header}
+::: {.accordion-button .collapsed .finalbox type="button" data-bs-toggle="collapse" data-bs-target="#meetingsubmission" aria-expanded="false" aria-controls="meetingsubmission"}
+
+Canvas submission for (post-1-on-1-meeting) final report plan
+
+:::
+:::
+
+::: {#meetingsubmission .accordion-collapse .collapse data-bs-parent="#w4c2"}
+::: {.accordion-body}
+
+  - **Due by 5pm Friday Week 7: Feb 16, 2024**
+  - After your report plan meeting with Dr. Dowling, write up a brief summary of what you discussed and submit to the "Report plan" assignment on Canvas. Your write-up should include:
+    - The specific plans for you analysis, figure, and table chunks
+    - A general description for how you will distribute the 1500+ words across 4 sections
+    - At least 2 elements of code produced in code chunks that you can referent in text (e.g., a p-value from the model you run in your analysis chunk, a value within the table you created in the table chunk, a summary value like mean or median that you calculated and stored as a variable)
+    - 2-4 sentences explaining your personal goals for the final report. What do you want to have accomplished or learned by the time you submit your report at the end of the quarter?
+
+:::
+:::
+
+:::
+
+:::
+
+  
+### Module 3: Presentating Data
+
+#### Tuesday, January 30 2024 (5.1)
+
+##### Pre-class preparation
+
+  - <span style="color:#93A14D">Remember to book your final report meeting with Dr. Dowling and submit the meeting summary to Canvas (see details in W4C2 box above)</span>
+  - Read chapters on data visualization and ggplot in r4ds: [1](https://r4ds.hadley.nz/data-visualize)\* and [9, 10, 11](https://r4ds.hadley.nz/visualize)\*
+  - Review the [ggplot2 cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf)
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/ow2vw25j93csebtuaa8ohh3e0s2ldrl0)
+
+  - Walkthrough of Assignment (8) Recreate this dataset
+    - Follow along with script in `d2m-2024` repo
+  - Lecture: Introduction to Data Visualization and ggplot2
+  - Assignment: <span style="color:#CB7E45">(11) Create basic plots (2 parts: recreate these plots & add 1 plot to .Rmd)</span>
+    - <span style="color:red">**submit BOTH to receive credit for Assignment (11)!**</span> Commit your final submission of both at the same time in just one commit
+    
+    
+    
+    
+  
+::: {.accordion #w5c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 5 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w5c1readings" aria-expanded="false" aria-controls="w5c1readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w5c1readings .accordion-collapse .collapse data-bs-parent="#w5c1"}
+::: {.accordion-body}
+
+  - Chapters on data visualization and ggplot in r4ds: [1](https://r4ds.hadley.nz/data-visualize)\* and [9, 10, 11](https://r4ds.hadley.nz/visualize)\*
+  - [ggplot2 cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf)
+  - [ggplot2-Book](https://ggplot2-book.org/) (note: 3e is currently "under construction" but it's still a great resource!)
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign11-1" aria-expanded="false" aria-controls="assign11-1"}
+
+Assignment (11) Part 1: Recreate these plots (basic)
+
+:::
+:::
+
+::: {#assign11-1 .accordion-collapse .collapse data-bs-parent="#w5c1"}
+::: {.accordion-body}
+
+
+  - <span style="color:red">**submit BOTH tasks to receive credit for Assignment (11)!**</span> Commit your final submission of both at the same time in just one commit
+  - **Part 1: Recreate these plots (basic)**
+    - In your existing `starwars.R` file from Assignment (8), replicate the following three plots using dplyr and ggplot2 functions (these can be found in the `d2m-2024` repo)
+      - [Plot 1](https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign11-plot1.png)
+      - [Plot 2](https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign11-plot2.png)
+      - [Plot 3](https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign11-plot3.png)
+    - You do not need to save these as image files
+    - If plotting the dataset you created in Assignment (8) isn't working as expected, reproduce it with the code provided during the class walkthrough
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign11-2" aria-expanded="false" aria-controls="assign11-2"}
+
+Assignment (11) Part 2: Add a plot to your .Rmd
+
+:::
+:::
+
+::: {#assign11-2 .accordion-collapse .collapse data-bs-parent="#w5c1"}
+::: {.accordion-body}
+
+
+  - <span style="color:red">**submit BOTH tasks to receive credit for Assignment (11)!**</span> Commit your final submission of both at the same time in just one commit
+  - **Part 2: Add a plot to your .Rmd** 
+    - Add code to one chunk created in Assignment (10)
+    - This can be very basic for now, but should at an absolute minimum contain the appropriate geom layer with correctly specified aesthetics
+    - Add/edit comments to make note of what you want to do to "fine tune" or "pretty up" your plot (e.g., changing theme, adding labels, changing how axis and legend labels appear, grouping by color, faceting, etc.)
+
+:::
+:::
+
+:::
+
+:::
+
+  
+#### Thursday, February 1 2024 (5.2)
+
+##### Pre-class preparation
+
+  - Refer to the ggplot2 resources from last class!
+
+##### Class meeting
+
+<!-- [slides](...) -->
+
+- ~~Lecture: Aesthetics & Layers~~
+    - Going rogue: Messing around with ggplot live on air
+- Assignment: <span style="color:#CB7E45">(12) Create intermediate plots (2 parts: recreate these plots & add 1 (more) plot to .Rmd)</span>
+    - <span style="color:red">**submit BOTH to receive credit for Assignment (12)!**</span> Commit your final submission of both at the same time in just one commit  
+  
+
+
+
+::: {.accordion #w5c2} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 5 / Class 2 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign12-1" aria-expanded="false" aria-controls="assign12-1"}
+
+Assignment (12) Part 1: Recreate these plots (intermediate)
+
+:::
+:::
+
+::: {#assign12-1 .accordion-collapse .collapse data-bs-parent="#w5c2"}
+::: {.accordion-body}
+
+
+  - <span style="color:red">**submit BOTH tasks to receive credit for Assignment (12)!**</span> Commit your final submission of both at the same time in just one commit
+  - **Part 1: Recreate these plots (intermediate)**
+    - In your existing `starwars.R` file from Assignments (8) & (11), replicate the following three plots using dplyr and ggplot2 functions (these can be found in the `d2m-2024` repo)
+      - [Plot 1](https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign12-plot1.png)
+      - [Plot 2](https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign12-plot2.png)
+      - [Plot 3](https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign12-plot3.png)
+    - You do not need to save these as image files
+    - If plotting the dataset you created in Assignment (8) isn't working as expected, reproduce it with the code provided during the class walkthrough
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign12-2" aria-expanded="false" aria-controls="assign12-2"}
+
+Assignment (12) Part 2: Tune up your plot and add another to your .Rmd
+
+:::
+:::
+
+::: {#assign12-2 .accordion-collapse .collapse data-bs-parent="#w5c2"}
+::: {.accordion-body}
+
+
+  - <span style="color:red">**submit BOTH tasks to receive credit for Assignment (12)!**</span> Commit your final submission of both at the same time in just one commit
+  - **Part 2: Tune up your plot and add another to your .Rmd** 
+    - Tune up the plot you made in Assignment (11), for example think about:
+      - Did you use the best kind of plot to tell the story you're hoping to tell?
+      - Did you have to do some wonky wrangling to plot what you wanted?
+      - Are there adjustments you could make to scale, coord, or labs layers that would make things easier to read?
+      - Are you effectively making use of groups? Could you communicate your point better by grouping in a different way (e.g., color, shape, fill, facet)?
+    Add code to one chunk created in Assignment (10)
+      - Add/edit comments to make note of what you want to do to make your plot "pretty" like customizing colors or fonts, tweaking the theme, or relabeling in the legend
+    - Add in the second plot you planned in Assignment (10). At a minimum, replicate what you did in Assignment (11) for the first plot. Add some "tune-ups" if you can!
+
+:::
+:::
+
+:::
+
+:::
+  
+  
+#### Tuesday, February 6 2024 (6.1)
+
+##### Pre-class preparation
+
+  - Refer to the ggplot2 resources from last week
+  - Read up on ggplot theme layer customization in the [documentation](https://ggplot2.tidyverse.org/reference/theme.html) and [ggplot2-book](https://ggplot2-book.org/themes)
+    - These are going to be essential references when you do Assignment (13)!
+  - <span style="color:#93A14D">If you haven't signed up for a report meeting, **do that right now.**</span> Slots are filling up fast, and report meeting slots during week 7 are competing with MAPSS pre-registration meeting slots. **I cannot meet outside the listed appointment times.** <span style="color:red">Failing to meet with me for a report meeting will result in an automatic 10 points off your final report grade.</span>
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/t454rysbdmghmto3uozclx1y4egsn4rc)
+
+  - Lecture: "Pretty Plots" & .Rmd Figure Chunks
+  - Assignment: <span style="color:#CB7E45">(13) Create advanced plots (2 parts: recreate this hideous plot & tune up your own plots</span>
+    - <span style="color:red">**submit BOTH to receive credit for Assignment (13)!**</span> Commit your final submission of both at the same time in just one commit  
+    
+    
+        
+
+
+::: {.accordion #w6c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 6 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w6c1readings" aria-expanded="false" aria-controls="w6c1readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w6c1readings .accordion-collapse .collapse data-bs-parent="#w6c1"}
+::: {.accordion-body}
+
+  - ggplot theme layer customization:
+    - [documentation](https://ggplot2.tidyverse.org/reference/theme.html)
+    - [ggplot2-book](https://ggplot2-book.org/themes)*
+  - From last week:
+    - Chapters on data visualization and ggplot in r4ds: [1](https://r4ds.hadley.nz/data-visualize)\* and [9, 10, 11](https://r4ds.hadley.nz/visualize)\*
+    - [ggplot2 cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf)
+    - [ggplot2-Book](https://ggplot2-book.org/) 
+
+:::
+:::
+
+:::
+
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign13-1" aria-expanded="false" aria-controls="assign13-1"}
+
+Assignment (13) Part 1: Recreate this plot (advanced & terrible)
+
+:::
+:::
+
+::: {#assign13-1 .accordion-collapse .collapse data-bs-parent="#w6c1"}
+::: {.accordion-body}
+
+
+  - <span style="color:red">**submit BOTH tasks to receive credit for Assignment (13)!**</span> Commit your final submission of both at the same time in just one commit
+  - **Part 1: Recreate this plot**
+    - In your existing `starwars.R` file from Assignments (8), (11), & (12), replicate this using dplyr and ggplot2 functions (these can be found in the `d2m-2024` repo)
+      - [Plot 1](https://github.com/nrdowling/d2m-2024/blob/main/images/plots/assign13.png)
+    - You do not need to save this as an image file
+    - If plotting the dataset you created in Assignment (8) isn't working as expected, reproduce it with the code provided during the class walkthrough
+    - <span style="color:red">There's a **lot** going on visually in this plot.</span> Start by creating a base plot with just the required `aes()` mappings and geoms, then making a commented list of all the different modifications you can spot, whether or not you have any idea how to replicate them. Some hints:
+      - You'll need 13 elements in your `theme()` layer *after* setting one of the built-in themes
+      - Install, load, and investigate the `ggsci` package to choose a scale layer
+      - Look for a list of "web-safe font families" to find the right fonts
+      - Neither the `limits` nor `breaks` arguments are required in your axis scales
+      - Remember that facet text can't be modified in the `labs()` layer
+      - You can use a color selector (i.e., eye-dropper) tool [like this one](https://get-color.com/image/) to identify precise colors
+        - If something doesn't look right even with the precise hex code, it could be an effect of transparency ("alpha") somewhere along the way
+    - Try to match as much as you can, but don't let it drive you crazy. Set a timer to keep working, then add/edit comments to describe what is still left to be done. Your completion grade is going to be based on putting in a good-faith effort, *not* getting a perfect replication
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign13-2" aria-expanded="false" aria-controls="assign13-2"}
+
+Assignment (13) Part 2: Tune up your plots & .Rmd code chunks
+
+:::
+:::
+
+::: {#assign13-2 .accordion-collapse .collapse data-bs-parent="#w6c1"}
+::: {.accordion-body}
+
+
+  - <span style="color:red">**submit BOTH tasks to receive credit for Assignment (13)!**</span> Commit your final submission of both at the same time in just one commit
+  - **Part 2: Tune up your plots & .Rmd code chunks** 
+    - Tune up the plots you made in Assignments (11) & (12), for example think about:
+      - Did you use the best kind of plot to tell the story you're hoping to tell?
+      - Did you have to do some wonky wrangling to plot what you wanted?
+      - Are there adjustments you could make to scale, coord, or labs layers that would make things easier to read?
+      - Are you effectively making use of groups? Could you communicate your point better by grouping in a different way (e.g., color, shape, fill, facet)?
+    - "Prettify" your plots with `scale_*()`, `theme()`, and `labs()` layers, as well as "aesthetic" non-aesthetics (i.e., visual attributes outside the `aes()` and so not mapped to your data)
+    - Use code chunks in your .Rmd to render publication-ready plots when knit that:
+      - Are in their own uniquely named chunks
+      - Have a caption defined and referenced in the chunk's fig.cap option
+      - Include appropriate and reader-friendly labels and text (no inscrutable axis or level names!)
+      - Include a theme layer with 1+ customized element (e.g., font, legend placement, background color)
+    - **Bonus:** Add a chunk that reads in one image file, like a photo, diagram, or saved ggplot
+      - Give it a chunk caption just like with your plot chunks
+
+:::
+:::
+
+:::
+
+:::
+  
+#### Thursday, February 8 2024 (6.2)
+
+##### Pre-class preparation
+
+  <!-- - Task -->
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/ujiftsbxroa2ha5rxn3nstsoqdt8n0c4)
+
+- Lecture: Tables & Kables
+- Assignment: 
+    - ~~Recreate this kable~~
+    - <span style="color:#CB7E45">(14) Add a table/kable to your .Rmd</span>
+    
+
+
+
+::: {.accordion #w6c2} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 6 / Class 2 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign14" aria-expanded="false" aria-controls="assign14"}
+
+Assignment (14) Add a table/kable and references to your .Rmd
+
+:::
+:::
+
+::: {#assign14 .accordion-collapse .collapse data-bs-parent="#w6c2"}
+::: {.accordion-body}
+
+  - Add a table/kable chunk to your .Rmd. Include:
+    - A unique chunk name
+    - An informative caption
+    - Reader-friendly column names
+    - At least 3 style modifications, for example (but not limited to):
+      - grouped header rows
+      - font or color changes
+      - table alignment or positioning
+      - scaled table size
+  - Reference your table **and both your figures** from your recent assignments in the text of your .Rmd. Be sure that when you knit the document you see the figures numbered in the order you expect.
+
+
+:::
+:::
+
+:::
+
+:::
+
+  
+#### Tuesday, February 13 2024 (7.1)
+
+##### Pre-class preparation
+
+  - <span style="color:#CB7E45">(15) Imagine (at least) two analyses you would like to run with your data, including 1+ descriptive analysis and 1+ hypothesis testing analysis. Add comment blocks into your rmd describing (in plain English, not code) the analyses you intend to run, for example listing the independent and dependent variables, explaining your hypothesized results, and identifying precisely which tests are appropriate.</span>
+    - This is a good place to check in with your co-authors or advisor before moving forward!
+  - **<span style="color:#93A14D">REMINDER: You must meet with Dr. Dowling by the end of this week (i.e., before end of day Friday, February 16th) to negotiate your plan for the scientific report assignment, which is due on Tuesday of Finals Week.</span>**
+    - Don't delay! More than 25 of these meetings need to happen; don't count on available meeting times at the end of 7th week. You can sign up for office hours any time in weeks 5-7 to make your report plan. Extra slots will be added to my office hours sign-up schedule for these weeks. Look out for a Canvas announcement sometime in week 3 or 4 for when those times are posted.
+    - <span style="color:red">Failing to meet with me for a report meeting will result in an automatic 10 points off your final report grade.</span>
+
+
+##### Class meeting
+
+<!-- [slides](...) -->
+**No slides this week! Demo only.**
+
+- Demo: Data Analysis Part 1
+    - Refer to `stats-demo.Rmd` in the `d2m-2024` repo
+- Assignment: <span style="color:#CB7E45">(16) Add 2 analysis chunks - 1 descriptive, 1 hypothesis testing</span>
+    - And complete Assignment (15) in the pre-class prep if you didn't before class!
+    
+
+  
+::: {.accordion #w7c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 7 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w7c1readings" aria-expanded="false" aria-controls="w7c1readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w7c1readings .accordion-collapse .collapse data-bs-parent="#w7c1"}
+::: {.accordion-body}
+
+- [Reporting analyses in papaja](https://frederikaust.com/papaja_man/reporting.html)
+    - how to use in-line code references effectively
+- [Stats and R](https://statsandr.com/)
+    - [Correlogram in R: how to highlight the most correlated variables in a dataset](https://statsandr.com/blog/correlogram-in-r-how-to-highlight-the-most-correlated-variables-in-a-dataset/)
+    - [Correlation coefficient and correlation test in R](https://statsandr.com/blog/correlation-coefficient-and-correlation-test-in-r/)
+    - [What statistical test should I do?](https://statsandr.com/blog/what-statistical-test-should-i-do/)
+        - With a much bigger and better flowchart than mine!!
+    - [Descriptive statistics in R](https://statsandr.com/blog/descriptive-statistics-in-r/)
+- [A Practical Extension of Introductory Statistics in Psychology using R](https://rpsystats.com/)
+    - Ch 6 Correlation
+    - Ch 7 One-sample t-test
+    - Ch 8 Dependent samples t-test
+    - Ch 9 Independent samples t-test
+- [Learning Statistics with R](https://open.umn.edu/opentextbooks/textbooks/559)
+    - Ch 5 Descriptive Statistics
+    - Ch 13 Comparing two means
+
+
+:::
+:::
+
+:::
+
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign15" aria-expanded="false" aria-controls="assign15"}
+
+Assignment (15) **Pre-class Preparation** add chunks for planned analyses
+
+:::
+:::
+
+::: {#assign15 .accordion-collapse .collapse data-bs-parent="#w7c1"}
+::: {.accordion-body}
+
+Imagine (at least) two analyses you would like to run with your data, including 1+ descriptive analysis and 1+ hypothesis testing analysis. Add comment blocks into your rmd describing (in plain English, not code) the analyses you intend to run, for example listing the independent and dependent variables, explaining your hypothesized results, and identifying precisely which tests are appropriate.
+
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign16" aria-expanded="false" aria-controls="assign16"}
+
+Assignment (16) Add 2 analyses
+
+:::
+:::
+
+::: {#assign16 .accordion-collapse .collapse data-bs-parent="#w7c1"}
+::: {.accordion-body}
+
+
+  - Based on your plans from Assignment (15) (go complete that if you haven't already!) fill in your planning chunks with basic analyses
+    - One chunk should include descriptive statistics and another should include a hypothesis test
+      - More than one of either or both works too! Just make sure you have at least one of each
+    - For anything we covered in class today (descriptives and basic hypothesis testing), create as complete and polished code as possible
+    - For anything more advanced, explore the `psych`, `lme4`, and `stats` packages and give it your best shot based on the info you can find. You'll clean it up after Thursday's class.
+
+
+:::
+:::
+
+:::
+
+
+:::
+  
+  
+#### Thursday, February 15 2024 (7.2)
+
+##### Pre-class preparation
+
+  <!-- - Task -->
+
+##### Class meeting
+
+<!-- [slides](...) -->
+**No slides this week! Demo only.**
+
+- Demo: Data Analysis Part 2
+- Assignment: <span style="color:#CB7E45">(17) Create a partial draft of methods/results with 5 in-line code references</span>
+  
+
+::: {.accordion #w7c2} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 7 / Class 2 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w7c2readings" aria-expanded="false" aria-controls="w7c2readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w7c2readings .accordion-collapse .collapse data-bs-parent="#w7c2"}
+::: {.accordion-body}
+
+- [Stats and R](https://statsandr.com/)
+    - [ANOVA in R](https://statsandr.com/blog/anova-in-r/)
+    - [Multiple linear regression made simple](https://statsandr.com/blog/multiple-linear-regression-made-simple/)
+    - [Binary logistic regression in R](https://statsandr.com/blog/binary-logistic-regression-in-r/)
+    - [Chi-square test of independence in R](https://statsandr.com/blog/chi-square-test-of-independence-in-r/)
+- [A Practical Extension of Introductory Statistics in Psychology using R](https://rpsystats.com/)
+    - Ch 5 Simple Linear Regression
+    - Ch 10 One-way ANOVA
+    - Ch 12 GLM Approach Summary
+- [Learning Statistics with R](https://open.umn.edu/opentextbooks/textbooks/559)
+    - Ch 12 Categorical data analysis
+    - Ch 14 Comparing several means (1-way ANOVA)
+    - Ch 15 Linear regression
+- [Brown VA. (2021) An Introduction to Linear Mixed-Effects Modeling in R](https://journals.sagepub.com/doi/full/10.1177/2515245920960351). *Advances in Methods and Practices in Psychological Science.* 
+- Linear & Mixed-effects model tutorials
+    - [lme4 Tutorial 1: Linear models and linear mixed effects models in R with linguistic applications.](http://arxiv.org/pdf/1308.5499.pdf)
+    - [lme4 Tutorial 2: A very basic tutorial for performing linear mixed effects analyses](https://jontalle.web.engr.illinois.edu/MISC/lme4/bw_LME_tutorial.pdf)
+
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign17" aria-expanded="false" aria-controls="assign17"}
+
+Assignment (17) Create a partial draft of methods/results with 5 in-line code references
+
+:::
+:::
+
+::: {#assign17 .accordion-collapse .collapse data-bs-parent="#w7c2"}
+::: {.accordion-body}
+
+
+- Complete the code chunks for the two analysis chunks you have been working on in Assignments (15) and (16)
+- In the narrative of your R Markdown manuscript, include at least *5* in-line code references
+    - By "in-line code" I mean using R Markdown to interpret some text *outside of a code chunk* as R code, so that it runs it as code and displays the resulting output as fully in-line in your regular old text
+        - Look at the `stats-demo.Rmd` file in the `d2m-2024` repo for lots of examples! Anything that starts with ``r `` is what I mean here.
+        - Remember that just using backticks without the `r` is just formatting, not code. (Everything on this page that looks like code in monospaced font is done that way.)
+    - At least 1 of these in-line code refs should "do something." In other words, it should be more than just a value reference; it should include a function.
+        - Examples of value calls: 
+            - `` `r knitr::inline_expr("model$p.value")` ``
+            - `` `r knitr::inline_expr("median_mpg")` ``
+            - `` `r knitr::inline_expr('mass_height_corr3$ci2[["r"]]')` ``
+        - Examples of in-line function code: 
+            - `` `r knitr::inline_expr("apa_p(model$p.value)")` ``
+            - `` `r knitr::inline_expr("nrow(filter(mtcars, mpg > median(mpg)))")` ``
+            - `` `r knitr::inline_expr('round(mass_height_corr3$ci2[["r"]], 3)')` ``
+
+:::
+:::
+
+:::
+
+:::  
+  
+### Module 4: Creating a Manuscript
+  
+#### Tuesday, February 20 2024 (8.1)
+
+##### Pre-class preparation
+
+- Review the readings & references box below to get a head start installing Zotero, Better BibTeX, and the `citr` package.
+- Pull the most recent version of the `d2m-2024` repo and browse the `bibtex-demo` directory.
+
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/s5nasc2j64n45k5fpehlprq2pynz7gsa)
+
+- Lecture: BibTeX References, citr, & Zotero
+- Workshop: Set up your ideal citation enviornment and start citing
+- Assignment: <span style="color:#CB7E45">(18) Create a .bib file with 5+ references</span>
+  
+  
+
+    
+  
+::: {.accordion #w8c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 8 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .prepbox type="button" data-bs-toggle="collapse" data-bs-target="#w8c1readings" aria-expanded="false" aria-controls="w8c1readings"}
+
+Readings & resources
+
+:::
+:::
+
+::: {#w8c1readings .accordion-collapse .collapse data-bs-parent="#w8c1"}
+::: {.accordion-body}
+
+- Downloads:
+    - [Zotero citation manager](https://www.zotero.org/)
+    - [citr](https://github.com/crsh/citr) R package/add-on
+        - Note: current version cannot be installed with CRAN, follow their instructions to install from GitHub
+    - [Better BibTeX](https://retorque.re/zotero-better-bibtex/) Zotero extension/add-on
+    
+- Reference:
+    - [Citations in papaja](https://frederikaust.com/papaja_man/writing.html)
+    - [R Mardown & BibTeX](https://bibtex.eu/rmarkdown/)
+    - Reproducible Research in R [Ch10: Citations](https://monashdatafluency.github.io/r-rep-res/citations.html)
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign18" aria-expanded="false" aria-controls="assign18"}
+
+Assignment (18) Create a .bib file and add 5+ in-text BibTeX citations
+
+:::
+:::
+
+::: {#assign18 .accordion-collapse .collapse data-bs-parent="#w8c1"}
+::: {.accordion-body}
+
+- Finish downloading and setting up Zotero, Better BibTeX, and the `citr` package add-on
+- Create a .bib file 
+    - Since you've been working in a papaja document all quarter, it's likely a .bib file was automatically generated or that you made a blank one so that your .Rmd would knit properly. If so, you can continue to use that one or create a new one, just make sure it is named appropriately and referenced correctly in the .Rmd where needed
+    - Use the papaja default (`r-references.bib`) or give it some other sensible name
+- Add 5+ relevant references for your manuscript
+    - Try to do different entry types if you can (journal article, book, book chapter, conference paper, etc.)
+    - *Already wrote a lit review for your project/proposal?* Great! You don't need to rewrite it. You can copy and paste your existing work into your RMarkdown notebook, edit formatting as needed, and then swap out the in-text citations you wrote out manually for dynamic bibtex references
+- Knit your .Rmd to .pdf and confirm that the citations render as expected
+    - Error messages? Add/edit/check the name of your .bib file in the YAML header
+    - Unexpected formatting?
+        - Check your .bib file to see if the problem is in that file (in which case, correct it)
+        - If not, debug by pinpointing the problem and following the troubleshooting guidelines from W2
+
+:::
+:::
+
+:::
+
+:::  
+  
+#### Thursday, February 22 2024 (8.2)
+
+##### Pre-class preparation
+
+Come to class with all your BibTeX tools from last class installed and fully functional! Troubleshoot any knitting issues with Assignment (18) before the beginning of class.
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/s5nasc2j64n45k5fpehlprq2pynz7gsa) - same slides as last class
+
+- Lecture: BibTeX References, citr, & Zotero (continued)
+- Assignment: <span style="color:#CB7E45">(19) Add 10+ in-text references to your manuscript in at least 3 different formats</span>
+  
+::: {.accordion #w8c2} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 8 / Class 2 Details
+
+:::
+:::
+
+
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign19" aria-expanded="false" aria-controls="assign19"}
+
+Assignment (19) Add 10+ in-text references to your manuscript in at least 3 different formats
+
+:::
+:::
+
+::: {#assign19 .accordion-collapse .collapse data-bs-parent="#w8c2"}
+::: {.accordion-body}
+
+Building on Assignment (18), continue adding BibTeX references to your literature review (or anywhere in your narrative text). Your repo should now include (among other things):
+
+- A .bib file with at least 10 BibTeX entries
+    - With at least 3 different source types (e.g., article, book, conference paper, policy memo, etc.)
+- A papaja .Rmd with at least 10 in-text bibtex references
+    - With at least 3 different formats (e.g., adding extra text, using year only, including chapters, etc.)
+    - You can rewrite or remove unnecessary extra formats later for your final project, but use them in this assignment for the sake of practice
+- A .pdf file created when you knit your papaja notebook rendering all bibtex references error free
+    - Everything is correctly APA formatted both in the text (e.g., alphabetical order, no random text, last names only, etc.) and the entries in the references section
+    - There are no formatting or input errors in the bibtex entries (e.g., broken special characters, incorrect capitalization, missing or misattributed fields, etc.)
+
+
+:::
+:::
+
+:::
+
+:::  
+  
+#### Tuesday, February 27 2024 (9.1)
+
+##### Pre-class preparation
+
+  <!-- - Task -->
+
+##### Class meeting
+
+[slides](https://uchicago.box.com/s/bcvfp539b84n2wnvupe2tcdntg2d5nyv)
+
+- Housekeeping: Final reports, self-evaluation, last class planning
+- Lecture: Putting it Together
+- Assignment: 
+    - <span style="color:#CB7E45">(20) Clean up your repo & revise your .README as needed</span>
+    - Revise your .Rmd (if needed) to include required elements 
+
+
+
+
+
+::: {.accordion #w9c1} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Week 9 / Class 1 Details
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .infobox type="button" data-bs-toggle="collapse" data-bs-target="#finaltasks" aria-expanded="false" aria-controls="finaltasks"}
+
+Final tasks
+
+:::
+:::
+
+::: {#finaltasks .accordion-collapse .collapse data-bs-parent="#w9c1"}
+::: {.accordion-body}
+
+- [Tell me what you'd like to do with our next and last class meeting.](https://docs.google.com/forms/d/e/1FAIpQLScZvslwBw7kTwkSlsmwv-IyPHJ5_j7pnYLFgKfZG0tgTKEfFQ/viewform)
+- [Share your anonymous feedback about this class](https://forms.gle/9SEpmVrNFffbUD5t8) to make it better for future students
+
+:::
+:::
+
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .assignbox type="button" data-bs-toggle="collapse" data-bs-target="#assign20" aria-expanded="false" aria-controls="assign20"}
+
+Assignment (20) Clean up your repo & update your .Rmd
+
+:::
+:::
+
+::: {#assign20 .accordion-collapse .collapse data-bs-parent="#w9c1"}
+::: {.accordion-body}
+
+- Clean up your repo
+    - Revise your README to reflect the current state of the project:
+        - Narrative description of project purpose, may include project abstract
+        - Representation of current directory structure
+    - Remove or archive old files (add to .gitignore as needed)
+    - Review and update your .gitignore
+- Revise your .Rmd so that it knit to PDF without errors and minimally includes:
+    - 1 table
+    - 1 figure
+    - 1 extracted value reference
+    - 1 in-line function (or math)
+    - 10 bibtex citations
+
+
+
+:::
+:::
+
+:::
+
+:::  
+  
+#### Thursday, February 29 2024 (9.2)
+
+##### Pre-class preparation
+
+  <!-- - Task -->
+
+##### Class meeting
+
+<!-- [slides](...) -->
+
+- Lecture: Polishing & Publishing
+- Assignment: <span style="color:#93A14D">Final reports due next week!</span>
+  
+### Final report & participation self-assessment
+
+#### Tuesday, March 5 2024
+
+<span style="color:#93A14D">Scientific report due. Push all materials to GitHub **AND** submit a .pdf (.doc acceptable if you absolutely insist) of your knit report to Canvas.</span>
+
+<span style="color:purple">Participation self-assessments due, submitted via Canvas.</span>
+
+
+
+## Course policies
+
+### Accessibility and Accommodation
+
+I am committed to making this course accessible to students of all backgrounds, identities, and abilities. If there are circumstances that make aspects of this course difficult for you to access, please contact me so we can discuss how to accommodate your needs. This includes, but is not limited to, accommodations around the format of course materials, the use of Canvas and other digital resources, the classroom and other physical resources, and the structure of assignments.
+
+I will work with you to create an accessible learning environment whether or not you disclose your disability or personal circumstances. If you choose to disclose personal information with me, I will keep those discussions confidential. For certain accommodations you may need to contact Student Disability Services at (773) 702-6000 or disabilities\@uchicago.edu. If you have a documented disability (or think you may have a disability) and, as a result, need a reasonable accommodation to participate in class, complete course requirements, or benefit from the University's programs or services, I encourage you to contact Student Disability Services.
+
+### Diversity, Inclusion, and Community
+
+We will commit as a class to creating a welcoming, respectful, and productive classroom. We will expect each other to be mutually respectful of our meaningful identities. I expect that when we engage with each other in discussion we are considerate of the diversity of our classroom with regards to gender, sexuality, disability, race, ethnicity, religion, socioeconomic status, immigration status, and language. It is critical that we maintain respectful dialogue in the classroom, which includes using correct names and pronouns. If a member of our community – including myself – is creating an unwelcome space for you, I hope you will bring this to my attention immediately.

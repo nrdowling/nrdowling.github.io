@@ -1,0 +1,129 @@
+---
+title: "Pragmatic Gestures"
+subtitle: "from Infancy to Adolescence"
+title-block-style: none
+format:
+  html:
+    template: ../templates/project-template.html
+toc: false
+project-image: ../images/Dissertation.png
+---
+
+Children begin using pragmatic co-speech gestures at the earliest stages of language development. Well before toddlers create their first two-words utterances, they use conventionalized gestures like shoulder shrugs, wrist flips, and head nods and shakes to communicate epistemic and affective states. Soon after they use these same movements as “beats” to complement prosody and emphasize words. Eventually, they will use these gestures with a high degree of flexibility in both form and function: a twitch of one shoulder and a tilt of the head to express disinterest, a palm up and extended toward their listener to pass the turn, a series of small nods to indicate comprehension through backchannel feedback. 
+
+Although children seem to have near mastery of many aspects of their native language before they even begin formal schooling, we know the developmental trajectory of pragmatics extends well into adolescence. We use data from the Language Development Project’s corpus of spontaneous, parent-child interaction in early childhood to explore how co-speech gestures fit into the emergence of these skills. In my dissertation research, I ask how these gestures continue to develop into the middle school years in our corpus of parent-child cooperative tasks.
+
+::: {.accordion #public} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Publications & Presentations
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .lightbox4 type="button" data-bs-toggle="collapse" data-bs-target="#publications" aria-expanded="false" aria-controls="publications"}
+
+Publications
+
+:::
+:::
+
+::: {#publications .accordion-collapse .collapse data-bs-parent="#public"}
+::: {.accordion-body}
+
+Vilà‐Giménez, I., **Dowling, N.**, Demir‐Lira, Ö. E., Prieto, P., & Goldin‐Meadow, S. (2021). The Predictive Value of Non‐Referential Beat Gestures: Early Use in Parent–Child Interactions Predicts Narrative Abilities at 5 Years of Age. Child Development, 92(6), 2335-2355. [Access](https://srcd.onlinelibrary.wiley.com/doi/abs/10.1111/cdev.13583){.badge .access-badge}
+
+**Dowling, N.** (2022). Obviously I Don’t Know but Whatever: Emblematic and Pragmatic Uses of Shrug Gestures in Early Childhood and Adolescence. Doctoral Dissertation, University of Chicago.
+ [Access](https://knowledge.uchicago.edu/record/4897){.badge .access-badge}
+
+![](../images/defense.jpeg){.bordered-image style="margin-left:3%; margin-right:3%; width: 94%"}
+
+:::
+:::
+:::
+
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .mainbox4 type="button" data-bs-toggle="collapse" data-bs-target="#inprep" aria-expanded="false" aria-controls="inprep"}
+
+In-preparation
+
+:::
+:::
+
+::: {#inprep .accordion-collapse .collapse data-bs-parent="#public"}
+::: {.accordion-body}
+
+**Dowling, N.**, Casillas, M., & Goldin-Meadow, S. (in prep) Emblematic origins of pragmatic shrug gestures in early childhood. [Preprint PDF](files/Dowling_EarlyShrugs_PREPRINT.pdf){.badge .access-badge}
+
+**Dowling, N.**, Vilà-Giménez, I., Demir-Lira, Ö., Prieto, P., & Goldin-Meadow, S. (in prep). Two dimensions of pragmatic gestures differentiate early developmental trajectories. 
+[Preprint PDF](files/Dowling_DIMENSIONS_PREPRINT.pdf){.badge .access-badge}
+
+:::
+:::
+:::
+
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .darkbox4 type="button" data-bs-toggle="collapse" data-bs-target="#presentations" aria-expanded="false" aria-controls="presentations"}
+
+Presentations
+
+:::
+:::
+
+::: {#presentations .accordion-collapse .collapse data-bs-parent="#public"}
+::: {.accordion-body}
+
+::: grid
+
+::: {.g-col-6}
+**Dowling, N.**, Casillas, M., & Goldin-Meadow, S. (2022). I dunno - I guess - I mean whatever: Children form a many-to-many pragmatic mapping of shrug gestures between early and late childhood [Paper presentation]. Conference of the International Society for Gesture Studies, Chicago, IL.
+:::
+
+::: {.g-col-6}
+![](../images/isgs-shrug.jpeg){.bordered-image}
+:::
+:::
+
+**Dowling, N.**, Vilà-Giménez, I., Demir-Lira, Ö., Prieto, P., & Goldin-Meadow, S. (2022). Non-referential gestures don't always flock together [Paper presentation]. Conference of the International Society for Gesture Studies, Chicago, IL.
+
+::: grid
+
+::: g-col-6
+![](../images/cds-shrug.jpeg){.bordered-image}
+:::
+::: g-col-6
+**Dowling, N.**, Casillas, M., & Goldin-Meadow, S. (2022). I dunno - I guess - I mean whatever: Children form a many-to-many pragmatic mapping of shrug gestures between early and late childhood. Poster presented at Cognitive Development Society Biannual Meeting, Madison, WI. [Poster PDF](files/poster-CDS-2022.pdf){.badge .access-badge}
+:::
+
+:::
+
+
+**Dowling, N.**, Casillas, M., & Goldin-Meadow, S. (2021). Emblematic and interactive uses of children's shrug gestures. Poster presented at Lancaster Conference on Infant and Early Child Development, Lancaster, United Kingdom (remote). [Poster PDF](files/poster-IASCL-2021-Dowling-Vila.pdf){.badge .access-badge}
+
+**Dowling, N.**, Vilà-Giménez, I., Demir-Lira, Ö., Prieto, P., & Goldin-Meadow, S. (2021) Non-referential beat and flip gestures follow distinct developmental trajectories of function. Poster presented at Congress of the International Association for the Study of Child Language, Philadelphia, PA (remote). [Poster PDF](files/poster-IASCL-2021-Vila-Dowling.pdf){.badge .access-badge}
+
+Vilà-Giménez, I., **Dowling, N.**, Demir-Lira, Ö., Prieto, P., & Goldin-Meadow, S. (2021). Early children’s use of non-referential beat gestures predicts narrative abilities at 5 years of age. Poster presented at Congress of the International Association for the Study of Child Language, Philadelphia, PA (remote).
+
+**Dowling, N.** (2021). “Obviously I don't know but whatever”: What children reveal about knowledge, interest, and understanding through gesture. Invited talk presented at The Chicago Education Workshop, Chicago, IL.
+
+**Dowling, N.** (2021). Emblematic and interactive uses of children's shrug gestures. Invited talk presented at The Language Evolution, Acquisition and Processing Workshop, Chicago, IL.
+Next
+
+
+:::
+:::
+:::
+:::
+
+

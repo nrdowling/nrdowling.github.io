@@ -1,0 +1,30 @@
+::: grid
+
+::: {.g-col-12 .g-col-md-6}
+
+::: {.card .equal-height style="background-color:transparent; border: none; padding:0px"}
+![]({{< meta project-image >}} )
+
+
+:::
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+::: {.card .card-proj-title}
+
+<!-- don't use headings to avoid anchor links -->
+::: {.proj-title .mt-auto}
+{{< meta title >}} 
+:::
+
+::: {.proj-subtitle .mb-auto}
+{{< meta subtitle >}} 
+:::
+
+:::
+
+:::
+
+:::

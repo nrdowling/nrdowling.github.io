@@ -1,0 +1,106 @@
+---
+title: "Research"
+toc: false
+---
+
+> ### *How do children go from being people who talk __at__ you to people who talk __with__ you?*
+
+Adults use an impressive toolkit of communicative resources to coordinate in everyday conversational. By the time American English-speaking children begin school, they have used conversational interaction to master many of the fundamentals of their language. They are not, however, masters of conversational interaction.
+
+Because language is much more than just speech, my work approaches language development as fundamentally multimodal, examining the changing functions of co-speech gestures as children become collaborative conversationalists. *Why and when do children use gestures before words? What kinds of nonverbal messages are children sending when they speak? As adults, do we notice?*
+
+As faculty in the Master of Arts Program in the Social Sciences and a graduate of the Department of Comparative Human Development at the University of Chicago, I share a commitment to an interdisciplinary research approach to the study of communicative development. Using a longitudinal corpus of spontaneous parent-child interaction, my work combines elements of conversation analysis with formal speech and gesture coding to investigate how the tools of cooperative conversation change over development.
+
+My research explores the acquisition and integration of linguistic and non-linguistic elements of discourse-pragmatics from infancy to adulthood. I treat language learning as a social phenomenon, necessarily contextualized in dynamic cultural and interpersonal aims and expectations. I work to understand how interlocutors of all ages leverage their speech, voice, and body to take stance, organize dialogue, and co-create conversation.
+
+Learn more about my ongoing work and project contributions with the links below.
+
+::: {.grid #research-grid}
+
+<!--# panel 1 -->
+
+::: {.g-col-6 .g-col-md-4}
+
+::: {.card .equal-height}
+
+[![](../images/Dissertation.png)](index.qmd)
+
+
+::: {.card-title .mt-auto .mb-auto}
+<span h3>[Pragmatic Gestures from Infancy to Adolescence](prag-gesture.qmd){.stretched-link style="text-decoration: none;"}</span>
+:::
+
+
+:::
+
+
+:::
+
+<!--# panel 2 -->
+
+::: {.g-col-6 .g-col-md-4}
+::: {.card .equal-height}
+
+![](../images/PrefOrg.png)
+
+
+::: {.card-title .mt-auto .mb-auto}
+<span h3>[Gesture in Preference Organization](pref-org.qmd){.stretched-link style="text-decoration: none;"}</span>
+:::
+
+:::
+:::
+
+<!--# panel 3 -->
+
+::: {.g-col-6 .g-col-md-4}
+::: {.card .equal-height}
+![](../images/HOTT.png)
+
+
+::: {.card-title .mt-auto .mb-auto}
+<span h3>[Higher-Order Thinking Talk (HOTT)](hott.qmd){.stretched-link style="text-decoration: none;"}</span>
+
+:::
+:::
+:::
+
+<!--# panel 4 -->
+
+::: {.g-col-6 .g-col-md-4}
+::: {.card .equal-height}
+![](../images/LDP.png)
+
+::: {.card-title .mt-auto .mb-auto}
+<span h3>[Language Development Project](ldp.qmd){.stretched-link style="text-decoration: none;"}</span>
+:::
+:::
+:::
+
+<!--# panel 5 -->
+
+::: {.g-col-6 .g-col-md-4}
+::: {.card .equal-height}
+![](../images/SPEAK.png)
+
+::: {.card-title .mt-auto .mb-auto}
+<span h3>[SPEAK](speak.qmd){.stretched-link style="text-decoration: none;"}</span>
+:::
+:::
+:::
+
+<!--# panel 6 -->
+
+::: {.g-col-6 .g-col-md-4}
+::: {.card .equal-height}
+![](../images/GOT.png)
+
+::: {.card-title .mt-auto .mb-auto}
+<span h3>[Getting on Track Early for School Success](got.qmd){.stretched-link style="text-decoration: none;"}</span>
+:::
+:::
+:::
+
+<!--# end grid-->
+
+:::

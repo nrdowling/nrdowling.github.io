@@ -1,0 +1,49 @@
+
+
+::: {.card .class-card-active .equal-height}
+::: card-header
+### <i class="bi bi-arrow-right-circle-fill"></i> FALL 2024 
+:::
+
+#### Perspectives in Social Science Analysis {.card-title}
+#####  MAPS 30000 Sections 7 & 8 {.card-subtitle}
+
+![](cards/perspectives-banner.svg){.class-banner fig-alt="Abstract, colorful geometric design"}
+
+::: {.card-body style="margin-top: 0px;"}
+
+::: {.content-narrow style="margin-top:-1rem;"}
+### Course description {#course-summary}
+:::
+
+::: {.card-text .overflow-y-scroll .content-narrow .class-scroller}
+
+Perspectives in Social Science Analysis is an introduction to interdisciplinary social theory which aims to teach how to read social science research at the graduate level and develop the ability to formulate and execute a successful master’s thesis. After an introduction during orientation week, we devote 6 weeks of this course to learning 6 influential theories and approaches (in our words, "perspectives") that social scientists use to understand the nature of social life and individual behavior. While the course does not provide a comprehensive overview of all perspectives in the social sciences, it is designed to stimulate thought about how standards of argumentation and evidence are applied in social science research. We read classic and contemporary social science research and discuss the perspective in seminar sessions, teaching how to “reverse  engineer” texts to identify and analyze the authors’ theoretical and methodological choices. Developing these skills is critical to success in graduate courses and the M.A. research thesis. Our study of these 6 perspectives is intended to familiarize students with a broad range of ways that scholars study social life, an essential part of graduate education in the social sciences. The other three weeks of this course, interspersed throughout the quarter, are devoted to M.A. thesis preparation. Here students apply developing knowledge of social science research to begin formulating a thesis project. Written assignments provide opportunities to explore and analyze scholarship in students' areas of research and develop a thesis proposal. 
+
+:::
+:::
+
+::: {.list-group .list-group-flush}
+
+::: list-group-item
+Graduate
+:::
+::: list-group-item
+MAPSS core curriculum; seminar
+:::
+::: list-group-item
+Social science theory, research design
+:::
+:::
+
+::: {.card-body .content-narrow style="text-align: center;"}
+[MAPSS Curriculum](https://mapss.uchicago.edu/programs-of-study/general-curriculum){.card-link .badge}
+[Syllabus](#){.card-link .badge}
+:::
+
+::: {.card-footer}
+Upcoming: Fall 2024 <br> Completed: Fall 2023
+:::
+
+:::
+

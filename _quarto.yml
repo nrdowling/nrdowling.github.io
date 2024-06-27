@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Natalie R. Dowling"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research/index.qmd
+        text: Research
+      - text: Teaching
+        menu:
+            - href: teaching/index.qmd
+              text: Classes
+            - href: teaching/teaching-statements.qmd
+              text: Teaching Statements
+            - href: d2m.qmd
+              text: Data to Manuscript in R
+      - href: about.qmd
+        text: About
+
+
+format:
+  html:
+    template: templates/main-template.html
+    template-partials:
+        - _partials/test.html
+    theme: 
+        - natalie.scss
+    toc: true
+    toc-float: true
+    toc-depth: 2
+    toc-title: Contents
+    anchor-sections: false
+    

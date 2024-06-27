@@ -1,0 +1,3413 @@
+/*-- scss:defaults --*/
+
+// Default the theme name
+$theme-name: if(variable-exists(theme), $theme, "gris");
+
+//
+// Color system - LUX
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f7f7f9 !default;
+$gray-300: #eceeef !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #919aa1 !default;
+$gray-700: #55595c !default;
+$gray-800: #343a40 !default;
+$gray-900: #1a1a1a !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #d9534f !default;
+$orange:  #fd7e14 !default;
+$yellow:  #f0ad4e !default;
+$green:   #4bbf73 !default;
+$teal:    #20c997 !default;
+$cyan:    #1f9bcf !default;
+
+// Natalie Color Theme
+
+$lightdefault: #FAF8F5 !default;
+$eggshell: #F7F1DE !default;
+$richblack: #001219 !default;
+$midnightgreen: #005f73 !default;
+$darkcyan: #0a9396 !default;
+$tiffanyblue: #94d2bd !default;
+$vanilla: #e9d8a6 !default;
+$gamboge: #ee9b00 !default;
+$alloyorange: #ca6702 !default;
+$rust: #bb3e03 !default;
+$rufous: #ae2012 !default;
+$auburn: #9b2226 !default;
+
+// Gris
+
+$main1: #006399 !default;
+
+$main2: #008F99 !default;
+
+$main3: #009978 !default;
+
+$main4: #9e0131 !default;
+
+$main5: #990086 !default;
+
+$main6: #995700 !default;
+
+$mainBW: $gray-500 !default;
+
+
+$primary:       darken($main1, 18%) !default;
+$secondary:     lighten($main1, 66%) !default;
+//$secondary:     lighten($main6, 66%) !default;
+
+$success:       lighten($main3, 8%) !default;
+$info:          lighten($main1, 8%) !default;
+$warning:       lighten($main5, 8%) !default;
+$danger:        lighten($main4, 8%) !default;
+$light:         lighten($main1, 14%) !default;
+$dark:          darken($main4, 21%) !default;
+
+$link-color: $main1 !default;
+
+$min-contrast-ratio:   2.3 !default;
+
+// Options - LUX
+
+$enable-rounded:            true !default;
+
+// Body - LUX
+
+$body-bg:                   $secondary !default;
+$body-color:                $primary !default;
+
+// Fonts - LUX + Natalie
+
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:      "Red Hat Display", "Syne", "Sarabun", "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$font-family-serif:      "Montagu Slab", "Bitter", "Trirong", "Neuton", Times, "Times New Roman", Georgia, serif !default;
+
+$h1-font-size:                2.5rem !default;
+$h2-font-size:                2rem !default;
+$h3-font-size:                1.5rem !default;
+$h4-font-size:                1.25rem !default;
+$h5-font-size:                1rem !default;
+$h6-font-size:                .75rem !default;
+$headings-font-weight:        300 !default;
+$headings-color:              darken($main4, 5%) !default;
+$low-headings-color:          darken($main3, 20%) !default;
+
+// Tables - LUX
+
+$table-border-color:          darken($main1, 21%) !default;
+
+// Buttons - LUX
+
+$btn-line-height:             1.5rem !default;
+$input-btn-padding-y:         .75rem !default;
+$input-btn-padding-x:         1.5rem !default;
+$input-btn-padding-y-sm:      .5rem !default;
+$input-btn-padding-x-sm:      1rem !default;
+$input-btn-padding-y-lg:      2rem !default;
+$input-btn-padding-x-lg:      2rem !default;
+$btn-font-weight:             600 !default;
+
+// Forms - LUX
+
+$input-line-height:                     1.5 !default;
+$input-bg:                              lighten($mainBW, 37%) !default;
+$input-disabled-bg:                     lighten($mainBW,16%) !default;
+$input-group-addon-bg:                  lighten($mainBW,16%) !default;
+
+$form-select-disabled-color:        darken($mainBW,16%) !default;
+$form-select-disabled-bg:           $input-disabled-bg !default;
+
+
+/* Code Block Formatting */
+// Code Block Border Treatment
+$code-block-border-left: false !default;
+$code-block-border-left-style: solid !default;
+$code-block-border-left-size: 3px !default;
+$code-block-padding-left: 0.6em !default;
+
+// Code Block Background Treatment
+// $code-block-bg, $code-block-bg-padding, $code-block-bg-alpha
+$code-block-bg: true !default;
+$code-block-bg-padding: 0.4em !default;
+$code-block-bg-alpha: -0.35 !default;
+
+// Controls when the code block will switch to a dark
+// version of a theme
+$code-block-theme-dark-threshhold: 40% !default;
+
+/* Inline Code Formatting */
+// $code-bg, $code-color, $code-padding
+$code-color: darken($main2, 21%) !default;
+$code-bg: lighten($main5, 66%) !default;
+
+// toc variables
+$toc-color: $main2 !default;
+$toc-font-size: 0.875rem !default;
+$toc-active-border: $main2 !default;
+$toc-inactive-border: lighten($main2, 14%) !default;
+
+$toc-tools-font-size: 0.8rem !default;
+
+/* Callout customization */
+// Formatting
+$callout-border-width: 5px !default;
+$callout-border-scale: 0% !default;
+$callout-icon-scale: 10% !default;
+$callout-margin-top: 1.25rem !default;
+$callout-margin-bottom: 1.25rem !default;
+
+// Navbar
+$navbar-default: if(
+  variable-exists(theme),
+  if(variable-exists(primary), $primary, $main1),
+  $main4
+);
+
+$navbar-padding-y:                  .8rem !default;
+
+// If the user provides a navbar-bg, we need to ignore the
+// theme overide and just recalculate a good value
+$navbar-hl-override: if(
+  variable-exists(navbar-bg) and variable-exists(link-color),
+  theme-contrast($link-color, $navbar-bg),
+  false
+);
+$navbar-bg: theme-override-value(
+  $theme-name,
+  "navbar-bg",
+  $navbar-default
+) !default;
+
+$btn-bg: if(variable-exists(secondary), $secondary, #6c757d) !default;
+$btn-fg: theme-contrast($btn-bg, $btn-bg) !default;
+
+$body-contrast-bg: if(variable-exists(body-bg), $body-bg, $white);
+$body-contrast-color: if(variable-exists(body-color), $body-color, $gray-900);
+$navbar-fg: if(
+  $navbar-bg == transparent,
+  theme-override-value(
+    $theme-name,
+    "navbar-fg",
+    theme-contrast($body-contrast-color, $body-contrast-bg)
+  ),
+  theme-override-value(
+    $theme-name,
+    "navbar-fg",
+    theme-contrast($navbar-bg, $navbar-bg)
+  )
+) !default;
+
+$navbar-hl: if(
+  $navbar-hl-override != false,
+  $navbar-hl-override,
+  theme-override-value(
+    $theme-name,
+    "navbar-hl",
+    if(
+      variable-exists(link-color),
+      theme-contrast($link-color, $navbar-bg),
+      $navbar-fg
+    )
+  )
+) !default;
+$navbar-brand: theme-override-value(
+  $theme-name,
+  "navbar-brand",
+  $navbar-fg
+) !default;
+$navbar-brand-hl: theme-override-value(
+  $theme-name,
+  "navbar-brand-hl",
+  $navbar-hl
+) !default;
+
+$navbar-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-fg}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-toggler-border-color: rgba($navbar-fg, 0) !default;
+$navbar-hover-color: rgba($navbar-hl, 0.8) !default;
+$navbar-disabled-color: rgba($navbar-fg, 0.75) !default;
+$navbar-toggler-padding-x: 0 !default;
+$navbar-toggler-padding-y: 0.25 !default;
+
+// We omit the !default here b/c the dark and light variants
+// are not meaningful in our usage of bootstrap. Instead, we will explicitly
+// manage these using the above documented variables
+$navbar-dark-bg: $navbar-bg;
+$navbar-dark-color: $navbar-fg;
+$navbar-dark-hover-color: $navbar-hover-color;
+//$navbar-dark-hover-color:   $white !default; //LUX
+$navbar-dark-active-color: $navbar-hl;
+$navbar-dark-disabled-color: $navbar-disabled-color;
+$navbar-dark-toggler-icon-bg: $navbar-toggler-icon-bg;
+$navbar-dark-toggler-border-color: $navbar-toggler-border-color;
+
+$navbar-light-bg: $navbar-bg;
+$navbar-light-color: $navbar-fg;
+//$navbar-light-color:                rgba($black, .3) !default; //LUX
+$navbar-light-hover-color: $navbar-hover-color;
+//$navbar-light-hover-color:          $gray-900 !default; //LUX
+$navbar-light-active-color: $navbar-hl;
+//$navbar-light-active-color:          $gray-900 !default; //LUX
+$navbar-light-disabled-color: $navbar-disabled-color;
+$navbar-light-toggler-icon-bg: $navbar-toggler-icon-bg;
+$navbar-light-toggler-border-color: $navbar-toggler-border-color;
+
+$navbar-light-brand-color: $navbar-brand;
+$navbar-light-brand-hover-color: $navbar-brand-hl;
+$navbar-dark-brand-color: $navbar-brand;
+$navbar-dark-brand-hover-color: $navbar-brand-hl;
+
+// Pagination
+
+$pagination-border-color:           transparent !default;
+$pagination-hover-border-color:     $pagination-border-color !default;
+$pagination-disabled-border-color:  $pagination-border-color !default;
+
+
+// Sidebar coloring
+$sidebar-bg: if(variable-exists(light), $light, #fff) !default;
+$sidebar-fg: null !default;
+@if $sidebar-bg == transparent {
+  $sidebar-fg: theme-contrast($body-contrast-color, $body-contrast-bg) !default;
+} @else {
+  $sidebar-fg: theme-contrast($sidebar-bg, $sidebar-bg) !default;
+}
+$sidebar-hl: null;
+$sidebar-font-size: 0.925rem !default;
+$sidebar-font-size-section: 0.875rem !default;
+$sidebar-font-size-collapse: 1rem !default;
+$sidebar-font-size-section-collapse: 1.1rem !default;
+$sidebar-border: false !default;
+
+// Title block variables
+$title-block-color: $body-contrast-color !default;
+$title-block-contast-color: $body-contrast-bg !default;
+$title-block-padding-top: 2.5em !default;
+
+// Footer coloring
+$footer-bg: if(variable-exists(body-bg), $body-bg, #fff) !default;
+$footer-fg: theme-contrast($footer-bg, $footer-bg, "AA") !default;
+$footer-font-size: 0.825em !default;
+$footer-left-font-size: $footer-font-size !default;
+$footer-center-font-size: $footer-font-size !default;
+$footer-right-font-size: $footer-font-size !default;
+
+// Disable default grid system and switch to CSS grid
+$enable-grid-classes: false;
+$enable-cssgrid: true;
+
+$zindex-pagelayout: 998;
+
+$popover-bg: if(variable-exists(body-bg), $body-bg, null) !default;
+$input-bg: if(variable-exists(body-bg), $body-bg, null) !default;
+
+// Note that 'default' is intentionally omitted from this
+// because we're using the default value if one is defined at this
+// point (the if variable exists check in the default).
+// This is a change to override the input border color for
+// darkly, which sets the border color to the body color for
+// whatever reason.
+$input-border-color: theme-override-value(
+  $theme-name,
+  "input-border-color",
+  if(variable-exists(input-border-color), $input-border-color, null)
+);
+
+// Same as above (default is respected if there is not override
+// so the `!default` keyword is omitted). Some themes don't provide
+// active tab border colors and they customize the main border
+// color which results in the tabs looking slightly weird since the
+// colors may not match (for example, simplex).
+$nav-tabs-link-active-border-color: theme-override-value(
+  $theme-name,
+  "nav-tabs-link-active-border-color",
+  if(
+    variable-exists(nav-tabs-link-active-border-color),
+    $nav-tabs-link-active-border-color,
+    null
+  )
+);
+
+/* GRID VARIABLES */
+// The left hand sidebar
+$grid-sidebar-width: 250px !default;
+// The main body
+$grid-body-width: 800px !default;
+// The right hand margin bar
+$grid-margin-width: 250px !default;
+// The gutter that appears between the above columns
+$grid-column-gutter-width: 1.5em !default;
+
+/* CODE ANNOTATION COLORS */
+$code-annotation-higlight-color: #aaaaaa44 !default;
+$code-annotation-higlight-bg: #aaaaaa22 !default;
+
+$breadcrumb-divider: quote(">") !default;
+
+// table variable overrides
+$table-group-separator-color: lighten(
+  if(variable-exists(body-color), $body-color, $gray-900),
+  50%
+) !default;
+$table-group-separator-color-lighter: lighten(
+  if(variable-exists(body-color), $body-color, $gray-900),
+  70%
+) !default;
+
+$bootstrap-version: 5;
+
+
+/*-- scss:functions --*/
+
+@function natalie-contrast($color, $bgColor, $level: "A") {
+  // These will be defined in bootstrap, but creating values here
+  // That will make this function accessible to callers prior to bootstrap variables
+  // being set
+  $black: rgb(0, 0, 0) !default;
+  $white: rgb(255, 255, 255) !default;
+
+  @if tone($bgColor) == "light" {
+    @return natalie-accessibleContrast($color, $black, $bgColor, $level);
+  } @else {
+    @return natalie-accessibleContrast($color, $white, $bgColor, $level);
+  }
+}
+
+@function natalie-accessibleContrast($startColor, $mixColor, $bgColor, $level: "A") {
+  // A: 3:1
+  // AA: 4.5:1
+  // AAA: 7:1
+  $goalContrastRatio: 3;
+  @if $level == "AA" {
+    $goalContrastRatio: 4.5;
+  } @else if $level == "AAA" {
+    $goalContrastRatio: 7;
+  }
+
+  $percentMix: 100;
+  $contrastRatio: 0;
+  $contrastColor: null;
+  @while ($contrastRatio < $goalContrastRatio and $percentMix > 0) {
+    $contrastColor: mix(
+      $startColor,
+      $mixColor,
+      percentage(quarto-math.div($percentMix, 100))
+    );
+    $contrastRatio: contrast($contrastColor, $bgColor);
+    $percentMix: $percentMix - 1;
+  }
+
+  @return $contrastColor;
+}
+
+
+
+/*-- scss:rules --*/
+
+// Variables
+
+//$web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" !default;
+
+//$web-font-path: 'https://fonts.googleapis.com/css?family=Syne' !default;
+
+$web-font-path: 'https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap' !default;
+
+
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+// Natalie's additional fonts
+@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Syne);
+
+// serif fonts
+@import url(https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap);
+
+// Navbar
+
+.navbar {
+  font-size: $font-size-sm;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &-nav {
+    .nav-link {
+      padding-top: .715rem;
+      padding-bottom: .715rem;
+    }
+  }
+
+  &-brand {
+    margin-right: 2rem;
+  }
+}
+
+.bg-light {
+  border: 2px solid lighten($main1, 66%);
+
+  &.navbar-fixed-top {
+    border-width: 0 0 12px;
+  }
+
+  &.navbar-bottom-top {
+    border-width: 2px 0 0;
+  }
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+// Buttons
+
+.btn {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+
+  &-sm {
+    font-size: 10px;
+  }
+
+  &-warning {
+    &,
+    &:hover,
+    &:not([disabled]):not(.disabled):active,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.btn-outline-secondary {
+  color: $gray-600;
+  border-color: $gray-600;
+
+  &:not([disabled]):not(.disabled):hover,
+  &:not([disabled]):not(.disabled):focus,
+  &:not([disabled]):not(.disabled):active {
+    color: $white;
+    background-color: $gray-400;
+    border-color: $gray-400;
+  }
+
+  &:not([disabled]):not(.disabled):focus {
+    box-shadow: 0 0 0 .2rem rgba($gray-400, .5);
+  }
+}
+
+[class*="btn-outline-"] {
+  border-width: 2px;
+}
+
+.border-secondary {
+  border: 1px solid $gray-400 !important;
+}
+
+
+
+// Tables
+
+th {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+}
+
+.table {
+  th,
+  td {
+    padding: 1rem;
+  }
+
+  &-sm {
+    th,
+    td {
+      padding: .75rem;
+    }
+  }
+}
+
+// Navs
+
+.dropdown-menu {
+  font-size: $font-size-sm;
+  text-transform: none;
+}
+
+// Indicators
+
+.badge {
+  padding-top: .28rem;
+
+  &-pill {
+    border-radius: 10rem;
+  }
+
+  &.bg-secondary,
+  &.bg-light {
+    color: $dark;
+  }
+}
+
+// Containers
+
+.list-group-item,
+.card {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: inherit;
+  }
+}
+
+main {
+  ol ol,
+  ul ul,
+  ol ul,
+  ul ol {
+    margin-bottom: 1em;
+  }
+}
+
+// the scss mode for vs code doesn't like the fancy :has(> p) selector, but
+// it's valid: https://developer.mozilla.org/en-US/docs/Web/CSS/:has
+ul > li:not(:has(> p)) > ul,
+ol > li:not(:has(> p)) > ul,
+ul > li:not(:has(> p)) > ol,
+ol > li:not(:has(> p)) > ol {
+  margin-bottom: 0;
+}
+
+ul > li:not(:has(> p)) > ul > li:has(> p),
+ol > li:not(:has(> p)) > ul > li:has(> p),
+ul > li:not(:has(> p)) > ol > li:has(> p),
+ol > li:not(:has(> p)) > ol > li:has(> p) {
+  margin-top: 1rem;
+}
+
+// Grid layout
+body {
+  margin: 0;
+}
+
+// If we're applying display: grid, we're losing our display: border-box
+// behavior, so we need to reset bottom margin for title block
+main.page-columns > header > h1.title {
+  margin-bottom: 0;
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    .page-columns {
+      @include page-columns-default-wide();
+    }
+  }
+
+  body.fullcontent:not(.floating):not(.docked) {
+    .page-columns {
+      @include page-columns-fullcontent-wide();
+    }
+  }
+
+  body.slimcontent:not(.floating):not(.docked) {
+    .page-columns {
+      @include page-columns-slimcontent-wide();
+    }
+  }
+
+  body.listing:not(.floating):not(.docked) {
+    .page-columns {
+      @include page-columns-listing-wide();
+    }
+  }
+
+  body:not(.floating):not(.docked) {
+    .page-columns.toc-left {
+      @include page-columns-tocleft-wide();
+      .page-columns {
+        @include page-columns-tocleft-wide();
+      }
+    }
+  }
+
+  body.floating {
+    .page-columns {
+      @include page-columns-float-wide();
+    }
+  }
+
+  body.docked {
+    .page-columns {
+      @include page-columns-docked-wide();
+    }
+  }
+
+  body.docked.fullcontent {
+    .page-columns {
+      @include page-columns-docked-fullcontent-wide();
+    }
+  }
+
+  body.floating.fullcontent {
+    .page-columns {
+      @include page-columns-float-fullcontent-wide();
+    }
+  }
+
+  body.docked.slimcontent {
+    .page-columns {
+      @include page-columns-docked-slimcontent-wide();
+    }
+  }
+
+  body.docked.listing {
+    .page-columns {
+      @include page-columns-docked-listing-wide();
+    }
+  }
+
+  body.floating.slimcontent {
+    .page-columns {
+      @include page-columns-float-slimcontent-wide();
+    }
+  }
+
+  body.floating.listing {
+    .page-columns {
+      @include page-columns-float-listing-wide();
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  body {
+    .page-columns {
+      @include page-columns-default-mid();
+    }
+  }
+
+  body.fullcontent:not(.floating):not(.docked) {
+    .page-columns {
+      @include page-columns-fullcontent-mid();
+    }
+  }
+
+  body.slimcontent:not(.floating):not(.docked) {
+    .page-columns {
+      @include page-columns-slimcontent-mid();
+    }
+  }
+
+  body.listing:not(.floating):not(.docked) {
+    .page-columns {
+      @include page-columns-listing-mid();
+    }
+  }
+
+  body:not(.floating):not(.docked) {
+    .page-columns.toc-left {
+      @include page-columns-tocleft-mid();
+      .page-columns {
+        @include page-columns-tocleft-mid();
+      }
+    }
+  }
+
+  body.floating {
+    .page-columns {
+      @include page-columns-float-mid();
+    }
+  }
+
+  body.docked {
+    .page-columns {
+      @include page-columns-docked-mid();
+    }
+  }
+
+  body.docked.fullcontent {
+    .page-columns {
+      @include page-columns-docked-fullcontent-mid();
+    }
+  }
+
+  body.floating.fullcontent {
+    .page-columns {
+      @include page-columns-float-fullcontent-mid();
+    }
+  }
+
+  body.docked.slimcontent {
+    .page-columns {
+      @include page-columns-docked-slimcontent-mid();
+    }
+  }
+
+  body.docked.listing {
+    .page-columns {
+      @include page-columns-docked-listing-mid();
+    }
+  }
+
+  body.floating.slimcontent {
+    .page-columns {
+      @include page-columns-float-slimcontent-mid();
+    }
+  }
+
+  body.floating.listing {
+    .page-columns {
+      @include page-columns-float-listing-mid();
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  body,
+  body.fullcontent:not(.floating):not(.docked),
+  body.slimcontent:not(.floating):not(.docked),
+  body.docked,
+  body.docked.slimcontent,
+  body.docked.fullcontent,
+  body.floating,
+  body.floating.slimcontent,
+  body.floating.fullcontent {
+    .page-columns {
+      @include page-columns();
+      @include grid-template-columns-narrow();
+    }
+  }
+
+  body:not(.floating):not(.docked) {
+    .page-columns.toc-left {
+      @include page-columns();
+      @include grid-template-columns-narrow();
+      .page-columns {
+        @include page-columns();
+        @include grid-template-columns-narrow();
+      }
+    }
+  }
+
+  nav[role="doc-toc"] {
+    display: none;
+  }
+}
+
+// Positions a header, body, and footer in rows
+body,
+.page-row-navigation {
+  grid-template-rows: [page-top] max-content [contents-top] max-content [contents-bottom] max-content [page-bottom];
+}
+
+// Positions contents followed by a region below the content
+// (used for pagination controls)
+.page-rows-contents {
+  grid-template-rows:
+    [content-top] minmax(max-content, 1fr) [content-bottom] minmax(
+      60px,
+      max-content
+    )
+    [page-bottom];
+}
+
+.page-full {
+  grid-column: screen-start / screen-end !important;
+}
+
+.page-columns > * {
+  grid-column: body-content-start / body-content-end;
+}
+
+.page-columns.column-page > * {
+  grid-column: page-start / page-end;
+}
+.page-columns.column-page-left .page-columns.page-full > *,
+.page-columns.column-page-left > * {
+  grid-column: page-start / body-content-end;
+}
+
+.page-columns.column-page-right .page-columns.page-full > *,
+.page-columns.column-page-right > * {
+  grid-column: body-content-start / page-end;
+}
+
+// Automatically creates new rows
+.page-rows {
+  grid-auto-rows: auto;
+}
+
+.header {
+  grid-column: screen-start / screen-end;
+  grid-row: page-top / contents-top;
+}
+
+#quarto-content {
+  padding: 0;
+  grid-column: screen-start / screen-end;
+  grid-row: contents-top / contents-bottom;
+}
+
+body.floating {
+  .sidebar.sidebar-navigation {
+    grid-column: page-start / body-start;
+    grid-row: content-top / page-bottom;
+  }
+}
+
+body.docked {
+  .sidebar.sidebar-navigation {
+    grid-column: screen-start / body-start;
+    grid-row: content-top / page-bottom;
+  }
+}
+
+.sidebar.toc-left {
+  grid-column: page-start / body-start;
+  grid-row: content-top / page-bottom;
+}
+
+.sidebar.margin-sidebar {
+  grid-column: body-end / page-end;
+  grid-row: content-top / page-bottom;
+}
+
+.page-columns .content {
+  grid-column: body-content-start / body-content-end;
+  grid-row: content-top / content-bottom;
+  align-content: flex-start;
+}
+
+.page-columns .page-navigation {
+  grid-column: body-content-start / body-content-end;
+  grid-row: content-bottom / page-bottom;
+}
+
+.page-columns .footer {
+  grid-column: screen-start / screen-end;
+  grid-row: contents-bottom / page-bottom;
+}
+
+.page-columns .column-body {
+  grid-column: body-content-start / body-content-end;
+}
+
+.page-columns .column-body-fullbleed {
+  grid-column: body-start / body-end;
+}
+
+.page-columns .column-body-outset {
+  grid-column: body-start-outset / body-end-outset;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-body-outset-left {
+  grid-column: body-start-outset / body-content-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-body-outset-right {
+  grid-column: body-content-start / body-end-outset;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-page {
+  grid-column: page-start / page-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-page-inset {
+  grid-column: page-start-inset / page-end-inset;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-page-inset-left {
+  grid-column: page-start-inset / body-content-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-page-inset-right {
+  grid-column: body-content-start / page-end-inset;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  figcaption {
+    @include column-spanning-element();
+  }
+}
+
+.page-columns .column-page-left {
+  grid-column: page-start / body-content-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-page-right {
+  grid-column: body-content-start / page-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  figcaption {
+    @include column-spanning-element();
+  }
+}
+
+#quarto-content.page-columns {
+  #quarto-margin-sidebar,
+  #quarto-sidebar {
+    z-index: 1;
+  }
+
+  @include media-breakpoint-down(lg) {
+    #quarto-margin-sidebar.collapse,
+    #quarto-sidebar.collapse,
+    #quarto-margin-sidebar.collapsing,
+    #quarto-sidebar.collapsing {
+      z-index: $zindex-modal;
+    }
+  }
+
+  main.column-page,
+  main.column-page-right,
+  main.column-page-left {
+    z-index: 0;
+  }
+}
+
+.page-columns .column-screen-inset {
+  grid-column: screen-start-inset / screen-end-inset;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-screen-inset-left {
+  grid-column: screen-start-inset / body-content-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-screen-inset-right {
+  grid-column: body-content-start / screen-end-inset;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-screen {
+  grid-column: screen-start / screen-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-screen-left {
+  grid-column: screen-start / body-content-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-screen-right {
+  grid-column: body-content-start / screen-end;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  @include column-spanning-element();
+}
+
+.page-columns .column-screen-inset-shaded {
+  grid-column: screen-start / screen-end;
+  padding: 1em;
+  background: $light;
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+  margin-bottom: 1em;
+}
+
+.zindex-content {
+  z-index: $zindex-pagelayout;
+  opacity: 0.999;
+}
+
+.zindex-modal {
+  z-index: $zindex-modal;
+  opacity: 0.999;
+}
+
+.zindex-over-content {
+  z-index: #{$zindex-dropdown - 1};
+  opacity: 0.999;
+}
+
+img.img-fluid.column-screen,
+img.img-fluid.column-screen-inset-shaded,
+img.img-fluid.column-screen-inset,
+img.img-fluid.column-screen-inset-left,
+img.img-fluid.column-screen-inset-right,
+img.img-fluid.column-screen-left,
+img.img-fluid.column-screen-right {
+  width: 100%;
+}
+
+@include media-breakpoint-up(lg) {
+  .margin-caption,
+  div.aside,
+  aside:not(.footnotes):not(.sidebar),
+  .column-margin {
+    grid-column: body-end / page-end !important;
+    z-index: $zindex-pagelayout;
+  }
+
+  .column-sidebar {
+    grid-column: page-start / body-start !important;
+    z-index: $zindex-pagelayout;
+  }
+
+  .column-leftmargin {
+    grid-column: screen-start-inset / body-start !important;
+    z-index: $zindex-pagelayout;
+  }
+
+  .no-row-height {
+    height: 1em;
+    overflow: visible;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .margin-caption,
+  div.aside,
+  aside:not(.footnotes):not(.sidebar),
+  .column-margin {
+    grid-column: body-end / page-end !important;
+    z-index: $zindex-pagelayout;
+  }
+
+  .no-row-height {
+    height: 1em;
+    overflow: visible;
+  }
+
+  .page-columns.page-full {
+    overflow: visible;
+  }
+
+  .page-columns.toc-left {
+    .margin-caption,
+    div.aside,
+    aside:not(.footnotes):not(.sidebar),
+    .column-margin {
+      grid-column: body-content-start / body-content-end !important;
+      z-index: $zindex-pagelayout;
+      opacity: 0.999;
+    }
+    .no-row-height {
+      height: initial;
+      overflow: initial;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .margin-caption,
+  div.aside,
+  aside:not(.footnotes):not(.sidebar),
+  .column-margin {
+    grid-column: body-content-start / body-content-end !important;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+  }
+  .no-row-height {
+    height: initial;
+    overflow: initial;
+  }
+
+  #quarto-margin-sidebar {
+    display: none;
+  }
+
+  #quarto-sidebar-toc-left {
+    display: none;
+  }
+
+  .hidden-sm {
+    display: none;
+  }
+}
+
+// Panel Grid (custom grid for our panel system)
+.panel-grid {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(24, 1fr);
+  gap: 1em;
+  @include make-cssgrid(24);
+}
+
+// Rest of rules
+body {
+  @if variable-exists(margin-top) {
+    margin-top: $margin-top;
+  }
+  @if variable-exists(margin-bottom) {
+    margin-bottom: $margin-bottom;
+  }
+  @if variable-exists(margin-left) {
+    margin-left: $margin-left;
+  }
+  @if variable-exists(margin-right) {
+    margin-right: $margin-right;
+  }
+}
+
+main {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.header-section-number {
+  @include body-secondary;
+}
+
+.nav-link.active .header-section-number {
+  color: inherit;
+}
+
+mark {
+  padding: 0em;
+}
+
+// The 1.4 figcaption classes are
+//
+// quarto-float-caption or quarto-subfloat-caption, depending
+// on whether it's a main or subfloat caption.
+//
+// In addition, the name of the float is added as a class
+// as well ("figure", "table", etc, including custom
+// float types like a hypothetical "diagram")
+//
+// this way, custom float types can be both supported and
+// offered good defaults.
+//
+// FIXME right now we're classing all of figcaption,
+// but we should clean this up.
+.panel-caption,
+.figure-caption,
+.subfigure-caption,
+.table-caption,
+figcaption,
+caption {
+  font-size: 0.9rem;
+  @include body-secondary;
+}
+
+// as of 1.4, tables emitted by quarto shouldn't have caption
+// elements, but we keep this here in case some strange rawhtml
+// table sneaks through.
+.quarto-layout-cell[data-ref-parent] caption {
+  @include body-secondary;
+}
+
+.column-margin figcaption,
+.margin-caption,
+div.aside,
+aside,
+.column-margin {
+  @include body-secondary;
+  font-size: 0.825rem;
+}
+
+.panel-caption.margin-caption {
+  text-align: inherit;
+}
+
+.column-margin.column-container p {
+  margin-bottom: 0;
+}
+
+.column-margin.column-container > *:not(.collapse):first-child {
+  padding-bottom: 0.5em;
+  display: block;
+}
+
+.column-margin.column-container > *:not(.collapse):not(:first-child) {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: block;
+}
+
+.column-margin.column-container > *.collapse:not(.show) {
+  display: none;
+}
+
+@include media-breakpoint-up(md) {
+  .column-margin.column-container .callout-margin-content:first-child {
+    margin-top: 4.5em;
+  }
+  .column-margin.column-container .callout-margin-content-simple:first-child {
+    margin-top: 3.5em;
+  }
+}
+
+.margin-caption > * {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+// Caption and footnotes
+
+// sort out font size
+$code-block-font-size: $small-font-size !default;
+
+// sort out border color
+$code-block-border-left-color: $table-border-color !default;
+@if type_of($code-block-border-left) == color {
+  $code-block-border-left-color: $code-block-border-left;
+}
+
+// sort out background color
+$code-block-bg-color: quarto-color.adjust(
+  $progress-bg,
+  $alpha: $code-block-bg-alpha
+) !default;
+@if type_of($code-block-bg) == color {
+  $code-block-bg-color: $code-block-bg;
+}
+
+// stack layout panels on mobile devices
+@include media-breakpoint-down(md) {
+  .quarto-layout-row {
+    flex-direction: column;
+  }
+}
+
+.nav-tabs .nav-item {
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.tab-content {
+  margin-top: 0px;
+  border-left: $nav-tabs-border-color $nav-tabs-border-width solid;
+  border-right: $nav-tabs-border-color $nav-tabs-border-width solid;
+  border-bottom: $nav-tabs-border-color $nav-tabs-border-width solid;
+  margin-left: 0;
+  padding: 1em;
+  margin-bottom: 1em;
+  //display: flex;
+}
+
+@include media-breakpoint-down(md) {
+  .layout-sidebar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.panel-sidebar,
+.panel-sidebar .form-control,
+.panel-input,
+.panel-input .form-control,
+.selectize-dropdown {
+  font-size: 0.9rem;
+}
+
+.panel-sidebar .form-control,
+.panel-input .form-control {
+  padding-top: 0.1rem;
+}
+
+//.tab-pane {
+//    flex: 1;
+//}
+
+.tab-pane div.sourceCode {
+  margin-top: 0px;
+}
+
+.tab-pane > p {
+  padding-top: 0;
+}
+
+.tab-pane > p:nth-child(1) {
+  padding-top: 0;
+}
+
+.tab-pane > p:last-child {
+  margin-bottom: 0;
+}
+
+.tab-pane > pre:last-child {
+  margin-bottom: 0;
+}
+
+.tab-content > .tab-pane:not(.active) {
+  display: none !important;
+}
+
+
+div.sourceCode {
+  // Clear code background if is not specified
+  @if $code-block-bg {
+    background-color: $code-block-bg-color;
+    border: 1px solid $code-block-bg-color;
+    border-radius: $border-radius;
+  } @else {
+    background-color: $body-bg !important;
+    border: none;
+    padding: 0;
+  }
+
+  @if variable-exists(code-block-color) {
+    color: $code-block-color;
+  }
+}
+
+@if variable-exists(code-block-color) {
+  div.sourceCode pre.sourceCode {
+    color: $code-block-color;
+  }
+}
+
+pre.sourceCode {
+  background-color: transparent;
+}
+
+pre.sourceCode {
+  // Border
+  @if $code-block-border-left {
+    border-left: $code-block-border-left-size;
+    border-left-style: $code-block-border-left-style;
+    border-left-color: $code-block-border-left-color;
+    padding-left: $code-block-padding-left;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+  } @else {
+    border: none;
+  }
+  font-size: $code-block-font-size;
+  overflow: visible !important;
+  @if $code-block-bg {
+    padding: $code-block-bg-padding;
+  }
+}
+
+pre.sourceCode > code.sourceCode {
+  @if not $code-block-bg {
+    padding: 0;
+  }
+}
+
+// no border inside callouts
+.callout pre.sourceCode {
+  padding-left: 0;
+}
+
+div.sourceCode {
+  overflow-y: hidden;
+}
+
+.callout div.sourceCode {
+  margin-left: initial;
+}
+
+// improve treatment of blockquotes
+.blockquote {
+  font-size: inherit;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  @include body-secondary;
+  color: $main1;
+  border-left-color: lighten($main1, 14%);
+}
+
+.blockquote {
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child {
+    margin-top: 0;
+  }
+}
+
+pre {
+  background-color: initial;
+  padding: initial;
+  border: initial;
+}
+
+// Maps the pandoc 'monobackgroundcolor' to bootstrap
+// Note this only targets code outside of sourceCode blocks
+@if variable-exists(mono-background-color) {
+  p code:not(.sourceCode),
+  li code:not(.sourceCode),
+  kbd,
+  pre:not(.sourceCode),
+  samp {
+    background-color: $mono-background-color;
+    padding: 0.2em;
+  }
+}
+
+p pre code:not(.sourceCode),
+li pre code:not(.sourceCode),
+pre code:not(.sourceCode) {
+  background-color: initial;
+}
+
+// Default padding if background is set
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  @if variable-exists(mono-background-color) {
+    background-color: $mono-background-color;
+  } @else if variable-exists(code-bg) {
+    background-color: $code-bg;
+  }
+
+  @if variable-exists(code-padding) {
+    padding: $code-padding;
+  } @else if variable-exists(code-bg) {
+    padding: 0.2em;
+  } @else if variable-exists(mono-background-color) {
+    padding: 0.2em;
+  }
+}
+
+nav p code:not(.sourceCode),
+nav li code:not(.sourceCode),
+nav td code:not(.sourceCode) {
+  background-color: transparent;
+  padding: 0;
+}
+
+td code:not(.sourceCode) {
+  white-space: pre-wrap;
+}
+
+#quarto-embedded-source-code-modal > .modal-dialog {
+  max-width: 1000px;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+#quarto-embedded-source-code-modal
+  > .modal-dialog
+  > .modal-content
+  > .modal-body {
+  padding: 0;
+}
+
+#quarto-embedded-source-code-modal
+  > .modal-dialog
+  > .modal-content
+  > .modal-body
+  div.sourceCode {
+  margin: 0;
+  padding: 0.2rem 0.2rem;
+  border-radius: 0px;
+  border: none;
+}
+
+#quarto-embedded-source-code-modal
+  > .modal-dialog
+  > .modal-content
+  > .modal-header {
+  padding: 0.7rem;
+}
+
+.code-tools-button {
+  font-size: 1rem;
+  padding: 0.15rem 0.15rem;
+  margin-left: 5px;
+  color: $text-muted;
+  background-color: transparent;
+  transition: initial;
+  cursor: pointer;
+}
+
+.code-tools-button > .bi::before {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  content: "";
+  vertical-align: -0.125em;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGB($text-muted)}" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+}
+
+.code-tools-button:hover > .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGB($body-color)}" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/></svg>');
+}
+
+#quarto-embedded-source-code-modal .code-copy-button > .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGB($text-muted)}" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>');
+}
+
+#quarto-embedded-source-code-modal .code-copy-button-checked > .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGB($text-muted)}" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>');
+}
+
+/* table of contents */
+.sidebar {
+  will-change: top;
+  transition: top 200ms linear;
+  position: sticky;
+  overflow-y: auto;
+  padding-top: 1.2em;
+  max-height: 100vh;
+}
+
+.sidebar.toc-left,
+.sidebar.margin-sidebar {
+  top: 0px;
+  padding-top: 1em;
+}
+
+.sidebar.quarto-banner-title-block-sidebar {
+  & > * {
+    padding-top: 1.65em;
+  }
+}
+
+figure .quarto-notebook-link {
+  margin-top: 0.5em;
+}
+
+.quarto-notebook-link {
+  font-size: 0.75em;
+  color: $text-muted;
+  margin-bottom: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.quarto-notebook-link:hover {
+  text-decoration: underline;
+  color: $link-color;
+}
+
+.quarto-notebook-link::before {
+  display: inline-block;
+  height: 0.75rem;
+  width: 0.75rem;
+  margin-bottom: 0em;
+  margin-right: 0.25em;
+  content: "";
+  vertical-align: -0.125em;
+
+  @if variable-exists(text-muted) {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGB($text-muted)}" class="bi bi-journal-code" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z"/><path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/><path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/></svg>');
+  } @else {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-code" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z"/><path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/><path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/></svg>');
+  }
+  background-repeat: no-repeat;
+  background-size: 0.75rem 0.75rem;
+}
+
+.toc-actions i.bi,
+.quarto-code-links i.bi,
+.quarto-other-links i.bi,
+.quarto-alternate-notebooks i.bi,
+.quarto-alternate-formats i.bi {
+  margin-right: 0.4em;
+  font-size: $toc-tools-font-size;
+}
+
+.quarto-other-links-text-target {
+  .quarto-code-links i.bi,
+  .quarto-other-links i.bi {
+    margin-right: 0.2em;
+  }
+}
+
+.quarto-other-formats-text-target .quarto-alternate-formats i.bi {
+  margin-right: 0.1em;
+}
+
+.toc-actions i.bi.empty,
+.quarto-code-links i.bi.empty,
+.quarto-other-links i.bi.empty,
+.quarto-alternate-notebooks i.bi.empty,
+.quarto-alternate-formats i.bi.empty {
+  padding-left: 1em;
+}
+
+.quarto-notebook {
+  h2 {
+    border-bottom: none;
+  }
+  .cell-container {
+    display: flex;
+    .cell {
+      flex-grow: 4;
+    }
+    .cell-decorator {
+      padding-top: 1.5em;
+      padding-right: 1em;
+      text-align: right;
+    }
+
+    &.code-fold .cell-decorator {
+      padding-top: 3em;
+    }
+  }
+  .cell-code code {
+    white-space: pre-wrap;
+  }
+
+  .cell .cell-output-stderr pre code,
+  .cell .cell-output-stdout pre code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+}
+
+.toc-actions,
+.quarto-alternate-formats,
+.quarto-other-links,
+.quarto-code-links,
+.quarto-alternate-notebooks {
+  padding-left: 0em;
+}
+.sidebar .toc-actions a,
+.sidebar .quarto-alternate-formats a,
+.sidebar .quarto-other-links a,
+.sidebar .quarto-code-links a,
+.sidebar .quarto-alternate-notebooks a,
+.sidebar nav[role="doc-toc"] a {
+  text-decoration: none;
+}
+
+.sidebar .toc-actions a:hover,
+.sidebar .quarto-other-links a:hover,
+.sidebar .quarto-code-links a:hover,
+.sidebar .quarto-alternate-formats a:hover,
+.sidebar .quarto-alternate-notebooks a:hover {
+  color: $link-color;
+}
+
+.sidebar .toc-actions h2,
+.sidebar .quarto-code-links h2,
+.sidebar .quarto-other-links h2,
+.sidebar .quarto-alternate-notebooks h2,
+.sidebar .quarto-alternate-formats h2,
+.sidebar nav[role="doc-toc"] > h2 {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  margin-top: 0.3rem;
+  font-family: inherit;
+  border-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.sidebar .toc-actions > h2,
+.sidebar .quarto-code-links > h2,
+.sidebar .quarto-other-links > h2,
+.sidebar .quarto-alternate-notebooks > h2,
+.sidebar .quarto-alternate-formats > h2 {
+  font-size: $toc-tools-font-size;
+}
+
+.sidebar nav[role="doc-toc"] > h2 {
+  font-size: $toc-font-size;
+  color: $main1;
+}
+
+.sidebar nav[role="doc-toc"] > ul a {
+  border-left: 1px solid $toc-inactive-border;
+  padding-left: 0.6rem;
+}
+
+.sidebar .toc-actions h2 > ul a,
+.sidebar .quarto-code-links h2 > ul a,
+.sidebar .quarto-other-links h2 > ul a,
+.sidebar .quarto-alternate-notebooks h2 > ul a,
+.sidebar .quarto-alternate-formats h2 > ul a {
+  border-left: none;
+  padding-left: 0.6rem;
+}
+
+.sidebar .toc-actions ul a:empty,
+.sidebar .quarto-code-links ul a:empty,
+.sidebar .quarto-other-links ul a:empty,
+.sidebar .quarto-alternate-notebooks ul a:empty,
+.sidebar .quarto-alternate-formats ul a:empty,
+.sidebar nav[role="doc-toc"] > ul a:empty {
+  display: none;
+}
+
+.sidebar .toc-actions ul,
+.sidebar .quarto-code-links ul,
+.sidebar .quarto-other-links ul,
+.sidebar .quarto-alternate-notebooks ul,
+.sidebar .quarto-alternate-formats ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar nav[role="doc-toc"] ul {
+  list-style: none;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar nav[role="doc-toc"] > ul {
+  margin-left: 0.45em;
+}
+
+.quarto-margin-sidebar nav[role="doc-toc"] {
+  padding-left: 0.5em;
+}
+
+.sidebar .toc-actions > ul,
+.sidebar .quarto-code-links > ul,
+.sidebar .quarto-other-links > ul,
+.sidebar .quarto-alternate-notebooks > ul,
+.sidebar .quarto-alternate-formats > ul {
+  font-size: $toc-tools-font-size;
+}
+
+.sidebar nav[role="doc-toc"] > ul {
+  font-size: $toc-font-size;
+}
+
+.sidebar .toc-actions ul li a,
+.sidebar .quarto-code-links ul li a,
+.sidebar .quarto-other-links ul li a,
+.sidebar .quarto-alternate-notebooks ul li a,
+.sidebar .quarto-alternate-formats ul li a,
+.sidebar nav[role="doc-toc"] > ul li a {
+  line-height: 1.1rem;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+  color: inherit;
+}
+
+$toc-indent-depth: 5;
+$indent: 1.2em;
+@for $i from 1 through $toc-indent-depth {
+  $selector-depth: repeat-chars(" ul > li >", $i);
+
+  .sidebar nav[role="doc-toc"] ul > li > #{$selector-depth} a {
+    padding-left: #{$indent * $i};
+  }
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
+  border-left: 1px solid $toc-active-border;
+  color: $toc-color !important;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a:hover,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a:hover {
+  color: $toc-color !important;
+}
+
+// tweaking default keyboard settings
+kbd,
+.kbd {
+  color: $body-color;
+  background-color: $gray-100;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: $table-border-color;
+}
+
+// tweak pandoc default hanging indent
+.quarto-appendix-contents div.hanging-indent {
+  margin-left: 0em;
+}
+
+.quarto-appendix-contents div.hanging-indent div.csl-entry {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+// footnotes/citations
+.citation a,
+.footnote-ref {
+  text-decoration: none;
+}
+.footnotes ol {
+  padding-left: 1em;
+}
+.tippy-content > * {
+  margin-bottom: 0.7em;
+}
+.tippy-content > *:last-child {
+  margin-bottom: 0;
+}
+
+@if $code-block-border-left {
+  // Align source code and callout text (not border) with main body text when there is room
+  @include media-breakpoint-up(lg) {
+    // Cards with header
+    .callout:not(.no-icon) {
+      margin-left: add(add(-0.4em, -$callout-border-width), -1px);
+    }
+
+    .callout {
+      margin-left: add(-0.4em, -$callout-border-width);
+    }
+
+    div.sourceCode {
+      margin-left: add(
+        add(-$code-block-padding-left, -$code-block-border-left-size),
+        2px
+      );
+    }
+  }
+}
+
+// Callouts
+
+.callout {
+  margin-top: $callout-margin-top;
+  margin-bottom: $callout-margin-bottom;
+  border-radius: $border-radius;
+  overflow-wrap: break-word;
+}
+
+.callout .callout-title-container {
+  overflow-wrap: anywhere;
+}
+
+.callout.callout-style-simple {
+  padding: 0.4em 0.7em;
+  border-left: $callout-border-width solid;
+  border-right: 1px solid $table-border-color;
+  border-top: 1px solid $table-border-color;
+  border-bottom: 1px solid $table-border-color;
+}
+
+.callout.callout-style-default {
+  border-left: $callout-border-width solid;
+  border-right: 1px solid $table-border-color;
+  border-top: 1px solid $table-border-color;
+  border-bottom: 1px solid $table-border-color;
+}
+
+.callout .callout-body-container {
+  flex-grow: 1;
+}
+
+.callout.callout-style-simple .callout-body {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.callout.callout-style-default .callout-body {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.callout:not(.no-icon).callout-titled.callout-style-simple .callout-body {
+  padding-left: 1.6em;
+}
+
+.callout.callout-titled > .callout-header {
+  padding-top: 0.2em;
+  margin-bottom: -0.2em;
+}
+
+.callout.callout-style-simple > div.callout-header {
+  border-bottom: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 75%;
+}
+
+.callout.callout-style-default > div.callout-header {
+  border-bottom: none;
+  font-weight: 600;
+  opacity: 85%;
+  font-size: 0.9rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.callout.callout-style-default .callout-body {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.callout.callout-style-default .callout-body > :first-child {
+  padding-top: 0.5rem;
+  margin-top: 0;
+}
+
+.callout > div.callout-header[data-bs-toggle="collapse"] {
+  cursor: pointer;
+}
+
+.callout.callout-style-default .callout-header[aria-expanded="false"],
+.callout.callout-style-default .callout-header[aria-expanded="true"] {
+  padding-top: 0px;
+  margin-bottom: 0px;
+  align-items: center;
+}
+
+.callout.callout-titled .callout-body > :last-child:not(.sourceCode),
+.callout.callout-titled .callout-body > div > :last-child:not(.sourceCode) {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+.callout:not(.callout-titled) .callout-body > :first-child,
+.callout:not(.callout-titled) .callout-body > div > :first-child {
+  margin-top: 0.25rem;
+}
+
+.callout:not(.callout-titled) .callout-body > :last-child,
+.callout:not(.callout-titled) .callout-body > div > :last-child {
+  margin-bottom: 0.2rem;
+}
+
+$code-block-border-left-color: $table-border-color !default;
+
+.callout.callout-style-simple .callout-icon::before,
+.callout.callout-style-simple .callout-toggle::before {
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+}
+
+.callout.callout-style-default .callout-icon::before,
+.callout.callout-style-default .callout-toggle::before {
+  height: 0.9rem;
+  width: 0.9rem;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 0.9rem 0.9rem;
+}
+
+.callout.callout-style-default .callout-toggle::before {
+  margin-top: 5px;
+}
+
+.callout .callout-btn-toggle .callout-toggle::before {
+  transition: transform 0.2s linear;
+}
+
+.callout .callout-header[aria-expanded="false"] .callout-toggle::before {
+  transform: rotate(-90deg);
+}
+
+.callout .callout-header[aria-expanded="true"] .callout-toggle::before {
+  transform: none;
+}
+
+.callout.callout-style-simple:not(.no-icon) div.callout-icon-container {
+  padding-top: 0.2em;
+  padding-right: 0.55em;
+}
+
+.callout.callout-style-default:not(.no-icon) div.callout-icon-container {
+  padding-top: 0.1em;
+  padding-right: 0.35em;
+}
+
+.callout.callout-style-default:not(.no-icon) div.callout-title-container {
+  margin-top: -1px;
+}
+
+.callout.callout-style-default.callout-caution:not(.no-icon)
+  div.callout-icon-container {
+  padding-top: 0.3em;
+  padding-right: 0.35em;
+}
+
+.callout > .callout-body > .callout-icon-container > .no-icon,
+.callout > .callout-header > .callout-icon-container > .no-icon {
+  display: none;
+}
+
+// Default values for callout colors
+$callout-color-note: lighten($main1, 8%) !default;
+$callout-color-tip: lighten($main2, 8%) !default;
+$callout-color-important: lighten($main4, 8%) !default;
+$callout-color-caution: lighten($main5, 8%) !default;
+$callout-color-warning: lighten($main6, 8%) !default;
+
+// Generate per callout type css to customize their appearance
+// Define the callouts for which we should define styles
+$callouts: (
+  // NOTE
+  "note":
+    (
+      "color": $callout-color-note,
+      "icon":
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>',
+    ),
+  // TIP
+  "tip":
+    (
+      "color": $callout-color-tip,
+      "icon":
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/></svg>',
+    ),
+  // WARNING
+  "warning":
+    (
+      "color": $callout-color-warning,
+      "icon":
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/><path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/></svg>',
+    ),
+  // CAUTION
+  "caution":
+    (
+      "color": $callout-color-caution,
+      "icon":
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16"><path d="M9.97 4.88l.953 3.811C10.158 8.878 9.14 9 8 9c-1.14 0-2.159-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.274 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/></svg>',
+    ),
+  // IMPORTANT
+  "important":
+    (
+      "color": $callout-color-important,
+      "icon":
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>',
+    )
+);
+
+div.callout.callout {
+  border-left-color: $text-muted;
+}
+
+div.callout.callout-style-default > .callout-header {
+  background-color: $text-muted;
+}
+
+@each $name, $info in $callouts {
+  div.callout-#{$name}.callout {
+    border-left-color: shift-color(
+      quarto-map.get($info, "color"),
+      $callout-border-scale
+    );
+  }
+
+  div.callout-#{$name}.callout-style-default > .callout-header {
+    @if (quarto-color.blackness($body-bg) > $code-block-theme-dark-threshhold) {
+      background-color: shift-color(quarto-map.get($info, "color"), 70%);
+    } @else {
+      background-color: shift-color(quarto-map.get($info, "color"), -90%);
+    }
+  }
+
+  $shifted-color: #{shift-color(
+      quarto-map.get($info, "color"),
+      $callout-icon-scale
+    )};
+  $shifted-color-svg: str-replace($shifted-color, "#", "%23");
+
+  div.callout-#{$name}:not(.callout-titled) .callout-icon::before {
+    background-image: #{"url('data:image/svg+xml," +
+      str-replace(
+        quarto-map.get($info, "icon"),
+        'fill="currentColor"',
+        'style="fill: #{$shifted-color-svg}"'
+      ) +
+      "');"};
+  }
+
+  div.callout-#{$name}.callout-titled .callout-icon::before {
+    background-image: #{"url('data:image/svg+xml," +
+      str-replace(
+        quarto-map.get($info, "icon"),
+        'fill="currentColor"',
+        'style="fill: #{$shifted-color-svg}"'
+      ) +
+      "');"};
+  }
+
+  div.callout-#{$name} .callout-toggle::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGB($body-color)}" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+  }
+}
+
+.quarto-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+// dark mode
+.quarto-reader-toggle .bi::before,
+.quarto-color-scheme-toggle .bi::before {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+}
+
+.sidebar-navigation {
+  padding-left: 20px;
+}
+
+.navbar {
+  background-color: $navbar-bg;
+  color: $navbar-fg;
+}
+
+.navbar .quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGBA($navbar-light-color)}" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>');
+}
+
+.navbar .quarto-color-scheme-toggle.alternate .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGBA($navbar-light-color)}" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>');
+}
+
+.sidebar-navigation .quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGBA(theme-dim($body-color, 10%))}" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>');
+}
+
+.sidebar-navigation .quarto-color-scheme-toggle.alternate .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGBA(theme-dim($body-color, 10%))}" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>');
+}
+
+// sidebar handling
+.quarto-sidebar-toggle {
+  border-color: $border-color;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  border-top-width: 0px;
+  padding-top: 0px !important;
+}
+
+.quarto-sidebar-toggle-title {
+  cursor: pointer;
+  padding-bottom: 2px;
+  margin-left: 0.25em;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.775em;
+}
+
+#quarto-content {
+  .quarto-sidebar-toggle {
+    background: theme-dim($body-bg, 2%);
+  }
+
+  .quarto-sidebar-toggle-title {
+    color: $body-color;
+  }
+}
+
+.quarto-sidebar-toggle-icon {
+  color: $border-color;
+  margin-right: 0.5em;
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.quarto-sidebar-toggle-icon::before {
+  padding-top: 5px;
+}
+
+.quarto-sidebar-toggle.expanded .quarto-sidebar-toggle-icon {
+  transform: rotate(-180deg);
+}
+
+.quarto-sidebar-toggle.expanded .quarto-sidebar-toggle-title {
+  border-bottom: solid $border-color 1px;
+}
+
+.quarto-sidebar-toggle-contents {
+  background-color: $body-bg;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 0px !important;
+  transition: max-height 0.5s ease;
+}
+
+.quarto-sidebar-toggle.expanded .quarto-sidebar-toggle-contents {
+  padding-top: 1em;
+  padding-bottom: 10px;
+}
+
+.sidebar-menu-container {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 5em;
+  }
+}
+
+.quarto-sidebar-toggle:not(.expanded) .quarto-sidebar-toggle-contents {
+  padding-top: 0px !important;
+  padding-bottom: 0px;
+}
+
+nav[role="doc-toc"] {
+  z-index: $zindex-sticky;
+}
+
+#quarto-sidebar > *,
+nav[role="doc-toc"] > * {
+  transition: opacity 0.1s ease, border 0.1s ease;
+}
+
+#quarto-sidebar.slow > *,
+nav[role="doc-toc"].slow > * {
+  transition: opacity 0.4s ease, border 0.4s ease;
+}
+
+.quarto-color-scheme-toggle:not(.alternate).top-right .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGBA(theme-dim($body-color, 35%))}" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>');
+}
+
+.quarto-color-scheme-toggle.alternate.top-right .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{colorToRGBA(theme-dim($body-color, 20%))}" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>');
+}
+
+// Quarto Appendix Treatment
+#quarto-appendix.default {
+  border-top: 1px solid $border-color;
+}
+
+#quarto-appendix.default {
+  background-color: $body-bg;
+  padding-top: 1.5em;
+  margin-top: 2em;
+  z-index: $zindex-pagelayout;
+
+  .quarto-appendix-heading {
+    margin-top: 0;
+    line-height: 1.4em;
+    font-weight: 600;
+    opacity: 0.9;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  // Remove botoom margin from specific elements
+  .footnotes ol,
+  .footnotes ol li > p:last-of-type,
+  .quarto-appendix-contents > p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .footnotes ol {
+    margin-left: 0.5em;
+  }
+
+  .quarto-appendix-secondary-label {
+    margin-bottom: 0.4em;
+  }
+
+  .quarto-appendix-bibtex {
+    font-size: 0.7em;
+    padding: 1em;
+    border: solid 1px $border-color;
+    margin-bottom: 1em;
+    code.sourceCode {
+      white-space: pre-wrap;
+    }
+  }
+
+  .quarto-appendix-citeas {
+    font-size: 0.9em;
+    padding: 1em;
+    border: solid 1px $border-color;
+    margin-bottom: 1em;
+  }
+
+  .quarto-appendix-heading {
+    font-size: 1em !important;
+  }
+
+  *[role="doc-endnotes"] > ol,
+  .quarto-appendix-contents > *:not(h2) {
+    font-size: 0.9em;
+  }
+
+  section {
+    padding-bottom: 1.5em;
+    *[role="doc-endnotes"],
+    > *:not(a) {
+      opacity: 0.9;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.btn.btn-quarto,
+div.cell-output-display .btn-quarto {
+  @include button-variant(
+    $btn-bg,
+    $btn-bg,
+    $btn-fg,
+    //if($btn-bg == $color-contrast-light, shade-color($btn-bg, $btn-hover-bg-shade-amount), tint-color($btn-bg, $btn-hover-bg-tint-amount)),
+    //if($btn-bg == $color-contrast-light, shade-color($btn-bg, $btn-hover-border-shade-amount), tint-color($btn-bg, $btn-hover-border-tint-amount)),
+    $hover-color: $btn-fg
+  );
+}
+
+// Quarto title block treatment
+nav.quarto-secondary-nav.color-navbar {
+  @if variable-exists(navbar-bg) {
+    background-color: $navbar-bg;
+  }
+
+  @if (variable-exists(navbar-fg)) {
+    color: $navbar-fg;
+  }
+}
+nav.quarto-secondary-nav.color-navbar h1,
+nav.quarto-secondary-nav.color-navbar .quarto-btn-toggle {
+  @if (variable-exists(navbar-fg)) {
+    color: $navbar-fg;
+  }
+}
+
+body.nav-sidebar {
+  @include media-breakpoint-down(lg) {
+    .quarto-title-banner {
+      margin-bottom: 0;
+      padding-bottom: 1em;
+    }
+    #title-block-header {
+      margin-block-end: 0;
+    }
+  }
+}
+
+p.subtitle {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+// downlit links
+code a:any-link {
+  color: inherit;
+  text-decoration-color: $gray-600;
+}
+
+// This is a sentinel value that renderers can use to determine
+// whether the theme is dark or light
+@if (quarto-color.blackness($body-bg) > $code-block-theme-dark-threshhold) {
+  /*! dark */
+} @else {
+  /*! light */
+}
+
+// observable UI element tweaks to support light-mode vs dark-mode
+div.observablehq table thead tr th {
+  background-color: var(--bs-body-bg);
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  background-color: var(--bs-body-bg);
+}
+
+// Code Annotation
+
+.code-annotated .code-copy-button {
+  margin-right: 1.25em;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 3px;
+}
+
+.code-annotation-gutter-bg {
+  background-color: $body-bg;
+}
+
+.code-annotation-gutter {
+  background-color: $code-block-bg-color;
+}
+
+.code-annotation-gutter,
+.code-annotation-gutter-bg {
+  height: 100%;
+  width: calc(20px + 0.5em);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+dl.code-annotation-container-grid {
+  dt {
+    margin-right: 1em;
+    margin-top: 0.25rem;
+  }
+}
+
+dl.code-annotation-container-grid {
+  dt {
+    font-family: $font-family-code;
+    color: theme-dim($body-color, 10%);
+    border: solid theme-dim($body-color, 10%) 1px;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    line-height: 22px;
+    font-size: 11px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    text-decoration: none;
+  }
+
+  dt[data-target-cell] {
+    cursor: pointer;
+  }
+
+  dt[data-target-cell].code-annotation-active {
+    color: $body-bg;
+    border: solid #aaaaaa 1px;
+    background-color: #aaaaaa;
+  }
+}
+
+pre.code-annotation-code {
+  padding-top: 0;
+  padding-bottom: 0;
+  code {
+    z-index: 3;
+  }
+}
+
+#code-annotation-line-highlight-gutter {
+  width: 100%;
+  border-top: solid $code-annotation-higlight-color 1px;
+  border-bottom: solid $code-annotation-higlight-color 1px;
+  z-index: 2;
+  background-color: $code-annotation-higlight-bg;
+}
+
+#code-annotation-line-highlight {
+  margin-left: -4em;
+  width: calc(100% + 4em);
+  border-top: solid $code-annotation-higlight-color 1px;
+  border-bottom: solid $code-annotation-higlight-color 1px;
+  z-index: 2;
+  background-color: $code-annotation-higlight-bg;
+}
+
+code.sourceCode .code-annotation-anchor.code-annotation-active {
+  background-color: var(--quarto-hl-normal-color, #aaaaaa);
+  border: solid var(--quarto-hl-normal-color, #aaaaaa) 1px;
+  color: rgb(
+    red($code-block-bg-color),
+    green($code-block-bg-color),
+    blue($code-block-bg-color)
+  );
+  font-weight: bolder;
+}
+
+code.sourceCode .code-annotation-anchor {
+  font-family: $font-family-code;
+  color: var(--quarto-hl-co-color);
+  border: solid var(--quarto-hl-co-color) 1px;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+code.sourceCode button.code-annotation-anchor {
+  padding: 2px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+code.sourceCode a.code-annotation-anchor {
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: default;
+  text-decoration: none;
+}
+
+// change .column-screen-* to behave like .column-page (which hugs the body margins)
+// cf https://github.com/quarto-dev/quarto-cli/issues/1824#issuecomment-1216018434
+@media print {
+  .page-columns .column-screen-inset {
+    grid-column: page-start-inset / page-end-inset;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+    @include column-spanning-element();
+  }
+
+  .page-columns .column-screen-inset-left {
+    grid-column: page-start-inset / body-content-end;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+    @include column-spanning-element();
+  }
+
+  .page-columns .column-screen-inset-right {
+    grid-column: body-content-start / page-end-inset;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+    @include column-spanning-element();
+  }
+
+  .page-columns .column-screen {
+    grid-column: page-start / page-end;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+    @include column-spanning-element();
+  }
+
+  .page-columns .column-screen-left {
+    grid-column: page-start / body-content-end;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+    @include column-spanning-element();
+  }
+
+  .page-columns .column-screen-right {
+    grid-column: body-content-start / page-end;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+    @include column-spanning-element();
+  }
+
+  .page-columns .column-screen-inset-shaded {
+    grid-column: page-start-inset / page-end-inset;
+    padding: 1em;
+    background: $light;
+    z-index: $zindex-pagelayout;
+    opacity: 0.999;
+    margin-bottom: 1em;
+  }
+}
+
+.quarto-video {
+  margin-bottom: 1em;
+}
+
+.table {
+  // Tables get a light top and bottom border (whether or not they have a head
+  // and independent of caption position)
+  border-top: $table-border-width solid $table-group-separator-color-lighter;
+  border-bottom: $table-border-width solid $table-group-separator-color-lighter;
+
+  // The heading gets a heavier line to differentiate it
+  > thead {
+    border-top-width: 0;
+    border-bottom: 1px solid $table-group-separator-color;
+  }
+
+  // Allow breaking inside tables
+  a {
+    word-break: break-word;
+  }
+
+  // This disables new styling taken from boostrap that overrides
+  // table level styling
+  // See https://github.com/quarto-dev/quarto-cli/issues/7566
+  > :not(caption) > * > * {
+    background-color: unset;
+    color: unset;
+  }
+}
+
+// Special Cross Talk Handling
+#quarto-document-content {
+  .crosstalk-input .checkbox input[type="checkbox"],
+  .crosstalk-input .checkbox-inline input[type="checkbox"] {
+    position: unset;
+    margin-top: unset;
+    margin-left: unset;
+  }
+
+  .row {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
+
+.quarto-xref {
+  white-space: nowrap;
+}
+
+#quarto-draft-alert {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0.3em;
+  text-align: center;
+  font-size: 0.9em;
+
+  i {
+    margin-right: 0.3em;
+  }
+}
+
+
+// Natalie's Rules
+
+
+// Accordions
+
+
+//$level: "AA";
+$contrast-text: $secondary;
+
+.accordion {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-width:2px;
+    border-radius:5px;
+}
+
+.accordion-item {
+    border-color:darken($mainBW, 37%);
+    border-width:2px;
+}
+
+.accordion-button {
+    color: $secondary;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.titlebox {
+  background-color:darken($main2, 18%);
+  text-align: center;
+  font-weight: bold;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+}
+
+.titlebox p {
+    color:lighten($main5, 66%);
+    font-variant: small-caps;
+}
+
+.prepbox{
+    background-color:$main3;
+}
+
+.assignbox {
+    background-color:$main5;
+}
+
+.infobox {
+    background-color:$main1;
+}
+
+.finalbox {
+    background-color:natalie-contrast(lighten($main6, 8%), $contrast-text);
+}
+
+.lightbox1{
+    background-color:lighten($main1, 14%);
+    color:darken($main4, 18%);
+}
+
+.mainbox1{
+    background-color:$main1;
+    color:lighten($main4, 66%);
+}
+
+.darkbox1{
+    background-color:darken($main1, 21%);
+    color:lighten($main4, 66%);
+}
+
+.lightbox2{
+    background-color:lighten($main2, 14%);
+    color:darken($main4, 18%);
+}
+
+.mainbox2{
+    background-color:$main2;
+    color:lighten($main4, 66%);
+}
+
+.darkbox2{
+    background-color:darken($main2, 21%);
+    color:lighten($main4, 66%);
+}
+
+.lightbox3{
+    background-color:lighten($main3, 14%);
+    color:darken($main4, 18%);
+}
+
+.mainbox3{
+    background-color:$main3;
+    color:lighten($main4, 66%);
+}
+
+.darkbox3{
+    background-color:darken($main3, 21%);
+    color:lighten($main4, 66%);
+}
+
+.lightbox4{
+    background-color:lighten($main4, 14%);
+    color:darken($main2, 18%);
+}
+
+.mainbox4{
+    background-color:$main4;
+    color:lighten($main2, 66%);
+}
+
+.darkbox4{
+    background-color:darken($main4, 21%);
+    color:lighten($main2, 66%);
+}
+
+.lightbox5{
+    background-color:lighten($main5, 14%);
+    color:darken($main2, 18%);
+}
+
+.mainbox5{
+    background-color:$main5;
+    color:lighten($main2, 66%);
+}
+
+.darkbox5{
+    background-color:darken($main5, 21%);
+    color:lighten($main2, 66%);
+}
+
+.lightbox6{
+    background-color:lighten($main6, 14%);
+    color:darken($main2, 18%);
+}
+
+.mainbox6{
+    background-color:$main6;
+    color:lighten($main2, 66%);
+}
+
+.darkbox6{
+    background-color:darken($main6, 21%);
+    color:lighten($main2, 66%);
+}
+
+.accordion-button, .accordion-header p, ol, ul {
+  margin-bottom: 0px;
+}
+
+.accordion-button::after {
+  margin-bottom: 8px;
+}
+
+.accordion-body {
+    background-color: lighten($body-bg, 10%);
+    color: $primary;
+}
+
+// Navbar Customization
+
+.nav-link {
+    color: lighten($main1, 66%);
+}
+
+.navbar-nav a:hover {
+    color: lighten($main1, 50%);
+}
+
+.navbar-nav .nav-link.active {
+  //color: lighten($main2, 37%);
+  color: $body-bg;
+  font-weight: 600;
+  text-decoration-line: underline overline;
+}
+
+
+//.navbar.navbar-default {
+//    background-color: $main1 !important;
+//    margin-bottom: 40px;
+//}
+
+.navbar-brand {
+    color: $body-bg;
+}
+
+.navbar .dropdown-menu {
+    background-color: mix(#cfd, $main4, 60%);
+    border-width: 2px;
+    border-color: mix(#222, $main4, 60%);
+    border-radius: 10px;
+    
+    & a.dropdown-item:hover {
+        background-color: $body-bg;
+        color: $main4;
+        
+        //&:last-child {
+          //  border-bottom-left-radius: 10px;
+            //border-bottom-right-radius: 10px;
+        //}
+        
+    }
+    
+}
+
+.navbar .dropdown-menu {
+    
+    & li:first-child :hover {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    & li:last-child :hover{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+
+// Typography
+
+body {
+  //font-weight: 200;
+  letter-spacing: .5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  //text-transform: uppercase;
+  //font-variant: small-caps;
+  //letter-spacing: 1px;
+  font-family: $font-family-sans-serif;
+}
+
+.text-secondary {
+  color: $body-color !important;
+}
+
+h1,
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  //font-variant: small-caps;
+  //font-weight: 600;
+}
+
+h1.title {
+  margin-top: 0;
+  //text-transform: uppercase;
+}
+
+main.content > section:first-of-type > h2:first-child {
+  margin-top: 0;
+}
+
+h2 {
+  border-bottom: 1px solid $table-border-color;
+  padding-bottom: 0.5rem;
+  color: theme-fade($headings-color,$body-bg,3%);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: $low-headings-color;
+    margin-top: 10px;
+}
+
+h3 {
+    opacity: .9;
+}
+
+h4 {
+    opacity: .8;
+}
+
+h5,
+h6 {
+    opacity: .8;
+    font-style: italic;
+}
+
+h6 {
+    font-weight: 100;
+}
+
+.level5 {
+    //padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-bottom: 15px;
+}
+
+.title-styled {
+    //border-bottom: 2px #999 solid; 
+    //border-bottom-style: double;
+    text-align: center; 
+    //margin-bottom: 1em;
+}
+
+hr.title-divider {
+    border-top: 3px double $main1;
+    margin-bottom: 2em;
+}
+
+// Components
+
+.card {
+    border: 2px solid lighten($main1, 66%);
+    padding: 10px;
+    background-color: theme-fade(lighten($mainBW,80%), $body-bg, 5%);
+}
+
+.equal-height {
+    height: 100%;
+}
+
+.card-alt {
+    //background-color: natalie-contrast($main2, lighten($main6, 69%));
+    background-color: $main2;
+    color: lighten($main6, 69%);
+    padding-left: 0px;
+    padding-right: 1rem;
+    border-color: lighten($main6,70%);
+    border-radius: 10px;
+    
+    & .btn {
+        background-color: lighten($main2,10%);
+        color: lighten($main6,70%);
+        padding: 5px 10px;
+        border-color: lighten($main6, 69%);
+        border-width: 1px;
+        border-radius: 10px;
+        font-weight: 400;
+    }
+    
+    & .nav-pills {
+        font-weight: 300;
+        border-style: none;
+        border-radius: 0px;
+        --bs-nav-pills-border-radius: 0rem;
+        //padding-left:10px;
+        
+        > p {
+            margin-bottom:0px;
+            //margin-left:10px;
+        }
+
+    }
+    
+    & .nav-link {
+        padding-left: 3rem;
+        text-align: right;
+    }
+    
+    & .nav-link.active, .nav-link.active:hover {
+        color: darken($main2, 20%);
+        background-color: lighten($main6,70%);
+    }
+    
+    & .nav-link:hover {
+        color: lighten($main2, 30%);
+        background-color: theme-dim($main2, 5%);
+        border-color: lighten($main6,70%);
+    }
+}
+
+.card-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.fade {
+    transition: opacity .1s linear;
+}
+
+.card-proj-title {
+    //background-color: natalie-contrast(darken($main5, 21%), lighten($mainBW,80%));
+    background-color: $main4;
+    color: lighten($mainBW,80%);
+    padding-right: 10%;
+    padding-left: 10%;
+    border-width: 5px;
+    border-color: lighten($main4, 14%);
+    border-radius: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-narrow {
+    margin-left:5%;
+    margin-right:5%;
+}
+
+.proj-title, .proj-subtitle {
+    text-align: right;
+}
+
+.proj-title {
+    color: $body-bg;
+    font-size: 2.5rem;
+    line-height: 1.3em;
+    font-weight: 500;
+}
+
+.proj-subtitle {
+    //color: darken($body-bg, 10%);
+    color: darken($body-bg,16%);
+    font-size: 1.7rem;
+    line-height: 1em;
+    font-style: italic;
+    font-weight: 200;
+}
+
+
+// Page-level
+
+body.no-title .page-title {
+    display: none;
+}
+
+
+// Gallery
+
+
+.container-gallery
+{
+    width: 90%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    position: relative;
+    margin-left: 5%;
+    padding-bottom: 30px;
+    //padding-top: 30px;
+}
+
+.popup
+{
+    width: 250px;
+    //height: 250px;
+    margin: 0 -25px;
+    position: relative;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 1);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+    border: 5px #000;
+    overflow: hidden;
+}
+
+.popup p {
+    margin-bottom: 0;
+}
+
+    .popup:hover
+    {
+        -webkit-transition: .2s;
+        transition: .2s;
+        -webkit-transform: translateZ(5px) translateY(-20px) scale(1.05);
+        transform: translateZ(5px) translateY(-20px) scale(1.05);
+    }
+
+.popup-1,
+.popup-4
+{
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px);
+
+}
+
+.popup-2,
+.popup-5
+{
+    -webkit-transform: translateZ(2px) translateY(-5px);
+    transform: translateZ(2px) translateY(-5px);
+}
+
+.popup-3
+{
+    -webkit-transform: translateZ(3px) translateY(-10px);
+    transform: translateZ(3px) translateY(-10px);
+}
+
+.popup-1:hover ~ .popup-2
+{
+    -webkit-transform: translateZ(4px) translateY(-15px);
+    transform: translateZ(4px) translateY(-15px);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.popup-4
+{
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
+}
+
+    .popup-4:hover ~ .popup-5
+    {
+        -webkit-transform: translateZ(3px) translateY(-15px);
+        transform: translateZ(3px) translateY(-15px);
+        -webkit-transition: .1s;
+        transition: .1s;
+    }
+
+body {
+  margin: 16px;
+}
+
+.access-badge {
+      background-color: $main1;
+      color: $secondary;
+      border-color: darken($main1, 21%);
+      border-width: 5px;
+      border-radius: 20px;
+  }
+
+a.badge  {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bordered-image {
+    border-width: 2px; 
+    border-color: lighten($main4, 66%);
+    border-radius: 15px;
+    border-style: solid;
+}
+
+
+// Class card customization
+
+.class-card {
+    background-color: lighten($main2, 66%);
+    border-color: darken($main2, 20%);
+    padding:0px;
+    border-radius:5px;
+    
+    & h3 {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    
+    & h4 {
+       color: theme-contrast(darken($main2, 21%), lighten($main2, 66%),"AAA");
+       font-size: 1.5rem;
+       font-variant: small-caps;
+       letter-spacing: .08rem;
+    }
+    
+    & h5 {
+        color: theme-contrast(darken($main2, 21%), lighten($main2, 66%),"AAA");
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    
+    #course-summary h3 {
+        color:darken($main2, 21%);
+        font-size: 1.2rem;
+    }
+    
+    & .card-body {
+        padding:0px;
+    }
+    
+    & > .card-header {
+        background-color: $main2;
+        color: $main2; // hide text for unscheduled classes w/out losing header
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        //font-style: italic;
+        letter-spacing: 0.2rem;
+        margin-bottom:1rem;
+        border-bottom-color: darken($main2, 20%);
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+    }
+    
+    & .list-group-flush {
+        margin-bottom: 1em;
+        margin-top: 1em;
+        
+        & p {
+            margin-bottom: 0px;
+            border-top:0px;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        
+        & .list-group-item {
+            background-color: darken($main2, 5%);
+            border-color: darken($main2, 20%);
+            color: mix(#fff, $main2, 90%);
+            font-size: .9rem;
+            font-weight: 300;
+            
+            &:nth-child(2n+1) {
+                background-color: darken($main2, 10%);
+            }
+                
+        }
+        
+        
+        
+    }
+    
+    & .badge {
+        background-color: $main2;
+        color: #fff;
+        font-weight: 500;
+        //font-variant: small-caps;
+        border-color: mix($main4, $main2, 20%);
+        padding: .5em 1em;
+        font-size: .8rem;
+        border-width: 2px;
+        border-radius: .7em;
+        border-style: solid;
+    }
+    
+    & .card-footer > p {
+        margin-bottom:0px;
+        padding-bottom:0px;
+        font-weight:200;
+        font-size: .8rem;
+    }
+    
+    &-active {
+        @extend .class-card;
+        background-color: lighten($main4, 65%);
+        border-color: darken($main4, 20%);
+    
+        & h4, h5 {
+            color: theme-contrast(darken($main4, 20%), lighten($main4, 65%),"AAA");
+        }
+        
+        & > .card-header {
+            background-color: lighten($main4, 10%);
+            color: lighten($mainBW,80%);
+            border-bottom-color: darken($main4, 20%);
+        }
+            
+        & .list-group-flush .list-group-item {
+            background-color: $main4;
+            border-color: darken($main4, 20%);
+            color: mix(#fff, $main4, 90%);
+
+            &:nth-child(2n+1) {
+                background-color: darken($main4, 5%);
+            }
+        }
+        
+        #course-summary h3 {
+            color: darken($main4, 21%);
+        }
+        
+        & .badge {
+            background-color: $main4;
+            color: $secondary;
+            border-color: mix($main2, $main4, 20%);
+        }
+    }
+}
+
+
+.class-banner {
+    margin-top:1rem;
+    margin-bottom:1rem;
+    width:90%; 
+    max-width:450px;
+    aspect-ratio: 2/1; 
+    object-fit: cover; 
+    border-width: 2px;
+    border-color: darken($main2, 21%);
+    border-radius: 5px;
+    border-style: solid;
+    background-color:lighten($mainBW,80%);
+}
+
+.class-scroller {
+    max-height: 20rem; 
+    font-size: .9rem; 
+    border-width: 1px 0px 1px 0px; 
+    border-style: solid; 
+    padding-top: .5rem; 
+    padding-bottom:.5rem;
+    margin-bottom: 1rem;
+}
+
+
+// Research page
+
+#research-grid .card {
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: lighten($main6, 60%);
+    background-color: lighten($main6, 69%);
+}

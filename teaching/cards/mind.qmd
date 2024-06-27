@@ -1,0 +1,50 @@
+
+
+::: {.card .class-card  .equal-height}
+::: card-header
+### Not scheduled 
+:::
+
+#### Mind I-II-III{.card-title}
+#####  SOSC 141-142-14300 {.card-subtitle}
+
+![](cards/mind-banner.jpg){.class-banner fig-alt="Illustartion of two people sitting next to a stylized brain."}
+
+::: {.card-body style="margin-top: 0px;"}
+
+::: {.content-narrow style="margin-top:-1rem;"}
+### Course description {#course-summary}
+:::
+
+::: {.card-text .overflow-y-scroll .content-narrow .class-scroller}
+
+*Mind* explores subjective experience and behavior through the lens of underlying mental processes, biological mechanisms, and social context. Drawing from research in the social sciences and beyond, the course broadly considers how empirical approaches can shape our understanding of long-standing questions about human experience. Each quarter of Mind is taught by a different group of faculty, and the material in each quarter is arranged into a broad theme that makes connections across quarters. These themes vary from year to year.
+
+:::
+:::
+
+::: {.list-group .list-group-flush}
+
+::: list-group-item
+Undergraduate
+:::
+::: list-group-item
+Social sciences core
+:::
+::: list-group-item
+Psychology, cognitive science
+:::
+:::
+
+
+::: {.card-body .content-narrow style="text-align: center;"}
+[Catalog](http://collegecatalog.uchicago.edu/thecollege/socialsciences/){.card-link .badge}
+[Syllabus](#){.card-link .badge}
+:::
+
+
+::: {.card-footer}
+<span style="font-weight:200;">Concluded: Fall/Winter/Spring 2018-2019 (TA), Spring 2020, Winter/Spring 2023</span>
+:::
+:::
+

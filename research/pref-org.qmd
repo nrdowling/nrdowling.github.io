@@ -1,0 +1,17 @@
+---
+title: "Gesture in Preference Organization"
+title-block-style: none
+format:
+  html:
+    template: ../templates/project-template.html
+toc: false
+project-image: ../images/PrefOrg.png
+---
+
+Everyday conversation between adult speakers is a multimodal experience. We use our hands, bodies, and faces to complement the words we speak. Co-speech gestures not only add semantic meaning to our communication, they can serve to coordinate conversational interaction. With gestures like head nods, shoulder shrugs, and wrist flips, interlocutors can silently and efficiently negotiate turn-taking, take epistemic and affective stance, and hint at the quality of response they are looking for.
+
+In this experiment we use stimuli designed to represent how speakers regularly cooperate in conversation with both preferred and dispreferred responses and monitor third-party observers’ experiences of such everyday conversation. We employ anticipatory eye-tracking and responsive finger-tapping measures to provide quantitative evidence in complement to the existing wealth of qualitative evidence from the field of conversation analysis.
+
+*Natalie Dowling, Kennedy Casey, Marisa Casillas* 
+
+[Center for Sign, Gesture and Language](https://www.uchicago.edu/education-and-research/center/center_for_gesture_sign_and_language)

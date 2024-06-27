@@ -1,0 +1,38 @@
+---
+hidden-title: "Classes"
+toc: false
+---
+
+::: title-styled
+# {{< meta hidden-title >}} {.title-styled}
+:::
+
+<hr class="title-divider">
+
+::: grid
+
+::: {.g-col-12 .g-col-sm-6}
+{{< include cards/perspectives.qmd >}}
+:::
+
+::: {.g-col-12 .g-col-sm-6}
+{{< include cards/d2m.qmd >}}
+:::
+
+::: {.g-col-12 .g-col-sm-6}
+{{< include cards/conversation.qmd >}}
+:::
+
+::: {.g-col-12 .g-col-sm-6}
+{{< include cards/chd-preceptor.qmd >}}
+:::
+
+::: {.g-col-12 .g-col-sm-6}
+{{< include cards/mind.qmd >}}
+:::
+
+::: {.g-col-12 .g-col-sm-6}
+{{< include cards/intro-to-chd.qmd >}}
+:::
+
+:::

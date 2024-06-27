@@ -1,0 +1,14 @@
+---
+title: "Language Development Project"
+format:
+  html:
+    template: ../templates/project-template.html
+toc: false
+project-image: ../images/SPEAK.png
+---
+
+The Survey of Parent/Provider Expectations and Knowledge (SPEAK) is an assessment of caregivers’ knowledge in the areas of early childhood cognitive and language development. The SPEAK was developed by the [TMW Center for Early Learning and Public Health](https://tmwcenter.uchicago.edu/), led by Dr. Dana Suskind. The self-administered survey is designed for both clinical and research settings and is available in both English and Spanish.
+
+The SPEAK is continuously revised to reflect the most current findings in developmental psychology, education, and pediatric research. I contributed to the third revision, the SPEAK-IV. My work with TMW was in two major components – theoretical foundations and item development. I created an evidence-based outline of the “ideal” survey, cross-cutting four developmental periods in early childhood and eight content domains, e.g. language production, math, and screen-media use. Using this as a guideline, I revised existing items to more accurately address target measures, to be accessible to adults from diverse social, educational, linguistic, and economic backgrounds, and to reflect evolving scientific findings and socio-cultural attitudes. I developed new items across domains, with particular attention to dual-language learning, screen-media usage, and mathematical development.
+
+[Learn more about SPEAK](https://tmwcenter.uchicago.edu/innovate/speak/){.btn .btn-dark}

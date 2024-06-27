@@ -1,0 +1,93 @@
+---
+title: "Higher-Order Thinking Talk"
+subtitle: '"HOTT" in caregiver-child interaction'
+title-block-style: none
+format:
+  html:
+    template: ../templates/project-template.html
+toc: false
+project-image: ../images/HOTT.png
+---
+
+Higher-order thinking is reasoning with and about relationships between concepts. The Language Development Project offers a unique way of investigating the development of higher-order thinking from infancy to adolescence; we qualitatively and quantitatively describe higher-order thinking talk (HOTT) in our corpus of spontaneous parent-child interaction. What kinds of language are families using to talk about relational reasoning like drawing analogies, structuring hierarchy, abstracting concepts, and inferring causation? When and how to children begin using HOTT to discuss deeper, structural conceptual relationships vs surface-level, easily perceptible relationships?
+
+
+::: {.accordion #public} 
+
+::: {.accordion-item}
+::: {.accordion-header .titlebox}
+
+Publications & Presentations
+
+:::
+:::
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .lightbox4 type="button" data-bs-toggle="collapse" data-bs-target="#publications" aria-expanded="false" aria-controls="publications"}
+
+Publications
+
+:::
+:::
+
+::: {#publications .accordion-collapse .collapse data-bs-parent="#public"}
+::: {.accordion-body}
+
+Frausel, R., Silvey, C., Freeman, C., **Dowling, N.**, Richland, L., Levine, S., Raudenbush, S., & Goldin-Meadow, S. (2020). The Origins of Higher-Order Thinking Lie in Children's Spontaneous Talk Across the Pre-School Years. Cognition.[Access](https://www.sciencedirect.com/science/article/pii/S0010027720300937){.badge .access-badge}
+
+:::
+:::
+:::
+
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .mainbox4 type="button" data-bs-toggle="collapse" data-bs-target="#presentations" aria-expanded="false" aria-controls="presentations"}
+
+Presentations
+
+:::
+:::
+
+::: {#inprep .accordion-collapse .collapse data-bs-parent="#public"}
+::: {.accordion-body}
+
+Dowling, N., Frausel, R., Richland, L., Levine, S., & Goldin-Meadow, S. (2019). Relations between early and later domain-specific higher-order thinking. Poster presented at Cognitive Development Society Biannual Meeting, Louisville, KY.{.badge .access-badge}
+
+**Dowling, N.**, Vilà-Giménez, I., Demir-Lira, Ö., Prieto, P., & Goldin-Meadow, S. (in prep). Two dimensions of pragmatic gestures differentiate early developmental trajectories. 
+[Preprint PDF](files/Dowling_DIMENSIONS_PREPRINT.pdf){.badge .access-badge}
+
+:::
+:::
+:::
+
+
+::: {.accordion-item}
+
+::: {.accordion-header}
+::: {.accordion-button .collapsed .darkbox4 type="button" data-bs-toggle="collapse" data-bs-target="#moreHOTT" aria-expanded="false" aria-controls="moreHOTT"}
+
+More
+
+:::
+:::
+
+::: {#moreHOTT .accordion-collapse .collapse data-bs-parent="#public"}
+::: {.accordion-body}
+
+*More work on HOTT using the Language Development Project corpus:*
+
+Catriona Silvey, Dedre Gentner, Lindsey Engle Richland, Susan Goldin-Meadow; Children’s Early Spontaneous Comparisons Predict Later Analogical Reasoning Skills: An Investigation of Parental Influence. Open Mind 2023; 7 483–509. [Access](https://direct.mit.edu/opmi/article/doi/10.1162/opmi_a_00093/116983){.badge .access-badge}
+
+Frausel, R.R., Vollman, E., Muzard, A., Richland, L.E., Goldin-Meadow, S. and Levine, S.C. (2022), Developmental Trajectories of Early Higher-Order Thinking Talk Differ for Typically Developing Children and Children With Unilateral Brain Injuries. Mind, Brain, and Education, 16: 153-166. [Access](https://doi.org/10.1111/mbe.12301){.badge .access-badge}
+
+Frausel, R. R., Richland, L. E., Levine, S. C., & Goldin-Meadow, S. (2021). Personal narrative as a “breeding ground” for higher-order thinking talk in early parent–child interactions. Developmental Psychology, 57(4), 519–534. [Access](https://www.sciencedirect.com/science/article/pii/S0010027720300937){.badge .access-badge}
+
+
+
+
+:::
+:::

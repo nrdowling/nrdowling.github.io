@@ -1,0 +1,9 @@
+# RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto/publishing
+/.quarto/
+/_site/

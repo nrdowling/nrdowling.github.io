@@ -1,0 +1,12 @@
+---
+title: "Language Development Project"
+format:
+  html:
+    template: ../templates/project-template.html
+toc: false
+project-image: ../images/ldp.png
+---
+
+The University of Chicago’s Language Development Project (LDP) is a longitudinal study of language and learning, following over 100 children and their families from 14 months through young adulthood. The LDP dataset includes a corpus of spontaneous parent-child in-home language and gesture as well as standardized assessments, qualitative surveys, and educational outcomes.  I began work with the Language Development Project as a research assistant in 2010 and as a graduate student researcher in 2016. My recent work explores the development of pragmatic gestures like shrug and palm-ups from infancy to early adolescence.
+
+*Principal Investigators: Susan Goldin-Meadow, Susan Levine, Stephen Raudenbush, Lindsey Richland, Steven L. Small*

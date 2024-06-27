@@ -1,0 +1,50 @@
+
+
+::: {.card .class-card}
+::: card-header
+### Not scheduled
+:::
+
+#### Comparative Human Development B.A. Honors {.card-title}
+#####  CHDV 298-29900 {.card-subtitle}
+
+![](cards/chd-preceptor-banner.jpg){.class-banner fig-alt="Illustration of students reading and working surrounded by books and school supplies. freepik.com"}
+
+::: {.card-body style="margin-top: 0px;"}
+
+::: {.content-narrow style="margin-top:-1rem;"}
+### Course description {#course-summary}
+:::
+
+::: {.card-text .overflow-y-scroll .content-narrow .class-scroller}
+
+Undergraduate students majoring in Comparative Human Development may apply to the departmental BA Honors program. In addition to maintaining high overall and major GPAs, Honors students complete a research thesis under supervision of a CHD faculty member. The thesis project should reflect original research of an empirical, scholarly, or theoretical nature and be rated as worth of honors from their CHD faculty advisor as well as a UChicago-affiliated second reader.
+
+The CHDV 29800 Honors Seminar aims to help qualified students formulate a suitable proposal and find a CHDV faculty supervisor. Students eligible for program honors must take the Honors Seminar Spring Quarter of their third year. The CHDV 29900 Honors Preparation course aims to help students successfully complete work on their BA honors paper through data analysis and peer review. Students continue to complete data analysis and draft their theses throughout winter quarter. After submitting their final thesis in the spring of their fourth year, successful honors students present their work at the annual CHD Student Research Conference.
+
+:::
+:::
+
+::: {.list-group .list-group-flush}
+
+::: list-group-item
+Undergraduate
+:::
+::: list-group-item
+CHD B.A. Honors program requirement
+:::
+::: list-group-item
+Research design, qualitative and quantitative methods, academic writing
+:::
+
+:::
+
+::: {.card-body .content-narrow style="text-align: center;"}
+[CHD BA Honors](http://collegecatalog.uchicago.edu/thecollege/comparativehumandevelopment/#bahonorsguidelines){.card-link .badge}
+[Syllabus](#){.card-link .badge}
+
+:::
+::: {.card-footer .text-muted}
+Concluded: Fall/Winter/Spring 2020-2021 (Undergraduate preceptor), Fall 2023
+:::
+:::

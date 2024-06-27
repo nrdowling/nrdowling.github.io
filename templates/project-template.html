@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+
+<head>
+
+$metadata.html()$
+
+<style>
+$styles.html()$
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(math)$
+$if(mathjax)$
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+$endif$
+  $math$
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+$endif$
+
+$for(css)$
+<link rel="stylesheet" href="$css$" />
+$endfor$
+</head>
+
+<body>
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+$if(toc)$
+$toc.html()$
+$endif$
+
+<div class="grid" style="margin-bottom: 2rem;">
+<div class="g-col-12 g-col-md-7">
+<div class="card card-proj-title">
+<!-- don't use headings to avoid anchor links -->
+<div class="proj-title mt-auto">
+<p class="text-break" style="word-wrap: break-word; word-break: break-word;">$title$</p>
+</div>
+$if(subtitle)$
+<div class="proj-subtitle mb-auto">
+<p>$subtitle$</p>
+</div>
+$endif$
+</div>
+</div>
+<div class="g-col-12 g-col-md-5">
+<div class="card equal-height mx-auto" style="background-color:transparent; border: none; padding:0px; max-width: 30rem">
+<p><img src=$project-image$ class="img-fluid"></p>
+</div>
+</div>
+</div>
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+</body>
+
+</html>
