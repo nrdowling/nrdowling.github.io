@@ -1,8 +1,15 @@
 ---
+title: "Teaching Statements"
 hidden-title: "Teaching Statements"
 toc: true
 
 ---
+
+<style>
+h1.title {
+    display: none;
+}
+</style>
 
 ::: {.title-styled}
 <h1>{{< meta hidden-title >}}</h1>

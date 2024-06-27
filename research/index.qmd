@@ -1,7 +1,20 @@
 ---
 title: "Research"
+hidden-title: "Research Projects"
 toc: false
 ---
+
+<style>
+h1.title {
+    display: none;
+}
+</style>
+
+::: {.title-styled}
+<h1>{{< meta hidden-title >}}</h1>
+:::
+
+<hr class="title-divider">
 
 > ### *How do children go from being people who talk __at__ you to people who talk __with__ you?*
 

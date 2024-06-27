@@ -1,7 +1,20 @@
 ---
-title: "About Natalie"
+title: "About"
+hidden-title: "About Natalie"
 toc: false
 ---
+
+<style>
+h1.title {
+    display: none;
+}
+</style>
+
+::: {.title-styled}
+<h1>{{< meta hidden-title >}}</h1>
+:::
+
+<hr class="title-divider">
 
 A lifelong love of language inspired me to major in linguistics. In my time as an undergraduate at the University of Chicago however, I realized that what I was really fascinated with was the remarkable and innumerable ways human beings effortlessly communicate with one another — with or without language. For my PhD, I worked with Dr. Susan Goldin-Meadow and Dr. Marisa Casillas in UChicago’s department of Comparative Human Development, allowing me to craft an interdisciplinary approach to my research. I borrow from psychology, linguistics, cognitive science, and sociology to study the development of pragmatics as a social, interactive and contextualized phenomenon that continues to change in form and function from infancy to adulthood.
 
@@ -150,7 +163,7 @@ As you can see, I share many of these interests with my cat Audrey. Audrey is, o
 
 My preferred way of blurring work/life boundaries is with [my shrug collection](https://nrdowling.notion.site/Obviously-Meh-Dunno-shrug-53d0a1a8936441d69724531a6a50b60c). 
 
-::: {.card style="margin-bottom:30px;"}
+::: {.card style="margin-bottom:30px; margin-left: 15%; margin-right: 15%"}
 ![](images/shrugs/15.jpeg){style="border:5px;"}
 :::
 

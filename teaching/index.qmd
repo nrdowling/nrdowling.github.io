@@ -1,7 +1,14 @@
 ---
+title: "Classes"
 hidden-title: "Classes"
 toc: false
 ---
+
+<style>
+h1.title {
+    display: none;
+}
+</style>
 
 ::: title-styled
 # {{< meta hidden-title >}} {.title-styled}
