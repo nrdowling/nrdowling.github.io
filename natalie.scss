@@ -1,90 +1,8 @@
+
 /*-- scss:defaults --*/
 
-// Default the theme name
-$theme-name: if(variable-exists(theme), $theme, "gris");
-
-//
-// Color system - LUX
-//
-
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #f7f7f9 !default;
-$gray-300: #eceeef !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #919aa1 !default;
-$gray-700: #55595c !default;
-$gray-800: #343a40 !default;
-$gray-900: #1a1a1a !default;
-$black:    #000 !default;
-
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #d9534f !default;
-$orange:  #fd7e14 !default;
-$yellow:  #f0ad4e !default;
-$green:   #4bbf73 !default;
-$teal:    #20c997 !default;
-$cyan:    #1f9bcf !default;
-
-// Natalie Color Theme
-
-$lightdefault: #FAF8F5 !default;
-$eggshell: #F7F1DE !default;
-$richblack: #001219 !default;
-$midnightgreen: #005f73 !default;
-$darkcyan: #0a9396 !default;
-$tiffanyblue: #94d2bd !default;
-$vanilla: #e9d8a6 !default;
-$gamboge: #ee9b00 !default;
-$alloyorange: #ca6702 !default;
-$rust: #bb3e03 !default;
-$rufous: #ae2012 !default;
-$auburn: #9b2226 !default;
-
-// Gris
-
-$main1: #006399 !default;
-
-$main2: #008F99 !default;
-
-$main3: #009978 !default;
-
-$main4: #9e0131 !default;
-
-$main5: #990086 !default;
-
-$main6: #995700 !default;
-
-$mainBW: $gray-500 !default;
-
-
-$primary:       darken($main1, 18%) !default;
-$secondary:     lighten($main1, 66%) !default;
-//$secondary:     lighten($main6, 66%) !default;
-
-$success:       lighten($main3, 8%) !default;
-$info:          lighten($main1, 8%) !default;
-$warning:       lighten($main5, 8%) !default;
-$danger:        lighten($main4, 8%) !default;
-$light:         lighten($main1, 14%) !default;
-$dark:          darken($main4, 21%) !default;
-
-$link-color: $main1 !default;
-
-$min-contrast-ratio:   2.3 !default;
-
-// Options - LUX
-
-$enable-rounded:            true !default;
-
-// Body - LUX
-
-$body-bg:                   $secondary !default;
-$body-color:                $primary !default;
+@import 'color-theme';
+ 
 
 // Fonts - LUX + Natalie
 
@@ -100,12 +18,13 @@ $h4-font-size:                1.25rem !default;
 $h5-font-size:                1rem !default;
 $h6-font-size:                .75rem !default;
 $headings-font-weight:        300 !default;
-$headings-color:              darken($main4, 5%) !default;
-$low-headings-color:          darken($main3, 20%) !default;
+$headings-color:              $main1 !default;
+$low-headings-color:          $main2 !default;
+$navbar-bg:                   $main1;
 
 // Tables - LUX
 
-$table-border-color:          darken($main1, 21%) !default;
+$table-border-color:          mix($dark, $main1, 20%) !default;
 
 // Buttons - LUX
 
@@ -121,11 +40,11 @@ $btn-font-weight:             600 !default;
 // Forms - LUX
 
 $input-line-height:                     1.5 !default;
-$input-bg:                              lighten($mainBW, 37%) !default;
-$input-disabled-bg:                     lighten($mainBW,16%) !default;
-$input-group-addon-bg:                  lighten($mainBW,16%) !default;
+$input-bg:                              mix($light, $mainBW, 40%) !default;
+$input-disabled-bg:                     mix($light, $mainBW, 20%) !default;
+$input-group-addon-bg:                  mix($light, $mainBW, 20%) !default;
 
-$form-select-disabled-color:        darken($mainBW,16%) !default;
+$form-select-disabled-color:        mix($dark, $mainBW, 20%) !default;
 $form-select-disabled-bg:           $input-disabled-bg !default;
 
 
@@ -138,8 +57,8 @@ $code-block-padding-left: 0.6em !default;
 
 // Code Block Background Treatment
 // $code-block-bg, $code-block-bg-padding, $code-block-bg-alpha
-$code-block-bg: true !default;
-$code-block-bg-padding: 0.4em !default;
+$code-block-bg: mix($light, $mainBW, 70%) !default;
+$code-block-bg-padding: 0.5em !default;
 $code-block-bg-alpha: -0.35 !default;
 
 // Controls when the code block will switch to a dark
@@ -148,14 +67,14 @@ $code-block-theme-dark-threshhold: 40% !default;
 
 /* Inline Code Formatting */
 // $code-bg, $code-color, $code-padding
-$code-color: darken($main2, 21%) !default;
-$code-bg: lighten($main5, 66%) !default;
+$code-color: mix($dark, $main2, 20%) !default;
+$code-bg: mix($light, $mainBW, 70%) !default;
 
 // toc variables
 $toc-color: $main2 !default;
 $toc-font-size: 0.875rem !default;
 $toc-active-border: $main2 !default;
-$toc-inactive-border: lighten($main2, 14%) !default;
+$toc-inactive-border: mix($light, $main2, 15%) !default;
 
 $toc-tools-font-size: 0.8rem !default;
 
@@ -168,10 +87,11 @@ $callout-margin-top: 1.25rem !default;
 $callout-margin-bottom: 1.25rem !default;
 
 // Navbar
+
 $navbar-default: if(
   variable-exists(theme),
   if(variable-exists(primary), $primary, $main1),
-  $main4
+  $main1
 );
 
 $navbar-padding-y:                  .8rem !default;
@@ -355,11 +275,11 @@ $code-annotation-higlight-bg: #aaaaaa22 !default;
 $breadcrumb-divider: quote(">") !default;
 
 // table variable overrides
-$table-group-separator-color: lighten(
+$table-group-separator-color: mix($light, 
   if(variable-exists(body-color), $body-color, $gray-900),
   50%
 ) !default;
-$table-group-separator-color-lighter: lighten(
+$table-group-separator-color-lighter: mix($light, 
   if(variable-exists(body-color), $body-color, $gray-900),
   70%
 ) !default;
@@ -455,7 +375,7 @@ $web-font-path: 'https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,w
 }
 
 .bg-light {
-  border: 2px solid lighten($main1, 66%);
+  border: 2px solid mix($light, $main1, 66%);
 
   &.navbar-fixed-top {
     border-width: 0 0 12px;
@@ -1451,7 +1371,7 @@ div.sourceCode {
   padding-right: 1.5rem;
   @include body-secondary;
   color: $main1;
-  border-left-color: lighten($main1, 14%);
+  border-left-color: mix($light, $main1, 14%);
 }
 
 .blockquote {
@@ -1486,7 +1406,7 @@ pre {
 p pre code:not(.sourceCode),
 li pre code:not(.sourceCode),
 pre code:not(.sourceCode) {
-  background-color: initial;
+  background-color: $code-block-bg;
 }
 
 // Default padding if background is set
@@ -2065,11 +1985,11 @@ $code-block-border-left-color: $table-border-color !default;
 }
 
 // Default values for callout colors
-$callout-color-note: lighten($main1, 8%) !default;
-$callout-color-tip: lighten($main2, 8%) !default;
-$callout-color-important: lighten($main4, 8%) !default;
-$callout-color-caution: lighten($main5, 8%) !default;
-$callout-color-warning: lighten($main6, 8%) !default;
+$callout-color-note: mix($light, $main1, 8%) !default;
+$callout-color-tip: mix($light, $main2, 8%) !default;
+$callout-color-important: mix($light, $main4, 8%) !default;
+$callout-color-caution: mix($light, $main5, 8%) !default;
+$callout-color-warning: mix($light, $main6, 8%) !default;
 
 // Generate per callout type css to customize their appearance
 // Define the callouts for which we should define styles
@@ -2698,6 +2618,11 @@ code.sourceCode a.code-annotation-anchor {
 //$level: "AA";
 $contrast-text: $secondary;
 
+.accordion-button:not(.collapsed) {
+    background-color: mix($light, $mainBW, 60%);
+    color: mix($dark, $mainBW, 60%);
+}
+
 .accordion {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -2706,18 +2631,20 @@ $contrast-text: $secondary;
 }
 
 .accordion-item {
-    border-color:darken($mainBW, 37%);
+    border-color: mix($mainBW, $dark, 30%);
     border-width:2px;
 }
 
 .accordion-button {
-    color: $secondary;
+    color: $light;
+    background-color: $secondary;
     padding-top: .3rem;
     padding-bottom: .3rem;
 }
 
 .titlebox {
-  background-color:darken($main2, 18%);
+  //background-color:mix($dark, $main2, 18%);
+  background-color: $dark;
   text-align: center;
   font-weight: bold;
   padding-top: .5rem;
@@ -2726,12 +2653,12 @@ $contrast-text: $secondary;
 }
 
 .titlebox p {
-    color:lighten($main5, 66%);
+    color: $light;
     font-variant: small-caps;
 }
 
 .prepbox{
-    background-color:$main3;
+    background-color:$main2;
 }
 
 .assignbox {
@@ -2743,97 +2670,101 @@ $contrast-text: $secondary;
 }
 
 .finalbox {
-    background-color:natalie-contrast(lighten($main6, 8%), $contrast-text);
-}
-
-.lightbox1{
-    background-color:lighten($main1, 14%);
-    color:darken($main4, 18%);
-}
-
-.mainbox1{
-    background-color:$main1;
-    color:lighten($main4, 66%);
-}
-
-.darkbox1{
-    background-color:darken($main1, 21%);
-    color:lighten($main4, 66%);
-}
-
-.lightbox2{
-    background-color:lighten($main2, 14%);
-    color:darken($main4, 18%);
-}
-
-.mainbox2{
-    background-color:$main2;
-    color:lighten($main4, 66%);
-}
-
-.darkbox2{
-    background-color:darken($main2, 21%);
-    color:lighten($main4, 66%);
-}
-
-.lightbox3{
-    background-color:lighten($main3, 14%);
-    color:darken($main4, 18%);
-}
-
-.mainbox3{
     background-color:$main3;
-    color:lighten($main4, 66%);
 }
 
-.darkbox3{
-    background-color:darken($main3, 21%);
-    color:lighten($main4, 66%);
+
+// Gradient boxes
+// TEMPORARY!! REPLACE THESE WITH A FUNCTION
+
+.light-1{
+    background-color: mix($light, $main1, 10%);
+    color: mix($light, $main1, 90%);
 }
 
-.lightbox4{
-    background-color:lighten($main4, 14%);
-    color:darken($main2, 18%);
+.base-1{
+    background-color: $main1;
+    color: mix($light, $main1, 90%);
 }
 
-.mainbox4{
-    background-color:$main4;
-    color:lighten($main2, 66%);
+.dark-1{
+    background-color: mix($dark, $main1, 10%);
+    color: mix($light, $main1, 90%);
 }
 
-.darkbox4{
-    background-color:darken($main4, 21%);
-    color:lighten($main2, 66%);
+.light-2{
+    background-color: mix($light, $main2, 10%);
+    color: mix($light, $main2, 90%);
 }
 
-.lightbox5{
-    background-color:lighten($main5, 14%);
-    color:darken($main2, 18%);
+.base-2{
+    background-color: $main2;
+    color: mix($light, $main2, 90%);
 }
 
-.mainbox5{
-    background-color:$main5;
-    color:lighten($main2, 66%);
+.dark-2{
+    background-color: mix($dark, $main2, 10%);
+    color: mix($light, $main2, 90%);
 }
 
-.darkbox5{
-    background-color:darken($main5, 21%);
-    color:lighten($main2, 66%);
+.light-3{
+    background-color: mix($light, $main3, 10%);
+    color: mix($light, $main3, 90%);
 }
 
-.lightbox6{
-    background-color:lighten($main6, 14%);
-    color:darken($main2, 18%);
+.base-3{
+    background-color: $main3;
+    color: mix($light, $main3, 90%);
 }
 
-.mainbox6{
-    background-color:$main6;
-    color:lighten($main2, 66%);
+.dark-3{
+    background-color: mix($dark, $main3, 10%);
+    color: mix($light, $main3, 90%);
 }
 
-.darkbox6{
-    background-color:darken($main6, 21%);
-    color:lighten($main2, 66%);
+.light-4{
+    background-color: mix($light, $main4, 10%);
+    color: mix($light, $main4, 90%);
+}
+
+.base-4{
+    background-color: $main4;
+    color: mix($light, $main4, 90%);
+}
+
+.dark-4{
+    background-color: mix($dark, $main4, 10%);
+    color: mix($light, $main4, 90%);
+}
+
+.light-5{
+    background-color: mix($light, $main5, 10%);
+    color: mix($light, $main5, 90%);
+}
+
+.base-5{
+    background-color: $main5;
+    color: mix($light, $main5, 90%);
+}
+
+.dark-5{
+    background-color: mix($dark, $main5, 10%);
+    color: mix($light, $main5, 90%);
+}
+
+.light-6{
+    background-color: mix($light, $main6, 10%);
+    color: mix($light, $main6, 90%);
+}
+
+.base-6{
+    background-color: $main6;
+    color: mix($light, $main6, 90%);
+}
+
+.dark-6{
+    background-color: mix($dark, $main6, 10%);
+    color: mix($light, $main6, 90%);
 }
 
 .accordion-button, .accordion-header p, ol, ul {
@@ -2845,27 +2776,28 @@ $contrast-text: $secondary;
 }
 
 .accordion-body {
-    background-color: lighten($body-bg, 10%);
-    color: $primary;
+    background-color: mix($light, $body-bg, 10%);
+    color: $dark;
 }
+
+
 
 // Navbar Customization
 
 .nav-link {
-    color: lighten($main1, 66%);
+    color: mix($light, $main1, 66%);
 }
 
 .navbar-nav a:hover {
-    color: lighten($main1, 50%);
+    color: mix($light, $main1, 50%);
 }
 
 .navbar-nav .nav-link.active {
-  //color: lighten($main2, 37%);
+  //color: mix($light, $main2, 37%);
   color: $body-bg;
   font-weight: 600;
   text-decoration-line: underline overline;
 }
-
 
 //.navbar.navbar-default {
 //    background-color: $main1 !important;
@@ -2877,14 +2809,17 @@ $contrast-text: $secondary;
 }
 
 .navbar .dropdown-menu {
-    background-color: mix(#cfd, $main4, 60%);
+    //background-color: mix(#ddd, $navbar-bg, 70%);
+    background-color: mix($light, $navbar-bg, 80%);
+    opacity: 95%;
     border-width: 2px;
-    border-color: mix(#222, $main4, 60%);
+    border-color: mix(#222, $navbar-bg, 30%);
     border-radius: 10px;
     
     & a.dropdown-item:hover {
         background-color: $body-bg;
-        color: $main4;
+        color: $navbar-bg;
+        opacity: 100%;
         
         //&:last-child {
           //  border-bottom-left-radius: 10px;
@@ -3005,9 +2940,9 @@ hr.title-divider {
 // Components
 
 .card {
-    border: 2px solid lighten($main1, 66%);
+    border: 2px solid mix($light, $main1, 66%);
     padding: 10px;
-    background-color: theme-fade(lighten($mainBW,80%), $body-bg, 5%);
+    background-color: theme-fade(mix($light, $mainBW,80%), $body-bg, 5%);
 }
 
 .equal-height {
@@ -3015,19 +2950,19 @@ hr.title-divider {
 }
 
 .card-alt {
-    //background-color: natalie-contrast($main2, lighten($main6, 69%));
+    //background-color: natalie-contrast($main2, mix($light, $main6, 69%));
     background-color: $main2;
-    color: lighten($main6, 69%);
+    color: $light;
     padding-left: 0px;
     padding-right: 1rem;
-    border-color: lighten($main6,70%);
+    border-color: mix($light, $main2, 90%);
     border-radius: 10px;
     
     & .btn {
-        background-color: lighten($main2,10%);
-        color: lighten($main6,70%);
+        background-color: mix($light, $main2, 80%);
+        color: mix($dark, $main2, 40%);
         padding: 5px 10px;
-        border-color: lighten($main6, 69%);
+        border-color: mix($light, $main2, 60%);
         border-width: 1px;
         border-radius: 10px;
         font-weight: 400;
@@ -3050,19 +2985,24 @@ hr.title-divider {
     & .nav-link {
         padding-left: 3rem;
         text-align: right;
-    }
-    
-    & .nav-link.active, .nav-link.active:hover {
-        color: darken($main2, 20%);
-        background-color: lighten($main6,70%);
+        color: $soft;
     }
     
     & .nav-link:hover {
-        color: lighten($main2, 30%);
-        background-color: theme-dim($main2, 5%);
-        border-color: lighten($main6,70%);
+        color: mix($dark, $main2, 30%);
+        background-color: $light;
+        //border-color: mix($light, $main6, 70%);
+        opacity: 80%;
     }
+    
+    & .nav-link.active, .nav-link.active:hover {
+        color: mix($dark, $main2, 30%);
+        background-color: mix($light, $main2, 90%);
+    }
+    
+
 }
+
 
 .card-title {
     font-weight: bold;
@@ -3074,13 +3014,13 @@ hr.title-divider {
 }
 
 .card-proj-title {
-    //background-color: natalie-contrast(darken($main5, 21%), lighten($mainBW,80%));
+    //background-color: natalie-contrast(mix($dark, $main5, 21%), mix($light, $mainBW,80%));
     background-color: $main4;
-    color: lighten($mainBW,80%);
+    color: mix($light, $mainBW,80%);
     padding-right: 10%;
     padding-left: 10%;
     border-width: 5px;
-    border-color: lighten($main4, 14%);
+    border-color: mix($light, $main4, 14%);
     border-radius: 30px;
     position: relative;
     top: 50%;
@@ -3104,8 +3044,8 @@ hr.title-divider {
 }
 
 .proj-subtitle {
-    //color: darken($body-bg, 10%);
-    color: darken($body-bg,16%);
+    //color: mix($dark, $body-bg, 10%);
+    color: mix($dark, $body-bg,16%);
     font-size: 1.7rem;
     line-height: 1em;
     font-style: italic;
@@ -3225,7 +3165,7 @@ body {
 .access-badge {
       background-color: $main1;
       color: $secondary;
-      border-color: darken($main1, 21%);
+      border-color: mix($dark, $main1, 21%);
       border-width: 5px;
       border-radius: 20px;
   }
@@ -3237,7 +3177,7 @@ a.badge  {
 
 .bordered-image {
     border-width: 2px; 
-    border-color: lighten($main4, 66%);
+    border-color: mix($light, $main4, 66%);
     border-radius: 15px;
     border-style: solid;
 }
@@ -3245,9 +3185,12 @@ a.badge  {
 
 // Class card customization
 
+$class-card-base: $main1;
+$class-card-active-base: $main6;
+
 .class-card {
-    background-color: lighten($main2, 66%);
-    border-color: darken($main2, 20%);
+    background-color: mix($light, $class-card-base, 80%);
+    border-color: mix($dark, $class-card-base, 20%);
     padding:0px;
     border-radius:5px;
     
@@ -3257,20 +3200,21 @@ a.badge  {
     }
     
     & h4 {
-       color: theme-contrast(darken($main2, 21%), lighten($main2, 66%),"AAA");
+       color: theme-contrast(mix($dark, $class-card-base, 20%), mix($light,$class-card-base, 60%),"AAA");
        font-size: 1.5rem;
        font-variant: small-caps;
        letter-spacing: .08rem;
+       padding: .2em .5em;
     }
     
     & h5 {
-        color: theme-contrast(darken($main2, 21%), lighten($main2, 66%),"AAA");
+        color: theme-contrast(mix($dark, $class-card-base, 20%), mix($light,$class-card-base, 60%),"AAA");
         font-size: 1rem;
         font-weight: 300;
     }
     
-    #course-summary h3 {
-        color:darken($main2, 21%);
+    .course-summary h3 {
+        color:mix($dark, $class-card-base, 20%);
         font-size: 1.2rem;
     }
     
@@ -3279,14 +3223,14 @@ a.badge  {
     }
     
     & > .card-header {
-        background-color: $main2;
-        color: $main2; // hide text for unscheduled classes w/out losing header
+        background-color: $class-card-base;
+        color: $class-card-base; // hide text for unscheduled classes w/out losing header
         padding-top: .5rem;
         padding-bottom: .5rem;
         //font-style: italic;
         letter-spacing: 0.2rem;
         margin-bottom:1rem;
-        border-bottom-color: darken($main2, 20%);
+        border-bottom-color: mix($dark, $class-card-base, 20%);
         border-bottom-style: solid;
         border-bottom-width: 2px;
     }
@@ -3303,14 +3247,14 @@ a.badge  {
         }
         
         & .list-group-item {
-            background-color: darken($main2, 5%);
-            border-color: darken($main2, 20%);
-            color: mix(#fff, $main2, 90%);
+            background-color: mix($light, $class-card-base, 10%);
+            border-color: mix($dark, $class-card-base, 20%);
+            color: mix($light, $class-card-base, 90%);
             font-size: .9rem;
             font-weight: 300;
             
             &:nth-child(2n+1) {
-                background-color: darken($main2, 10%);
+                background-color: mix($dark, $class-card-base, 10%);
             }
                 
         }
@@ -3320,12 +3264,13 @@ a.badge  {
     }
     
     & .badge {
-        background-color: $main2;
+        background-color: $class-card-base;
         color: #fff;
         font-weight: 500;
         //font-variant: small-caps;
-        border-color: mix($main4, $main2, 20%);
+        border-color: mix($light, $class-card-base, 20%);
         padding: .5em 1em;
+        margin-top: .5em;
         font-size: .8rem;
         border-width: 2px;
         border-radius: .7em;
@@ -3341,37 +3286,37 @@ a.badge  {
     
     &-active {
         @extend .class-card;
-        background-color: lighten($main4, 65%);
-        border-color: darken($main4, 20%);
+        background-color: mix($light, $class-card-active-base, 80%);
+        border-color: mix($dark, $class-card-active-base, 20%);
     
         & h4, h5 {
-            color: theme-contrast(darken($main4, 20%), lighten($main4, 65%),"AAA");
+            color: theme-contrast(mix($dark, $class-card-active-base, 20%), mix($light, $class-card-active-base, 65%),"AAA");
         }
         
         & > .card-header {
-            background-color: lighten($main4, 10%);
-            color: lighten($mainBW,80%);
-            border-bottom-color: darken($main4, 20%);
+            background-color: $class-card-active-base;
+            color: $light;
+            border-bottom-color: mix($dark, $class-card-active-base, 20%);
         }
             
         & .list-group-flush .list-group-item {
-            background-color: $main4;
-            border-color: darken($main4, 20%);
-            color: mix(#fff, $main4, 90%);
+            background-color: mix($light, $class-card-active-base, 10%);
+            border-color: mix($dark, $class-card-active-base, 20%);
+            color: mix($light, $class-card-active-base, 90%);
 
             &:nth-child(2n+1) {
-                background-color: darken($main4, 5%);
+                background-color: mix($dark, $class-card-active-base, 10%);
             }
         }
         
-        #course-summary h3 {
-            color: darken($main4, 21%);
+        .course-summary h3 {
+            color: mix($dark, $class-card-active-base, 20%);
         }
         
         & .badge {
-            background-color: $main4;
-            color: $secondary;
-            border-color: mix($main2, $main4, 20%);
+            background-color: $class-card-active-base;
+            color: $light;
+            border-color: mix($light, $class-card-active-base, 20%);
         }
     }
 }
@@ -3385,10 +3330,10 @@ a.badge  {
     aspect-ratio: 2/1; 
     object-fit: cover; 
     border-width: 2px;
-    border-color: darken($main2, 21%);
+    border-color: mix($dark, $mainBW, 20%);
     border-radius: 5px;
     border-style: solid;
-    background-color:lighten($mainBW,80%);
+    background-color:$light;
 }
 
 .class-scroller {
@@ -3408,6 +3353,6 @@ a.badge  {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: lighten($main6, 60%);
-    background-color: lighten($main6, 69%);
+    border-color: mix($light, $main6, 60%);
+    background-color: mix($light, $main6, 69%);
 }

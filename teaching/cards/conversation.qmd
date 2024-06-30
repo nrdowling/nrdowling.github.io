@@ -13,7 +13,7 @@
 ::: {.card-body style="margin-top: 0px;"}
 
 ::: {.content-narrow style="margin-top:-1rem;"}
-### Course description {#course-summary}
+### Course description {.course-summary}
 :::
 
 ::: {.card-text .overflow-y-scroll .content-narrow .class-scroller}

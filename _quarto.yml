@@ -1,7 +1,6 @@
 project:
   type: website
   output-dir: docs
-
 website:
   title: "Natalie R. Dowling"
   navbar:
@@ -26,7 +25,7 @@ format:
   html:
     template: templates/main-template.html
     template-partials:
-        - _partials/test.html
+        - _partials/test.html 
     theme: 
         - natalie.scss
     toc: true

@@ -1,0 +1,95 @@
+
+/*-- scss:defaults --*/
+
+// Default the theme name
+$theme-name: if(variable-exists(theme), $theme, "gris");
+
+//
+// Color system - LUX
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f7f7f9 !default;
+$gray-300: #eceeef !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #919aa1 !default;
+$gray-700: #55595c !default;
+$gray-800: #343a40 !default;
+$gray-900: #1a1a1a !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #d9534f !default;
+$orange:  #fd7e14 !default;
+$yellow:  #f0ad4e !default;
+$green:   #4bbf73 !default;
+$teal:    #20c997 !default;
+$cyan:    #1f9bcf !default;
+
+// Natalie Color Theme
+
+$Xlightdefault: #FAF8F5 !default;
+$Xdarkdefault: #001219 !default;
+$eggshell: #F7F1DE !default;
+
+$midnightgreen: #005f73 !default;
+$darkcyan: #0a9396 !default;
+//$tiffanyblue: #94d2bd !default;
+$tiffanyblue: #669788 !default;
+$vanilla: #e9d8a6 !default;
+$gamboge: #ee9b00 !default;
+$alloyorange: #ca6702 !default;
+$rust: #bb3e03 !default;
+$rufous: #ae2012 !default;
+$auburn: #9b2226 !default;
+
+// Gris
+
+$main2: $auburn !default;
+
+$main1: $midnightgreen !default;
+
+$main5: $alloyorange !default;
+
+$main6: $rufous !default;
+
+$main3: $darkcyan !default;
+
+$main4: $tiffanyblue !default;
+
+$soft: $eggshell;
+
+$light: #FAF8F5;
+
+$dark: #001219;
+
+$mainBW: mix($dark, $light, 50%) !default;
+
+
+$primary:       $main1 !default;
+$secondary:     $main2 !default;
+//$secondary:     mix($light, $main6, 66%) !default;
+
+$success:       $darkcyan;
+$info:          $midnightgreen;
+$warning:       $gamboge;
+$danger:        $rufous;
+
+$link-color: $main4 !default;
+
+$min-contrast-ratio:   2.3 !default;
+
+// Options - LUX
+
+$enable-rounded:            true !default;
+
+// Body - LUX
+
+$body-bg:                   $light !default;
+$body-color:                $dark !default;
+
