@@ -3,6 +3,20 @@ title: "Schelling Games at UChicago"
 subtitle: "All Participants"
 ---
 
+::: {.alert .alert-dismissible .alert-warning role="alert"}
+::: {.btn-close type="button" data-bs-dismiss="alert"}
+::: 
+
+::: {.alert-heading}
+
+## Wait!
+
+:::
+
+Before you go further, you can [play the game here](https://forms.gle/BLdXSpYhhY27jei67). This really doesn't work if you know what's coming, so if you want to contribute to this (silly and totally informal) project, please play the game first!
+
+:::
+
 ```{r load-packages, include=FALSE}
 # Load packages that we can assume (for d2m) we all have installed
 library(papaja) # though we've switched to quarto, there are still some useful functions in papaja like cite_r()

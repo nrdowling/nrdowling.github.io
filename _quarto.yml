@@ -17,6 +17,8 @@ website:
               text: Teaching Statements
             - href: d2m.qmd
               text: Data to Manuscript in R
+            - href: schelling/index.qmd
+              text: Schelling Games
       - href: about.qmd
         text: About
 
