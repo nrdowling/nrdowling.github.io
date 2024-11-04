@@ -1,0 +1,33 @@
+---
+title: "test"
+---
+
+::: {.card .card-alt-hor}
+::: {.card-header}
+::: {.nav .nav-tabs role="tablist" }
+::: {.nav-item}
+[Stranger]{.nav-link .active #stranger-tab data-bs-toggle="tab" data-bs-target="#stranger" type="button" role="tab" aria-controls="stranger" aria-selected="true"}
+:::
+::: {.nav-item}
+[Student]{.nav-link #student-tab data-bs-toggle="tab" data-bs-target="#student" type="button" role="tab" aria-controls="student" aria-selected="false"}
+:::
+::: {.nav-item}
+[Friend]{.nav-link #friend-tab data-bs-toggle="tab" data-bs-target="#friend" type="button" role="tab" aria-controls="friend" aria-selected="false"}
+:::
+:::
+:::
+
+::: {.card-body}
+::: {.tab-content}
+::: {.tab-pane .fade .show .active #stranger role="tabpanel" aria-labelledby="stranger-tab"}
+Content for the Stranger tab goes here.
+:::
+::: {.tab-pane .fade #student role="tabpanel" aria-labelledby="student-tab"}
+Content for the Student tab goes here.
+:::
+::: {.tab-pane .fade #friend role="tabpanel" aria-labelledby="friend-tab"}
+Content for the Friend tab goes here.
+:::
+:::
+:::
+:::

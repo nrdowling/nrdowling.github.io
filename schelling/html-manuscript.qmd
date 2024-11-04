@@ -1,0 +1,456 @@
+---
+title: "Schelling Games"
+subtitle: "At the University of Chicago"
+---
+
+```{r load-packages, include=FALSE}
+# Load packages that we can assume (for d2m) we all have installed
+library(papaja) # though we've switched to quarto, there are still some useful functions in papaja like cite_r()
+library(tidyverse)
+
+# Load packages that are less likely to be installed
+# In some cases it may be better to Require() these packages
+library(googlesheets4)
+library(kableExtra)
+library(data.table)
+library(scales)
+library(ggsci)
+```
+
+```{r preferences, include=FALSE}
+# Seed for random number generation
+set.seed(6788)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+
+# Set theme for plots
+theme_set(theme_bw())
+
+# Set bibliography file
+r_refs("bibliography.bib")
+```
+
+```{r import-raw, include=FALSE}
+# 2 OPTIONS FOR DATA READ-IN:
+
+# 1. Read responses from Google sheets
+# PRO: Most current data
+# CON: Requires appropriate permissions for the google sheet and maintaining settings in the googlesheets4 pkg
+
+responses_raw <- read_sheet("https://docs.google.com/spreadsheets/d/1T4XEXNxmb3jK2WenIR9vRXggT_-_8HDejP0J3qeXFqM/edit?usp=sharing")
+
+# 2. Read intermediary dataset (includes responses from Spring 2020 & Winter 2023)
+# PRO: Data can be publicly accessible and stored in the GitHub repo as a relatively small csv file
+# CON: May not include recent response data
+
+#responses_raw <- read_csv("data/responses_raw.csv")
+
+# Note: last 3 columns indicate when the corresponding response is clearly a misinterpretation of the question
+# These errors were manually added based purely on human reasoning and healthy skepticism 
+
+```
+
+```{r setup, include = FALSE}
+
+# SOURCE FILES AS NEEDED
+source("source/functions.R")
+source("source/setup.R")
+
+```
+
+
+# Introduction
+<!-- For the purposes of this example manuscript, the introduction is primarily explanation and motivation with very limited literature review. In a typical psychology paper like you will (probably) produce in D2M, the introduction would be much more literature review and much less semi-casual explanation. -->
+
+<!-- 
+TODO: 
+1. Convert all citations to bibtex reference format. 
+2. Add bibtex references to bibliography.bib
+3. Confirm that all references are accurate. (Some were suggested by chatGPT which is obviously not to be trusted!)
+--> 
+
+Thomas Schelling introduced the concept of "focal points" in The Strategy of Conflict with the intention of expanding the contemporary perspectives of game theory to include cooperative, not just competitive, games in human decision making (Schelling, 1960). Though his work certainly proved influential in this regard, concepts of focal points and coordination games have found relevance well beyond game theory and economics as a whole. From improvisational music (Canonne, 2018) to urban planning (Rondinelli, 1983), from human-computer interfacing (Wong et al., 2009) to linguistic anthropology (Brown & Levinson, 1987), from social stereotyping (Yoon & Hollingshead, 2010) to online gaming (Ross & Collister, 2014), elements of Schelling's framework of coordinated decision-making seem ubiquitous.
+
+In this brief report, we consider focal points from a cognitive science perspective. We present data from an informal survey mimicking Schelling's early (and also quite informal) study in The Strategy of Conflict (Schelling, 1960). We discuss our findings as they relate to nonverbal communication and how these concepts may be extended to further our understanding of coordination in everyday conversation.
+
+Focal points (also called Schelling points) were first conceptualized within the field of economics. Schelling noted that by focusing on zero-sum or fully competitive behavioral scenarios, game theory had failed to account for many real-world games whose outcome rested on successful coordination, not competition, among multiple players (Schelling, 1960). In the context of coordination games, Schelling's focal points are the salient solutions that players tend to choose due to their intuitively recognizable or, more often, socially shared nature (Schelling, 1960). Critically, players tasked with coordination choose these options even in the absence of explicit communication (Mehta, Starmer, & Sugden, 1994).
+
+Since being introduced in game theory, focal points have seen broader application across the social sciences. In social psychology, focal points offer an explanation for the natural solutions individuals find in social coordination problems where multiple choices are equally valid, as individuals may rely on common expectations or cultural cues to make decisions that lead to successful coordination (Sugden, 1995). Social norms, traditions, and conventions contribute to the emergence of focal points, and they showcase how individuals rely on shared understanding to achieve coordination without explicit negotiation (Bacharach & Bernasconi, 1997). This concept sheds light on the intricate ways in which human behavior and decision-making are influenced by social context and the desire to align with others (Chwe, 2001).
+
+These principles of implicit coordination are clearly applicable to relatively broad real-life contexts, such as meeting someone in a crowded place, deciding on a meeting time without prior communication, or determining where to sit in an auditorium (Schelling, 1960). However, they may additionally apply to narrower contexts we might typically associate with explicit coordination, such as face-to-face conversation. In conversation, we use speech (or sign language) to express meaning "on-the-record," but conversational interaction consists of much more than formal language (Clark, 1996). "Off-the-record" non-linguistic signals allow interlocutors to send highly informative but implicit messages alongside explicit meaning in speech (Clark, 1996). Nonverbal resources like co-speech gesture and paralinguistic resources like intonation can serve critical pragmatic functions (McNeill, 1992). These tools can make conversation more efficient by allowing addressees to make inferences about speaker intention and meaning based on contextual cues (Clark, 1996).
+
+In the context of everyday interaction, the significance of focal points is tightly linked to common ground (Clark, 1996). In simplest terms, conversational common ground is the shared knowledge, beliefs, assumptions, and experiences that participants in a face-to-face conversation believe to be mutually understood (Clark, 1996). At one level, common ground refers to common knowledge (Stalnaker, 1978). If all interlocutors know that they have all been invited to Anna's birthday party next Saturday, they may discuss the presents they plan to bring without explicitly mentioning who Anna is, why they would be giving her presents, or the deadline for buying a present for the party (Clark & Marshall, 1981). These assumptions are localized to this group in this conversation on this topic, but there are also generalized social assumptions at play (Clark, 1996). The party-goers know that presents are given for birthdays, that both the invitees and the host will be at the party, that the presents will be given to the host at the party, that presents should be appropriate for what the host would want to receive, etc. (Clark & Marshall, 1981).
+
+Conversational common ground also encompasses emergent properties of the interaction, guided by cultural expectations and linguistic systems (Clark, 1996). The party-goers may refer to Anna as the "birthday girl" or simply "her" rather than naming her at each reference (Clark, 1996). One interlocutor may ask a question and expect to get an answer that is prompt, relevant, and truthful, given that all interlocutors are assumed to follow principles of English pragmatics and conversational organization (Grice, 1975). Common ground, both that which is present at the initiation of the conversation and that which emerges as a product of conversation, allows interlocutors to disambiguate and infer meaning with focal points (Clark, 1996). When a party-goer says, "I really hope she likes it," the listeners face multiple valid options when determining the referents of "she" and "it" (Clark, 1996). The conversation's general focus on Anna's birthday likely enables a convergence of understanding on "Anna" as the "she"; Anna is highly salient in the immediate context (Clark, 1996). Listeners will need to rely on subtler mutual salience to determine whether "it" refers to the party, some particular present, or something else entirely (Clark, 1996).
+
+In the present study, we do not directly probe how interlocutors use focal points in conversation. Instead, we informally replicate Schelling's first survey (Schelling, 1960). We consider both the results of our survey and of Schelling's survey to theorize how these generalized points of mutual salience may add to our understanding of the implicit coordination facilitating everyday conversation.
+
+# Methods
+
+We constructed a survey modeled after Schelling's original report. Schelling himself did not perform a true "study" in reporting his results, but rather loosely surveyed the **graduate?** students in his class at **Yale?** in **the year**. Our data collection was similarly gathered quite loosely. The survey data were collected with the intention of serving a pedagogical purpose and with no intention to be published as rigorous study. While we cannot use these data to make empirical claims, they are nonetheless a useful and thought-provoking educational tool (as Schelling's data certainly were).
+
+## Participants
+
+<!-- Participant groups --> 
+
+## Materials
+
+Schelling's classroom survey asked students questions challenging them to ambiguously "win" a game by coordinating with a stranger. Famously, he asked where and when the participants would meet a stranger in New York City without any prior communication. Additionally, the survey included a series of questions encouraging convergence on a response in more "game-like" circumstances: guessing a number, flipping a coin, etc.
+
+The survey in this report was in essence an abbreviated version of Schelling's. It included a selection of the "game-like" questions taken directly from Schelling's survey. We asked the classic where-and-when questions with some revisions. Because our survey was conducted at the University of Chicago, our version of the where-and-when question asked about meeting a stranger in Chicago rather than New York City. We additionally included two follow-up questions that were not included in Schelling's data, changing the interpersonal context between the participant and hypothetical partner.  
+
+<!-- description of google form hosting & link -->
+
+
+## Data analysis
+
+We used `r cite_r("bibliography.bib")` for all our analyses.
+
+Responses have been cleaned to account for predictable variations in how individuals input popular responses -- e.g., "the reg", "Regenstein", and "In the Reg." are all reported as "The Reg." Ambiguous responses (e.g., "the library") are left ambiguous.
+
+### Exclusions
+
+<!-- TODO: add inline refs for exclusion numbers & remove temporary formatting -->A total of <span color="red">NUMBER GOES HERE</span> responses to the "meetup location" questions were excluded (out of <span color="red">NUMBER GOES HERE</span> total) or re-coded as "Other".
+
+Responses that indicate clear misunderstanding of the question are excluded. These primarily consisted of responses in the "meeting a stranger" or "meeting a student" questions. Since these questions specify that the other party is unknown to the respondent, responses should not assume prior familiarity or experience with the other party, for example "their house", "the last place we last met", "where we usually see each other", or "where you expect them to be at a certain time."
+
+Responses to the meetup location questions were coded as "Other" if they included multiple locations without rankings (e.g., "pret or hutch"), were overly vague (e.g., "a major center within the city that everyone knows about"), or fanciful/impossible (e.g., "THE MOON!").
+
+# Results
+
+The survey results for each item are reported and visualized below. Some item-level visualizations use pie charts, which we recognize are anathema to many data visualization experts.[^1] Item-level summary statistics are also provided, and pie-chart-allergic readers may skip to the comparative bar charts.
+
+[^1]: Come at me and/or get in the comments. Pie charts get too much hate. It's trendy, the same way everyone loves to hate the word moist. Look, I don't disagree that pie charts are widely misused. In most cases data represented with a pie chart would be better visualized with a bar chart (or no chart at all). However, the very qualities that make pie charts terrible visualizations in most situations can be a strength in others. In this case, the fact that they are really bad communicating any kind of precise information about more than two or three categories actually makes them a quick and easy way to visually communicate the dramatic differences in response distribution for each question. They are not meant to be precise or detailed, but to give the reader a quick sense of proportional data at the item-level without being distracted or overwhelmed by group-level comparisons. Seeing all the tiny little pie slices makes you say "Ugh, there are way too many of those!" Well, yes! That's the point! Note that when I actually *do* want to communicate a comparison I use bar charts. There's no reason to completely trash a tool just because it's often misused.
+
+
+## Meeting locations
+
+<!-- 
+TODO: 
+1. Move full tables of all responses to appendix 
+2. Add a comparative bar graph for all three managing-to-meet scenarios
+-->
+
+### Meeting a stranger
+
+**You are meeting a stranger in Chicago.** You both know that you need to meet each other today, but you haven't agreed on a place or a time and you have no means of communication. *Remember, you cannot communicate with them now or previously in any way!*
+
+**WHERE** do you go to meet them? 
+
+```{r str-where, include=FALSE}
+# Select stranger meetup column and add cleaning/grouping
+# Making it into a data.table allows for easy in-text references (it will be both a df and a dt)
+
+stranger_meetup <- data.table(clean_meetup(responses, "stranger_where", "stranger_error"))
+
+```
+
+```{r str-visualize-where, echo=FALSE}
+
+# How many levels to display in legend?
+pie_meetup(stranger_meetup, "stranger_where_clean", title="WHERE do you meet a STRANGER in Chicago?")
+
+# ?Q?: Since the legend only shows the top n meetup locations (in order), it can be unintuitive what "Other" or "Other (something)" would mean: "Other residence?" Other than what? (other than dorms!). How could you make this more intuitive/understandable?
+
+```
+
+Response breakdown:
+
+```{r str-kable, echo=FALSE, paged.print=TRUE}
+# Show kable of all (cleaned) responses with raw counts and percent
+kbl_responses(stranger_meetup, "stranger_where_clean")
+
+```
+
+The most common response for where to meet a *stranger* in Chicago was `r levels(stranger_meetup$stranger_where_clean)[1]`, with `r stranger_meetup[stranger_where_clean==stranger_meetup$stranger_where_clean[1],.N]` responses (`r round((stranger_meetup[stranger_where_clean==stranger_meetup$stranger_where_clean[1],.N]/stranger_meetup[,.N])*100,2)`%). <!-- These in-text refs are verbose, but they are entirely data-dependent! If suddenly the Sears tower got way more popular than the Bean, this text would reflect that without any changes. -->
+
+Common responses of Chicago landmarks included the Bean/Cloudgate ($N$ = `r stranger_meetup[stranger_where_clean=="The Bean", .N]`), Millennium/Grant Park ($N$ = `r stranger_meetup[stranger_where_clean=="Millennium/Grant Park", .N]`), and the Sears/Willis Tower ($N$ = `r stranger_meetup[stranger_where_clean=="Sears/Willis Tower", .N]`).
+
+
+
+### Meeting an unfamiliar student
+
+**You are meeting another UChicago student who you have not met before.** You both know that you are both UChicago students and that you should meet today, but you haven't agreed on a meeting location and you have no means of communication. **Where** do you go to meet them?
+
+```{r student-where, include=FALSE}
+
+student_meetup <- data.table(clean_meetup(responses, "student_where", "student_error"))
+
+```
+
+```{r student-visualize-where, echo=FALSE}
+
+pie_meetup(student_meetup, "student_where_clean", title="WHERE do you meet an UNFAMILIAR UCHICAGO STUDENT in Chicago?")
+```
+
+Response breakdown:
+
+```{r student-kable, echo=FALSE, paged.print=TRUE}
+# Show kable of all (cleaned) responses with raw counts and percent
+kbl_responses(student_meetup, "student_where_clean")
+
+```
+
+The most common response for where to meet an *unknown UChicago student* in Chicago was `r levels(student_meetup$student_where_clean)[1]`, with `r student_meetup[student_where_clean==student_meetup$student_where_clean[1],.N]` responses (`r round((student_meetup[student_where_clean==student_meetup$student_where_clean[1],.N]/student_meetup[,.N])*100,2)`%). By comparison, `r ifelse(stranger_meetup[stranger_where_clean==student_meetup$student_where_clean[1],.N]==0, "no respondents", paste0("only ", stranger_meetup[stranger_where_clean==student_meetup$student_where_clean[1],.N], " respondents (", round((stranger_meetup[stranger_where_clean==student_meetup$student_where_clean[1],.N]/stranger_meetup[,.N])*100,2), "%)"))` chose to meet a stranger at `r levels(student_meetup$student_where_clean)[1]`.
+
+While `r levels(stranger_meetup$stranger_where_clean)[1]` was the most common response for where to meet a *stranger* in Chicago, `r ifelse(student_meetup[student_where_clean==stranger_meetup$stranger_where_clean[1],.N]==0, "no respondents", paste0("only ", student_meetup[student_where_clean==stranger_meetup$stranger_where_clean[1],.N], " respondents (", round((student_meetup[student_where_clean==stranger_meetup$stranger_where_clean[1],.N]/student_meetup[,.N])*100,2), "%)"))` chose to meet an unfamiliar UChicago student at `r levels(stranger_meetup$stranger_where_clean)[1]`.
+
+
+### Meeting your UChicago friend
+
+**You are meeting your closest friend at UChicago.** You haven't agreed on a meeting location and you have no means of communication. **Where** do you go to meet them?
+
+```{r friend-where, include=FALSE}
+
+friend_meetup <- data.table(clean_meetup(responses, "friend_where", "friend_error"))
+
+```
+
+```{r friend-visualize-where, echo=FALSE}
+
+pie_meetup(friend_meetup, "friend_where_clean", title="WHERE do you meet your CLOSEST UCHICAGO FRIEND in Chicago?")
+
+```
+
+Response breakdown:
+
+```{r friend-kable, echo=FALSE, paged.print=TRUE}
+# Show kable of all (cleaned) responses with raw counts and percent
+kbl_responses(friend_meetup, "friend_where_clean")
+
+```
+
+The most common response for where to meet a close UChicago friend in Chicago was `r levels(friend_meetup$friend_where_clean)[1]`, with `r friend_meetup[friend_where_clean==friend_meetup$friend_where_clean[1],.N]` responses (`r round((friend_meetup[friend_where_clean==friend_meetup$friend_where_clean[1],.N]/friend_meetup[,.N])*100,2)`%). By comparison, `r ifelse(stranger_meetup[stranger_where_clean==friend_meetup$friend_where_clean[1],.N]==0, "no respondents", paste0("only ", stranger_meetup[stranger_where_clean==friend_meetup$friend_where_clean[1],.N], " respondents (", round((stranger_meetup[stranger_where_clean==friend_meetup$friend_where_clean[1],.N]/stranger_meetup[,.N])*100,2), "%)"))` chose to meet a stranger at `r levels(friend_meetup$friend_where_clean)[1]` and `r ifelse(student_meetup[student_where_clean==friend_meetup$friend_where_clean[1],.N]==0, "no respondents", paste0("only ", student_meetup[student_where_clean==friend_meetup$friend_where_clean[1],.N], " respondents (", round((student_meetup[student_where_clean==friend_meetup$friend_where_clean[1],.N]/student_meetup[,.N])*100,2), "%)"))` chose to meet a stranger at `r levels(friend_meetup$friend_where_clean)[1]`.
+
+While `r levels(stranger_meetup$stranger_where_clean)[1]` was the most common response for where to meet a *stranger* in Chicago, `r ifelse(friend_meetup[friend_where_clean==stranger_meetup$stranger_where_clean[1],.N]==0, "no respondents", paste0("only ", friend_meetup[friend_where_clean==stranger_meetup$stranger_where_clean[1],.N], " respondents (", round((friend_meetup[friend_where_clean==stranger_meetup$stranger_where_clean[1],.N]/friend_meetup[,.N])*100,2), "%)"))` chose to meet a close UChicago friend at `r levels(stranger_meetup$stranger_where_clean)[1]`.
+
+`r str_to_title(levels(student_meetup$student_where_clean)[1])` was the most common response for where to meet an *unfamiliar UChicago student* in Chicago, but `r ifelse(friend_meetup[friend_where_clean==student_meetup$student_where_clean[1],.N]==0, "no respondents", paste0("only ", friend_meetup[friend_where_clean==student_meetup$student_where_clean[1],.N], " respondents (", round((friend_meetup[friend_where_clean==student_meetup$student_where_clean[1],.N]/friend_meetup[,.N])*100,2), "%)"))` chose to meet a close UChicago friend at `r levels(student_meetup$student_where_clean)[1]`.
+
+
+## Meeting time
+
+As a follow-up to the first "where-to-meet" question, we asked participants to choose a time to meet their stranger.
+
+**WHAT TIME** do you go to meet them?[^2]
+
+[^2]: Here "them" refers to a stranger, as the time question was only asked once. 
+
+
+```{r str-visualize-when, echo=FALSE, warning=FALSE}
+
+# Define limits for x-axis time scale
+# This visually centers 12pm and makes it show even axis ticks instead of odd (since we want 12 to be clear)
+lims <- as.POSIXct(strptime(c("1899-12-29 18:00:00","1899-12-30 18:00:00"), format = "%Y-%m-%d %H:%M:%S")) 
+
+ggplot(filter(responses, !is.na(stranger_when)), aes(x=stranger_when)) + 
+    geom_histogram(binwidth=360) +
+    #geom_density(adjust=1/5) +
+    #geom_dotplot() +
+    scale_x_datetime(labels = date_format("%H:%M"),
+                     date_breaks = "2 hours",
+                     limits = lims) +
+    theme(axis.text.x = element_text(angle=45)) +
+    theme_minimal() +
+    labs(x = "TIME OF DAY",
+         title = "Meeting a STRANGER in Chicago, WHEN do you go?",
+         subtitle = paste0(nrow(filter(responses,!is.na(stranger_when))), " total responses"))
+    
+
+```
+
+#### Time breakdown...
+
+<span style="color:red">**`r round((love_connections/nrow(stranger_times))*100,2)`%**</span> (`r love_connections` out of `r nrow(stranger_times)`) of people chose to meet at **exactly `r most_pop_time`.**
+
+`r round(((on_the_hour - love_connections)/nrow(stranger_times))*100,2)`% chose another time "on the hour" (but not `r most_pop_time`).
+
+`r round((on_the_thirty/nrow(stranger_times))*100,2)`% chose a time "on the half hour."
+
+Just `r round((on_anything_else/nrow(stranger_times))*100,2)`% (`r on_anything_else` lonely `r lonely_hearts`) chose anything else.
+
+
+## Coins
+
+```{r anon-responses, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+responses_anon <- responses %>% 
+    select(coin_same, coin_different, number_0to10, number_selection, number_big) %>% 
+    drop_na()
+    
+```
+
+You and an anonymous partner need to choose heads or tails. If you both choose the **SAME** answer, you both win. Which do you choose?
+
+...If you both choose a **DIFFERENT** answer, you both win. Which do you choose?
+
+```{r coins, echo=FALSE, message=FALSE, warning=FALSE}
+coins <- select(responses_anon, coin_same, coin_different) %>% 
+    pivot_longer(cols = c(coin_same, coin_different), names_to = "goal", names_prefix = "coin_", values_to = "side")
+
+coins$goal <- fct_recode(coins$goal, 'Choose same' = "same", 'Choose different' = "different")
+    
+
+```
+
+```{r coins-visualize, message=FALSE, warning=FALSE, echo=FALSE}
+ggplot(coins, aes(x="", fill = side)) + 
+    geom_bar(width=.8) +  
+    coord_polar("y", start=0) +
+    geom_label(stat="count", aes(label=stat(count), group=side), 
+               position = position_stack(vjust = .5),
+               show.legend = F,
+               fill="white") +
+    theme_void() +
+    facet_wrap(vars(fct_rev(goal))) +
+    theme(strip.text = element_text(size = 20)) +
+    labs(fill = "Coin side") +
+    scale_fill_manual(values=pal_futurama()(10)[5:7])
+```
+
+```{r coins-props, echo=FALSE}
+round(addmargins(proportions(table(fct_rev(coins$goal), coins$side),1)*100,2),2) %>% kable()
+```
+
+## Numbers...
+
+```{r numbers, include=FALSE}
+numbers <- responses_anon %>% 
+    select(starts_with("number")) %>% 
+    mutate(across(1:2, factor, ordered=T),
+           number_big_fct = factor(number_big, ordered=T)) %>% 
+    na.omit()
+
+```
+
+Pick a number 0 to 10. You win if you match your partner.
+
+```{r number-0to10-visualize, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(numbers, aes(x=number_0to10, fill=number_0to10)) + 
+    geom_bar() +
+    #theme_minimal() +
+    labs(title="Match an anonymous partner: select 0-10",
+         y=element_blank(),
+         x=element_blank()) +
+    theme(axis.text.x = element_text(size=24),
+          legend.position = "none") +
+    scale_fill_futurama()
+
+```
+
+Select a number from the set. You win if you match your partner.
+
+```{r number-selection-visualize, echo=FALSE, message=TRUE, warning=TRUE}
+
+ggplot(numbers, aes(x=number_selection, fill=number_selection)) + 
+    geom_bar() +
+    theme_minimal() +
+    labs(title="Match an anonymous partner: select among these numbers",
+         y=element_blank(),
+         x=element_blank()) +
+    theme(axis.text.x = element_text(size=20),
+          legend.position = "none") +
+    scale_fill_futurama()
+```
+
+Pick any number. You win if you match your partner, *and* the bigger the number, the more you both win.
+
+```{r number-big-visualize, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(filter(numbers, !is.na(number_big)), aes(x=factor(as.integer(number_big)))) + 
+    geom_bar(aes(fill=factor(as.integer(number_big)))) +
+    #geom_histogram(binwidth = 10) +
+    theme_minimal() +
+    labs(title="Match an anonymous partner: the bigger the better",
+         y=element_blank(),
+         x=element_blank()) +
+    theme(axis.text.x = element_text(size=10, angle=90, hjust=1),
+          legend.position = "none") 
+```
+
+## Consistency
+
+<!-- For the purposes of demonstration only, a few analyses that look at respondents' internal consistency.
+
+1. Are respondents who "win" one game more likely to "win" others as well?
+2. Do we see "rebels", or respondents who consistently choose a unique or particularly uncommon response? 
+3. Do responses vary across demographic groups either in terms specific responses (e.g., MAPSS students more likely to meet in 1155) or general "winningness" (undergrads more likely to be "rebels")?
+4. Do respondents "win" more if they only play within their own group?
+
+-->
+
+
+# Discussion
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
+
+<!-- 
+References
+
+    Bacharach, M., & Bernasconi, M. (1997). The Variable Frame Theory of Focal Points: An Experimental Study. Games and Economic Behavior, 19(1), 1-45.
+    Brown, P., & Levinson, S. C. (1987). Politeness: Some Universals in Language Usage. Cambridge University Press.
+    Canonne, C. (2018). Focal Points in Collective Musical Improvisation. Music Perception: An Interdisciplinary Journal, 35(4), 471-487.
+    Chwe, M. S.-Y. (2001). Rational Ritual: Culture, Coordination, and Common Knowledge. Princeton University Press.
+    Clark, H. H. (1996). Using Language. Cambridge University Press.
+    Clark, H. H., & Marshall, C. R. (1981). Definite Reference and Mutual Knowledge. In A. K. Joshi, B. L. Webber, & I. A. Sag (Eds.), Elements of Discourse Understanding (pp. 10-63). Cambridge University Press.
+    Grice, H. P. (1975). Logic and Conversation. In P. Cole & J. L. Morgan (Eds.), Syntax and Semantics (Vol. 3, pp. 41-58). Academic Press.
+    McNeill, D. (1992). Hand and Mind: What Gestures Reveal About Thought. University of Chicago Press.
+    Mehta, J., Starmer, C., & Sugden, R. (1994). The Nature of Salience: An Experimental Investigation of Pure Coordination Games. American Economic Review, 84(3), 658-673.
+    Rondinelli, D. A. (1983). Secondary Cities in Developing Countries: Policies for Diffusing Urbanization. Sage Publications.
+    Ross, J., & Collister, L. B. (2014). Ethnographic Approaches to the Study of Online Communities: Lessons from Gaming Research. Journal of Contemporary Ethnography, 43(4), 395-424.
+    Schelling, T. C. (1960). The Strategy of Conflict. Harvard University Press.
+    Stalnaker, R. C. (1978). Assertion. In P. Cole (Ed.), Syntax and Semantics (Vol. 9, pp. 315-332). Academic Press.
+    Sugden, R. (1995). A Theory of Focal Points. Economic Journal, 105(430), 533-550.
+    Wong, W., Oranchak, J., & Fagan, M. (2009). A Computational Model for Human-Computer Interaction Using Schelling Points for Coordinated Action. International Journal of Human-Computer Studies, 67(2), 125-137.
+    Yoon, K., & Hollingshead, A. B. (2010). Effects of Coordination and Prediction on the Formation of Social Stereotypes. Journal of Personality and Social Psychology, 99(6), 967-983.
+-->
+
+# Appendix
+
+# Appendix A: Individual responses
+
+
+
+```{r agg-other-responses}
+stranger_others <- Filter(function(x) x %ilike% "Other", levels(stranger_meetup$stranger_where_clean))
+
+student_others <- c(Filter(function(x) x %ilike% "Other", levels(student_meetup$student_where_clean)), "Dorms")
+
+friend_others <- c(Filter(function(x) x %ilike% "Other", levels(friend_meetup$friend_where_clean)), "Dorms", "Recent meeting location")
+
+```
+
+All responses grouped into "Other" categories (`r paste(stranger_others, collapse=", ")`):
+
+```{r str-other-response-list, echo=FALSE}
+filter(stranger_meetup, stranger_where_clean %in% stranger_others) %>% 
+    mutate(stranger_where = factor(stranger_where)) %>% 
+    pull(stranger_where) %>% 
+    levels() %>% 
+    kable(col.names = c("Other responses"))
+```
+
+
+All responses grouped into "Other" or general categories (`r paste(student_others, collapse=", ")`):
+
+```{r student-other-response-list, echo=FALSE}
+filter(student_meetup, student_where_clean %in% student_others) %>% 
+    mutate(student_where = factor(student_where)) %>% 
+    pull(student_where) %>% 
+    levels() %>% 
+    kable(col.names = c("Other responses"))
+```
+
+
+All responses grouped into "Other" or general categories (`r paste(friend_others, collapse=", ")`):
+
+```{r friend-other-response-list, echo=FALSE, message=FALSE, warning=FALSE}
+
+filter(friend_meetup, friend_where_clean %in% friend_others) %>% 
+    mutate(friend_where = factor(friend_where)) %>% 
+    pull(friend_where) %>% 
+    levels() %>% 
+    kable(col.names = c("Other responses"))
+```
+

@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.45">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Schelling Games – Natalie R. Dowling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+    
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Natalie R. Dowling</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../teaching/index.html">
+ <span class="dropdown-text">Classes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../teaching/teaching-statements.html">
+ <span class="dropdown-text">Teaching Statements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../d2m.html">
+ <span class="dropdown-text">Data to Manuscript in R</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#participants" id="toc-participants" class="nav-link" data-scroll-target="#participants">Participants</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data analysis</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#meeting-locations" id="toc-meeting-locations" class="nav-link" data-scroll-target="#meeting-locations">Meeting locations</a></li>
+  <li><a href="#meeting-time" id="toc-meeting-time" class="nav-link" data-scroll-target="#meeting-time">Meeting time</a></li>
+  <li><a href="#coins" id="toc-coins" class="nav-link" data-scroll-target="#coins">Coins</a></li>
+  <li><a href="#numbers" id="toc-numbers" class="nav-link" data-scroll-target="#numbers">Numbers…</a></li>
+  <li><a href="#consistency" id="toc-consistency" class="nav-link" data-scroll-target="#consistency">Consistency</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  <li><a href="#appendix-a-individual-responses" id="toc-appendix-a-individual-responses" class="nav-link" data-scroll-target="#appendix-a-individual-responses">Appendix A: Individual responses</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Schelling Games</h1>
+<p class="subtitle lead">At the University of Chicago</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<!-- For the purposes of this example manuscript, the introduction is primarily explanation and motivation with very limited literature review. In a typical psychology paper like you will (probably) produce in D2M, the introduction would be much more literature review and much less semi-casual explanation. -->
+<!-- 
+TODO: 
+1. Convert all citations to bibtex reference format. 
+2. Add bibtex references to bibliography.bib
+3. Confirm that all references are accurate. (Some were suggested by chatGPT which is obviously not to be trusted!)
+-->
+<p>Thomas Schelling introduced the concept of “focal points” in The Strategy of Conflict with the intention of expanding the contemporary perspectives of game theory to include cooperative, not just competitive, games in human decision making (Schelling, 1960). Though his work certainly proved influential in this regard, concepts of focal points and coordination games have found relevance well beyond game theory and economics as a whole. From improvisational music (Canonne, 2018) to urban planning (Rondinelli, 1983), from human-computer interfacing (Wong et al., 2009) to linguistic anthropology (Brown &amp; Levinson, 1987), from social stereotyping (Yoon &amp; Hollingshead, 2010) to online gaming (Ross &amp; Collister, 2014), elements of Schelling’s framework of coordinated decision-making seem ubiquitous.</p>
+<p>In this brief report, we consider focal points from a cognitive science perspective. We present data from an informal survey mimicking Schelling’s early (and also quite informal) study in The Strategy of Conflict (Schelling, 1960). We discuss our findings as they relate to nonverbal communication and how these concepts may be extended to further our understanding of coordination in everyday conversation.</p>
+<p>Focal points (also called Schelling points) were first conceptualized within the field of economics. Schelling noted that by focusing on zero-sum or fully competitive behavioral scenarios, game theory had failed to account for many real-world games whose outcome rested on successful coordination, not competition, among multiple players (Schelling, 1960). In the context of coordination games, Schelling’s focal points are the salient solutions that players tend to choose due to their intuitively recognizable or, more often, socially shared nature (Schelling, 1960). Critically, players tasked with coordination choose these options even in the absence of explicit communication (Mehta, Starmer, &amp; Sugden, 1994).</p>
+<p>Since being introduced in game theory, focal points have seen broader application across the social sciences. In social psychology, focal points offer an explanation for the natural solutions individuals find in social coordination problems where multiple choices are equally valid, as individuals may rely on common expectations or cultural cues to make decisions that lead to successful coordination (Sugden, 1995). Social norms, traditions, and conventions contribute to the emergence of focal points, and they showcase how individuals rely on shared understanding to achieve coordination without explicit negotiation (Bacharach &amp; Bernasconi, 1997). This concept sheds light on the intricate ways in which human behavior and decision-making are influenced by social context and the desire to align with others (Chwe, 2001).</p>
+<p>These principles of implicit coordination are clearly applicable to relatively broad real-life contexts, such as meeting someone in a crowded place, deciding on a meeting time without prior communication, or determining where to sit in an auditorium (Schelling, 1960). However, they may additionally apply to narrower contexts we might typically associate with explicit coordination, such as face-to-face conversation. In conversation, we use speech (or sign language) to express meaning “on-the-record,” but conversational interaction consists of much more than formal language (Clark, 1996). “Off-the-record” non-linguistic signals allow interlocutors to send highly informative but implicit messages alongside explicit meaning in speech (Clark, 1996). Nonverbal resources like co-speech gesture and paralinguistic resources like intonation can serve critical pragmatic functions (McNeill, 1992). These tools can make conversation more efficient by allowing addressees to make inferences about speaker intention and meaning based on contextual cues (Clark, 1996).</p>
+<p>In the context of everyday interaction, the significance of focal points is tightly linked to common ground (Clark, 1996). In simplest terms, conversational common ground is the shared knowledge, beliefs, assumptions, and experiences that participants in a face-to-face conversation believe to be mutually understood (Clark, 1996). At one level, common ground refers to common knowledge (Stalnaker, 1978). If all interlocutors know that they have all been invited to Anna’s birthday party next Saturday, they may discuss the presents they plan to bring without explicitly mentioning who Anna is, why they would be giving her presents, or the deadline for buying a present for the party (Clark &amp; Marshall, 1981). These assumptions are localized to this group in this conversation on this topic, but there are also generalized social assumptions at play (Clark, 1996). The party-goers know that presents are given for birthdays, that both the invitees and the host will be at the party, that the presents will be given to the host at the party, that presents should be appropriate for what the host would want to receive, etc. (Clark &amp; Marshall, 1981).</p>
+<p>Conversational common ground also encompasses emergent properties of the interaction, guided by cultural expectations and linguistic systems (Clark, 1996). The party-goers may refer to Anna as the “birthday girl” or simply “her” rather than naming her at each reference (Clark, 1996). One interlocutor may ask a question and expect to get an answer that is prompt, relevant, and truthful, given that all interlocutors are assumed to follow principles of English pragmatics and conversational organization (Grice, 1975). Common ground, both that which is present at the initiation of the conversation and that which emerges as a product of conversation, allows interlocutors to disambiguate and infer meaning with focal points (Clark, 1996). When a party-goer says, “I really hope she likes it,” the listeners face multiple valid options when determining the referents of “she” and “it” (Clark, 1996). The conversation’s general focus on Anna’s birthday likely enables a convergence of understanding on “Anna” as the “she”; Anna is highly salient in the immediate context (Clark, 1996). Listeners will need to rely on subtler mutual salience to determine whether “it” refers to the party, some particular present, or something else entirely (Clark, 1996).</p>
+<p>In the present study, we do not directly probe how interlocutors use focal points in conversation. Instead, we informally replicate Schelling’s first survey (Schelling, 1960). We consider both the results of our survey and of Schelling’s survey to theorize how these generalized points of mutual salience may add to our understanding of the implicit coordination facilitating everyday conversation.</p>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<p>We constructed a survey modeled after Schelling’s original report. Schelling himself did not perform a true “study” in reporting his results, but rather loosely surveyed the <strong>graduate?</strong> students in his class at <strong>Yale?</strong> in <strong>the year</strong>. Our data collection was similarly gathered quite loosely. The survey data were collected with the intention of serving a pedagogical purpose and with no intention to be published as rigorous study. While we cannot use these data to make empirical claims, they are nonetheless a useful and thought-provoking educational tool (as Schelling’s data certainly were).</p>
+<section id="participants" class="level2">
+<h2 data-anchor-id="participants">Participants</h2>
+<!-- Participant groups -->
+</section>
+<section id="materials" class="level2">
+<h2 data-anchor-id="materials">Materials</h2>
+<p>Schelling’s classroom survey asked students questions challenging them to ambiguously “win” a game by coordinating with a stranger. Famously, he asked where and when the participants would meet a stranger in New York City without any prior communication. Additionally, the survey included a series of questions encouraging convergence on a response in more “game-like” circumstances: guessing a number, flipping a coin, etc.</p>
+<p>The survey in this report was in essence an abbreviated version of Schelling’s. It included a selection of the “game-like” questions taken directly from Schelling’s survey. We asked the classic where-and-when questions with some revisions. Because our survey was conducted at the University of Chicago, our version of the where-and-when question asked about meeting a stranger in Chicago rather than New York City. We additionally included two follow-up questions that were not included in Schelling’s data, changing the interpersonal context between the participant and hypothetical partner.</p>
+<!-- description of google form hosting & link -->
+</section>
+<section id="data-analysis" class="level2">
+<h2 data-anchor-id="data-analysis">Data analysis</h2>
+<p>We used R <span class="citation" data-cites="R-base">[Version 4.3.3\; @R-base]</span> and the R-packages <em>data.table</em> <span class="citation" data-cites="R-data.table">[Version 1.16.2\; @R-data.table]</span>, <em>dplyr</em> <span class="citation" data-cites="R-dplyr">[Version 1.1.4\; @R-dplyr]</span>, <em>forcats</em> <span class="citation" data-cites="R-forcats">[Version 1.0.0\; @R-forcats]</span>, <em>ggplot2</em> <span class="citation" data-cites="R-ggplot2">[Version 3.5.1\; @R-ggplot2]</span>, <em>ggsci</em> <span class="citation" data-cites="R-ggsci">[Version 3.2.0\; @R-ggsci]</span>, <em>googlesheets4</em> <span class="citation" data-cites="R-googlesheets4">[Version 1.1.1\; @R-googlesheets4]</span>, <em>kableExtra</em> <span class="citation" data-cites="R-kableExtra">[Version 1.4.0.1\; @R-kableExtra]</span>, <em>lubridate</em> <span class="citation" data-cites="R-lubridate">[Version 1.9.3\; @R-lubridate]</span>, <em>papaja</em> <span class="citation" data-cites="R-papaja">[Version 0.1.3\; @R-papaja]</span>, <em>purrr</em> <span class="citation" data-cites="R-purrr">[Version 1.0.2\; @R-purrr]</span>, <em>readr</em> <span class="citation" data-cites="R-readr">[Version 2.1.5\; @R-readr]</span>, <em>scales</em> <span class="citation" data-cites="R-scales">[Version 1.3.0\; @R-scales]</span>, <em>stringr</em> <span class="citation" data-cites="R-stringr">[Version 1.5.1\; @R-stringr]</span>, <em>tibble</em> <span class="citation" data-cites="R-tibble">[Version 3.2.1\; @R-tibble]</span>, <em>tidyr</em> <span class="citation" data-cites="R-tidyr">[Version 1.3.1\; @R-tidyr]</span>, <em>tidyverse</em> <span class="citation" data-cites="R-tidyverse">[Version 2.0.0\; @R-tidyverse]</span> and <em>tinylabels</em> <span class="citation" data-cites="R-tinylabels">[Version 0.2.4\; @R-tinylabels]</span> for all our analyses.</p>
+<p>Responses have been cleaned to account for predictable variations in how individuals input popular responses – e.g., “the reg”, “Regenstein”, and “In the Reg.” are all reported as “The Reg.” Ambiguous responses (e.g., “the library”) are left ambiguous.</p>
+<section id="exclusions" class="level3">
+<h3 data-anchor-id="exclusions">Exclusions</h3>
+<!-- TODO: add inline refs for exclusion numbers & remove temporary formatting -->
+<p>A total of <span color="red">NUMBER GOES HERE</span> responses to the “meetup location” questions were excluded (out of <span color="red">NUMBER GOES HERE</span> total) or re-coded as “Other”.</p>
+<p>Responses that indicate clear misunderstanding of the question are excluded. These primarily consisted of responses in the “meeting a stranger” or “meeting a student” questions. Since these questions specify that the other party is unknown to the respondent, responses should not assume prior familiarity or experience with the other party, for example “their house”, “the last place we last met”, “where we usually see each other”, or “where you expect them to be at a certain time.”</p>
+<p>Responses to the meetup location questions were coded as “Other” if they included multiple locations without rankings (e.g., “pret or hutch”), were overly vague (e.g., “a major center within the city that everyone knows about”), or fanciful/impossible (e.g., “THE MOON!”).</p>
+</section>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<p>The survey results for each item are reported and visualized below. Some item-level visualizations use pie charts, which we recognize are anathema to many data visualization experts.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Item-level summary statistics are also provided, and pie-chart-allergic readers may skip to the comparative bar charts.</p>
+<section id="meeting-locations" class="level2">
+<h2 data-anchor-id="meeting-locations">Meeting locations</h2>
+<!-- 
+TODO: 
+1. Move full tables of all responses to appendix 
+2. Add a comparative bar graph for all three managing-to-meet scenarios
+-->
+<section id="meeting-a-stranger" class="level3">
+<h3 data-anchor-id="meeting-a-stranger">Meeting a stranger</h3>
+<p><strong>You are meeting a stranger in Chicago.</strong> You both know that you need to meet each other today, but you haven’t agreed on a place or a time and you have no means of communication. <em>Remember, you cannot communicate with them now or previously in any way!</em></p>
+<p><strong>WHERE</strong> do you go to meet them?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/str-visualize-where-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Response breakdown:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Response</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">N</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">the Bean</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">35.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Millennium/Grant Park</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">13.66</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">9.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">the Reg</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">8.81</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">another Chicago landmark</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">7.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another cafe/dining</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">7.49</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the Quad</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">5.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">a UChi Dorm</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">3.08</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the Sears/Willis Tower</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2.64</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another library</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">another residence</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another UChicago site</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ex Libris</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">a recent meeting location</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pret a Manger</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">the Reynold's Club</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.44</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>The most common response for where to meet a <em>stranger</em> in Chicago was the Bean, with 80 responses (35.24%). <!-- These in-text refs are verbose, but they are entirely data-dependent! If suddenly the Sears tower got way more popular than the Bean, this text would reflect that without any changes. --></p>
+<p>Common responses of Chicago landmarks included the Bean/Cloudgate (<span class="math inline">\(N\)</span> = 0), Millennium/Grant Park (<span class="math inline">\(N\)</span> = 31), and the Sears/Willis Tower (<span class="math inline">\(N\)</span> = 0).</p>
+</section>
+<section id="meeting-an-unfamiliar-student" class="level3">
+<h3 data-anchor-id="meeting-an-unfamiliar-student">Meeting an unfamiliar student</h3>
+<p><strong>You are meeting another UChicago student who you have not met before.</strong> You both know that you are both UChicago students and that you should meet today, but you haven’t agreed on a meeting location and you have no means of communication. <strong>Where</strong> do you go to meet them?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/student-visualize-where-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Response breakdown:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Response</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">N</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">the Reg</td>
+<td style="text-align: right;">117</td>
+<td style="text-align: right;">44.66</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">the Quad</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">27.10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">another library</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">5.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another UChicago site</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the Reynold's Club</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">4.20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3.82</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pret a Manger</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3.82</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another cafe/dining</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3.44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ex Libris</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">a UChi Dorm</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.76</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the 1155 Building</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.76</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>The most common response for where to meet an <em>unknown UChicago student</em> in Chicago was the Reg, with 117 responses (44.66%). By comparison, only 20 respondents (8.81%) chose to meet a stranger at the Reg.</p>
+<p>While the Bean was the most common response for where to meet a <em>stranger</em> in Chicago, no respondents chose to meet an unfamiliar UChicago student at the Bean.</p>
+</section>
+<section id="meeting-your-uchicago-friend" class="level3">
+<h3 data-anchor-id="meeting-your-uchicago-friend">Meeting your UChicago friend</h3>
+<p><strong>You are meeting your closest friend at UChicago.</strong> You haven’t agreed on a meeting location and you have no means of communication. <strong>Where</strong> do you go to meet them?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/friend-visualize-where-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Response breakdown:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Response</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">N</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">a UChi Dorm</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">25.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another residence</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">20.52</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the Reg</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">15.67</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another cafe/dining</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">12.69</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">10.45</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">another UChicago site</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4.48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">another library</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3.36</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pret a Manger</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2.99</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the 1155 Building</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.87</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">the Quad</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.49</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">a recent meeting location</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.75</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>The most common response for where to meet a close UChicago friend in Chicago was a UChi Dorm, with 69 responses (25.75%). By comparison, only 7 respondents (3.08%) chose to meet a stranger at a UChi Dorm and only 2 respondents (0.76%) chose to meet a stranger at a UChi Dorm.</p>
+<p>While the Bean was the most common response for where to meet a <em>stranger</em> in Chicago, no respondents chose to meet a close UChicago friend at the Bean.</p>
+<p>The Reg was the most common response for where to meet an <em>unfamiliar UChicago student</em> in Chicago, but only 42 respondents (15.67%) chose to meet a close UChicago friend at the Reg.</p>
+</section>
+</section>
+<section id="meeting-time" class="level2">
+<h2 data-anchor-id="meeting-time">Meeting time</h2>
+<p>As a follow-up to the first “where-to-meet” question, we asked participants to choose a time to meet their stranger.</p>
+<p><strong>WHAT TIME</strong> do you go to meet them?<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/str-visualize-when-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="time-breakdown" class="level4">
+<h4 data-anchor-id="time-breakdown">Time breakdown…</h4>
+<p><span style="color:red"><strong>40.67%</strong></span> (109 out of 268) of people chose to meet at <strong>exactly 12:00.</strong></p>
+<p>50.75% chose another time “on the hour” (but not 12:00).</p>
+<p>7.84% chose a time “on the half hour.”</p>
+<p>Just 0% (0 lonely people) chose anything else.</p>
+</section>
+</section>
+<section id="coins" class="level2">
+<h2 data-anchor-id="coins">Coins</h2>
+<p>You and an anonymous partner need to choose heads or tails. If you both choose the <strong>SAME</strong> answer, you both win. Which do you choose?</p>
+<p>…If you both choose a <strong>DIFFERENT</strong> answer, you both win. Which do you choose?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/coins-visualize-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Heads</th>
+<th style="text-align: right;">Tails</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Choose same</td>
+<td style="text-align: right;">85.13</td>
+<td style="text-align: right;">14.87</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Choose different</td>
+<td style="text-align: right;">57.25</td>
+<td style="text-align: right;">42.75</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="numbers" class="level2">
+<h2 data-anchor-id="numbers">Numbers…</h2>
+<p>Pick a number 0 to 10. You win if you match your partner.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/number-0to10-visualize-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Select a number from the set. You win if you match your partner.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/number-selection-visualize-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Pick any number. You win if you match your partner, <em>and</em> the bigger the number, the more you both win.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="html-manuscript_files/figure-html/number-big-visualize-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="consistency" class="level2">
+<h2 data-anchor-id="consistency">Consistency</h2>
+<!-- For the purposes of demonstration only, a few analyses that look at respondents' internal consistency.
+
+1. Are respondents who "win" one game more likely to "win" others as well?
+2. Do we see "rebels", or respondents who consistently choose a unique or particularly uncommon response? 
+3. Do responses vary across demographic groups either in terms specific responses (e.g., MAPSS students more likely to meet in 1155) or general "winningness" (undergrads more likely to be "rebels")?
+4. Do respondents "win" more if they only play within their own group?
+
+-->
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" data-custom-style="Bibliography" role="list">
+
+</div>
+<!-- 
+References
+
+    Bacharach, M., & Bernasconi, M. (1997). The Variable Frame Theory of Focal Points: An Experimental Study. Games and Economic Behavior, 19(1), 1-45.
+    Brown, P., & Levinson, S. C. (1987). Politeness: Some Universals in Language Usage. Cambridge University Press.
+    Canonne, C. (2018). Focal Points in Collective Musical Improvisation. Music Perception: An Interdisciplinary Journal, 35(4), 471-487.
+    Chwe, M. S.-Y. (2001). Rational Ritual: Culture, Coordination, and Common Knowledge. Princeton University Press.
+    Clark, H. H. (1996). Using Language. Cambridge University Press.
+    Clark, H. H., & Marshall, C. R. (1981). Definite Reference and Mutual Knowledge. In A. K. Joshi, B. L. Webber, & I. A. Sag (Eds.), Elements of Discourse Understanding (pp. 10-63). Cambridge University Press.
+    Grice, H. P. (1975). Logic and Conversation. In P. Cole & J. L. Morgan (Eds.), Syntax and Semantics (Vol. 3, pp. 41-58). Academic Press.
+    McNeill, D. (1992). Hand and Mind: What Gestures Reveal About Thought. University of Chicago Press.
+    Mehta, J., Starmer, C., & Sugden, R. (1994). The Nature of Salience: An Experimental Investigation of Pure Coordination Games. American Economic Review, 84(3), 658-673.
+    Rondinelli, D. A. (1983). Secondary Cities in Developing Countries: Policies for Diffusing Urbanization. Sage Publications.
+    Ross, J., & Collister, L. B. (2014). Ethnographic Approaches to the Study of Online Communities: Lessons from Gaming Research. Journal of Contemporary Ethnography, 43(4), 395-424.
+    Schelling, T. C. (1960). The Strategy of Conflict. Harvard University Press.
+    Stalnaker, R. C. (1978). Assertion. In P. Cole (Ed.), Syntax and Semantics (Vol. 9, pp. 315-332). Academic Press.
+    Sugden, R. (1995). A Theory of Focal Points. Economic Journal, 105(430), 533-550.
+    Wong, W., Oranchak, J., & Fagan, M. (2009). A Computational Model for Human-Computer Interaction Using Schelling Points for Coordinated Action. International Journal of Human-Computer Studies, 67(2), 125-137.
+    Yoon, K., & Hollingshead, A. B. (2010). Effects of Coordination and Prediction on the Formation of Social Stereotypes. Journal of Personality and Social Psychology, 99(6), 967-983.
+-->
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+</section>
+<section id="appendix-a-individual-responses" class="level1">
+<h1>Appendix A: Individual responses</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>stranger_others <span class="ot">&lt;-</span> <span class="fu">Filter</span>(<span class="cf">function</span>(x) x <span class="sc">%ilike%</span> <span class="st">"Other"</span>, <span class="fu">levels</span>(stranger_meetup<span class="sc">$</span>stranger_where_clean))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>student_others <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">Filter</span>(<span class="cf">function</span>(x) x <span class="sc">%ilike%</span> <span class="st">"Other"</span>, <span class="fu">levels</span>(student_meetup<span class="sc">$</span>student_where_clean)), <span class="st">"Dorms"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>friend_others <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">Filter</span>(<span class="cf">function</span>(x) x <span class="sc">%ilike%</span> <span class="st">"Other"</span>, <span class="fu">levels</span>(friend_meetup<span class="sc">$</span>friend_where_clean)), <span class="st">"Dorms"</span>, <span class="st">"Recent meeting location"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>All responses grouped into “Other” categories (Other, another Chicago landmark, another cafe/dining, another library, another residence, another UChicago site):</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Other responses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A coffee shop</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A Starbucks</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Art Insitute</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Art institute</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Art Institute</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">art institute entrance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bartlett Dining Commons</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Buckingham Fountain</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cafe near me</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cafeteria</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">center of the Chicago</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chicago</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Chicago subway station</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clark and Lake</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cloud gate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">coffee shop</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">community center</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Downtown Art institute of Chicago</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Downtown near the loop</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Downtown near the tallest building in Chicago.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Harper</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hutchinson Commons</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I don’t go meet them.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I would go to Depaul University’s Barnes and Nobles</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I would go to the nearest coffee spot to my home</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">In a coffee shop or a quiet (brunch) restaurant.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Insomnia Cookies</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">It is literally impossible</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">La Serre</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Library</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Magnificent Mile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Meet them at your apartment.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">My apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">My home</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Navy Pier</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Near the riverwalk</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no idea</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nutella cafe/I wouldn’t go meet them</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O’hare</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">On campus.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Outside</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Philz Coffee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Planetarium</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Probably a cafe.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Restaurant</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">River walk bridge</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Roosavelt Station</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Somewhere on Campus</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Starbucks downtown</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Starbucks Reserve</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Station</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Teamo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the airport</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The library</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Mansueto Library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Med</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Trump Tower</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UChicago - dollop</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UChicago campus</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Union Station</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">University of Chicago</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Very center of Chicago</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>All responses grouped into “Other” or general categories (another library, another UChicago site, Other, another cafe/dining, Dorms):</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Other responses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">At the library.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bartlett</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bartlett or the Reg</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bartlett; I assume they have to stop by at some point.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Big arch</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bookstore</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bookstore</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cafeteria</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Charles M. Harper Center</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">glass library</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Harper Library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hutchinson</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I just don’t meet them then</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I would go to a dining hall most likely</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">In the library, or student lounges.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Insomnia Cookies</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Library</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mansueto/reg entrance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no idea</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NULL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outside the Bookstore</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Plein Air</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Social Science building</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">starbucks</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">the book store</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the dining hall</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The library</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The library’s</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The square</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The University Bookstore</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UChicago - dollop</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Uchicago Bookstore</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UChicago Bookstore</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Uchicago Library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Underneath the uchicago arch</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">University of Chicago</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>All responses grouped into “Other” or general categories (another residence, another cafe/dining, Other, another UChicago site, another library, Dorms, Recent meeting location):</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Other responses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">a coffee shop we regularly visit together</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">After class</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">any coffee shop on campus</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">at apartment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">At the CI and I (thats where we always end up)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">At the dining hall.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">At their apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Baker</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Baker dining hall</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bartlett</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bartlett or max p</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beecher</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cafe</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cathey</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cathey lounge</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">common spot</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Crerar</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dining hall</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dollop</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dollop coffee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Eckardt</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Either the crown weight room or bartlett/baker dining halls</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fraternity house</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Front door</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Go to their house</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grounds of Being</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hallowed Grounds</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Harper cafe</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">harper cubicles</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Harper Library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">her apartment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Her apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Her apt</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">her house</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Her house</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hillel House</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Home</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">House lounge</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hutch</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I go to their house</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I will meet her at Bartlett</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I would meet them at our fraternity house</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I would meet them at their apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I’d meet them at their apartment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iHouse</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">In the I-house lounge</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">In their apartment or in my apartment. Or any where we want, like coffee shop or restaurant.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Insomnia Cookies</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kelly Beecher Green</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">KGB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kgb first floor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Koi Pond (Botany Pond)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lab</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">library</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Logan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Logan Square monument</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mansueto</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mansueto</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mine</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">my apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">My apartment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">My apartment… hopefully he comes back.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">My fraternity house</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">my house</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">My office</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">our apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Our apartment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Our Apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Our apt</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">our house lounge</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Our house lounge</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Our lab</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Our normal meeting place</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">our shared apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outside the Bookstore</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Plain Air Cafe</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Plein air cafe</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Plein Air Café</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prêt à manger</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Psi Upsilon</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Psych dept</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ratner Athletics Center</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratner or baker</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rockefeller memorial chapel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rockerfeller lounge</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">social work</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Starbucks</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Teamo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The house lounge</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The lobby of Woodlawn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Logan Center</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Lounge</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The place we always study together</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The pub</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The University Bookstore</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Their apartment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Their Apartment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Their apartment or a common hangout place</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">their home</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Their home</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Their house</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">their or my apartment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UChicago Bookstore</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">where he proposed to me, overlooking Robie House</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Woodlawn</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodlawn dining hall</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Woodlawn lounge</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Come at me and/or get in the comments. Pie charts get too much hate. It’s trendy, the same way everyone loves to hate the word moist. Look, I don’t disagree that pie charts are widely misused. In most cases data represented with a pie chart would be better visualized with a bar chart (or no chart at all). However, the very qualities that make pie charts terrible visualizations in most situations can be a strength in others. In this case, the fact that they are really bad communicating any kind of precise information about more than two or three categories actually makes them a quick and easy way to visually communicate the dramatic differences in response distribution for each question. They are not meant to be precise or detailed, but to give the reader a quick sense of proportional data at the item-level without being distracted or overwhelmed by group-level comparisons. Seeing all the tiny little pie slices makes you say “Ugh, there are way too many of those!” Well, yes! That’s the point! Note that when I actually <em>do</em> want to communicate a comparison I use bar charts. There’s no reason to completely trash a tool just because it’s often misused.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Here “them” refers to a stranger, as the time question was only asked once.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
