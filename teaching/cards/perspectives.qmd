@@ -38,7 +38,7 @@ Social science theory, research design
 
 ::: {.card-body .content-narrow style="text-align: center;"}
 [MAPSS Curriculum](https://mapss.uchicago.edu/programs-of-study/general-curriculum){.card-link .badge}
-[Syllabus](#){.card-link .badge}
+[Syllabus](files/syllabi/perspectives-2024.pdf){.card-link .badge}
 :::
 
 ::: {.card-footer}

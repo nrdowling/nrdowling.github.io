@@ -41,10 +41,10 @@ Research design, qualitative and quantitative methods, academic writing
 
 ::: {.card-body .content-narrow style="text-align: center;"}
 [CHD BA Honors](http://collegecatalog.uchicago.edu/thecollege/comparativehumandevelopment/#bahonorsguidelines){.card-link .badge}
-[Syllabus](#){.card-link .badge}
+[Syllabus](files/syllabi/chd-ba-2023.pdf){.card-link .badge}
 
 :::
 ::: {.card-footer .text-muted}
-Concluded: Fall/Winter/Spring 2020-2021 (Undergraduate preceptor), Fall 2023
+Concluded: Fall/Winter/Spring 2020-2021, Fall 2023
 :::
 :::

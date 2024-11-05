@@ -39,7 +39,7 @@ Psychology, cognitive science
 
 ::: {.card-body .content-narrow style="text-align: center;"}
 [Catalog](http://collegecatalog.uchicago.edu/thecollege/socialsciences/){.card-link .badge}
-[Syllabus](#){.card-link .badge}
+[Syllabus](files/syllabi/mind3-2023.pdf){.card-link .badge}
 :::
 
 

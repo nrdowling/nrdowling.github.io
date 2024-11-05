@@ -2,7 +2,7 @@
 
 ::: {.card .class-card-active  .equal-height}
 ::: card-header
-### <i class="bi bi-arrow-right-circle-fill"></i> WINTER 2024 
+### <i class="bi bi-arrow-right-circle-fill"></i> WINTER 2025 
 :::
 
 #### From Data to Manuscript in R (D2M) {.card-title}
