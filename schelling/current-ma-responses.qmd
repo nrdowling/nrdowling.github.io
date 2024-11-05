@@ -323,7 +323,7 @@ ggplot(filter(responses, !is.na(stranger_when)), aes(x=stranger_when)) +
 
 `r round((on_the_thirty/nrow(stranger_times))*100,2)`% chose a time "on the half hour."
 
-Just `r round((on_anything_else/nrow(stranger_times))*100,2)`% (`r on_anything_else` lonely `r lonely_hearts_other`) chose anything else.
+Just `r round((unique_times_other/nrow(stranger_times))*100,2)`% (`r unique_times_other` lonely `r lonely_hearts_other`) chose anything else.
 
 :::
 
